@@ -1,0 +1,219 @@
+{
+  "name": "Flávio Dias",
+  "title": "Industrial & Process Engineer",
+  "location": "Santarém, Pará, Brazil",
+  "email": "flaviohasd@hotmail.com",
+  "linkedin": "https://www.linkedin.com/in/flaviohasd/",
+  "github": "https://github.com/flaviohasd",
+
+  "summary": "Industrial & Process Engineer with strong experience in aluminum casting (HPDC/LPDC), tooling development, stamping, welding, layout redesign, and continuous-improvement initiatives. Led large-scale industrial projects including mold-renewal master plans, process optimization, and manufacturing technical planning (MTP). Skilled in Lean Six Sigma (Green Belt), PDCA, DMAIC, and industrial diagnostics applied in GEMBA to eliminate defects, reduce scrap, optimize flow, and improve operational efficiency. Experienced supporting production, solving chronic failures, implementing MES systems, and improving technical documentation and standard work. Strong analytical mindset with an engineering foundation in mechanical systems, complemented by advanced skills in Excel, Power BI, and data-driven decision support.",
+
+  "subsummary": "Industrial Processes · Lean Six Sigma · Casting (HPDC/LPDC) · Welding & Stamping · Tooling · Layout · Reliability · Data-Driven Improvement",
+
+  "experience": [
+    {
+      "title": "Industrial Engineering Specialist",
+      "company": "Yamaha Motor Componentes da Amazônia",
+      "date": "Apr 2023 – Apr 2025",
+      "tasks": [
+        "Coordinated HPDC/LPDC mold renewal program with annual budget of BRL 8 million, ensuring technical accuracy, schedule adherence, and cost control.",
+        "Developed a semi-automated Excel-based master plan for mold management, increasing predictability and traceability of technical deliverables.",
+        "Implemented and acted as key-user of the MES system for HPDC/LPDC machines, enabling real-time monitoring of casting parameters and production stability.",
+        "Led factory layout restructuring projects, optimizing flow, space usage, and integration between tooling, engineering, and production teams.",
+        "Provided technical support for defect analysis, casting troubleshooting, dimensional deviation investigations, and flow-related issues.",
+        "Reviewed, improved, and standardized tooling projects (HPDC/LPDC molds, devices, fixtures), reducing tryout time and increasing reliability.",
+        "Represented Yamaha in the International Foundry Conference in Taiwan (2024), presenting MES integration results in English.",
+        "Supported manufacturing technical planning (MTP) with robust analyses and engineering criteria to support investment decisions."
+      ]
+    },
+    {
+      "title": "Engineering Analyst – Tooling & Stamping",
+      "company": "Metalúrgica Sato da Amazônia",
+      "date": "Mar 2023 – Apr 2023",
+      "tasks": [
+        "Developed and reviewed tooling for stamping operations, improving sheet-metal utilization and reducing material costs.",
+        "Created detailed operational procedures to ensure standardization, repeatability, and correct execution of manufacturing steps.",
+        "Improved chemical product control through Excel-based systems, increasing accuracy of stock and consumption records.",
+        "Planned and coordinated technical improvements in stamping tools, enhancing production efficiency and reliability."
+      ]
+    },
+    {
+      "title": "Industrial Analyst – Welding & Stamping",
+      "company": "Yamaha Motor da Amazônia",
+      "date": "Jul 2021 – Nov 2021",
+      "tasks": [
+        "Responsible for welding and stamping operations of rear-fork assemblies, performing defect analysis and defining correction strategies.",
+        "Led continuous-improvement projects using PDCA, eliminating chronic issues and improving process stability.",
+        "Created and maintained technical documentation, quality controls, and standard work for production support.",
+        "Contributed to ISO 9001 compliance through process standardization and corrective actions."
+      ]
+    },
+    {
+      "title": "Maintenance Engineering Intern",
+      "company": "3M do Brasil",
+      "date": "Jan 2020 – Jul 2021",
+      "tasks": [
+        "Developed maintenance manuals and inspection checklists for belts, bearings, and rotating machines, improving troubleshooting accuracy.",
+        "Created a Power BI dashboard integrating maintenance indicators such as OEE, MTBF, and MTTR, supporting strategic decision-making.",
+        "Automated Excel tools for vacation/leave tracking and personnel allocation, improving operational planning efficiency."
+      ]
+    },
+    {
+      "title": "Mechanical Engineering Intern",
+      "company": "UFAM – Mechanical Systems and Control Laboratory",
+      "date": "May 2022 – Aug 2022",
+      "tasks": [
+        "Led the full restructuring of the laboratory: layout redesign, infrastructure expansion, equipment installation, and safety improvements.",
+        "Implemented 5S practices, wrote a best-practice manual, and organized the lab for better accessibility and experiment capacity.",
+        "Developed detailed floor-plan and infrastructure project delivered to the university engineering office for layout expansion."
+      ]
+    },
+    {
+      "title": "Teaching Assistant – Mechanical Vibrations",
+      "company": "UFAM",
+      "date": "Jun 2022 – Sep 2022",
+      "tasks": [
+        "Supported students in vibration measurements using accelerometers and DAQ systems.",
+        "Conducted FFT-based analysis of rotating machines, reinforcing diagnostic reasoning applied in industrial troubleshooting."
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bachelor of Science",
+      "field": "Mechanical Engineering",
+      "institution": "Federal University of Amazonas (UFAM)",
+      "date": "2015 – 2022",
+      "comments": [
+        "Strong foundation in statics, dynamics, vibrations, mechanical design, materials, and manufacturing processes.",
+        "Research experience in dynamic systems and gear-vibration modeling (published in a Qualis A2 journal)."
+      ]
+    },
+    {
+      "degree": "Project Management & Lean Six Sigma Green Belt",
+      "field": "Continuous Improvement & Project Management",
+      "institution": "Escola DNC",
+      "date": "2021",
+      "comments": [
+        "Applied DMAIC and Lean Six Sigma tools to a real industrial project, achieving 33% productivity increase and cost reduction above BRL 200k/year.",
+        "Training included Scrum, Excel automation, Power BI, Minitab, and practical improvement projects."
+      ]
+    }
+  ],
+
+  "core_competencies": [
+    {
+      "category": "Industrial Processes",
+      "items": [
+        "HPDC/LPDC casting",
+        "welding & stamping operations",
+        "flow analysis & layout optimization",
+        "standard work & documentation",
+        "MES integration & technical planning"
+      ]
+    },
+    {
+      "category": "Continuous Improvement",
+      "items": [
+        "Lean Six Sigma (Green Belt)",
+        "PDCA / DMAIC",
+        "root-cause analysis (Ishikawa, 5 Whys)",
+        "FMEA / APQP",
+        "scrap and rework reduction"
+      ]
+    },
+    {
+      "category": "Tooling & Manufacturing",
+      "items": [
+        "mold and die revision",
+        "tooling tryout & troubleshooting",
+        "fixture/design interpretation",
+        "GD&T fundamentals",
+        "material flow optimization"
+      ]
+    },
+    {
+      "category": "Reliability & Maintenance",
+      "items": [
+        "OEE, MTBF, MTTR",
+        "preventive/predictive support",
+        "failure-mode analysis",
+        "checklists & manuals development"
+      ]
+    },
+    {
+      "category": "Data & Decision Support",
+      "items": [
+        "Excel advanced (automation, dashboards)",
+        "Power BI",
+        "Minitab statistical tools",
+        "KPI structuring",
+        "SQL basics"
+      ]
+    }
+  ],
+
+  "skills": [
+    "HPDC/LPDC casting operations",
+    "Welding & stamping diagnostics",
+    "Layout & flow optimization",
+    "Tooling (dies, molds, fixtures)",
+    "Lean Six Sigma (Green Belt)",
+    "PDCA, DMAIC, APQP, FMEA",
+    "MES integration",
+    "OEE / MTBF / MTTR",
+    "Excel Advanced",
+    "Power BI",
+    "Minitab",
+    "Root-cause analysis",
+    "Process documentation & standard work",
+    "ISO 9001 compliance",
+    "GD&T fundamentals"
+  ],
+
+  "certifications": [
+    { "name": "Lean Six Sigma Green Belt", "institution": "Escola DNC", "date": "2021" },
+    { "name": "Project Manager Full Stack", "institution": "Escola DNC", "date": "2021" },
+    { "name": "Scrum Master", "institution": "PM Tech", "date": "2021" },
+    { "name": "IBM Data Science (Python, SQL, ML)", "institution": "IBM / Coursera", "date": "2023" },
+    { "name": "Power BI Avançado", "institution": "DNC", "date": "2021" },
+    { "name": "Minitab Avançado", "institution": "DNC", "date": "2021" },
+    { "name": "MAGMASOFT Training", "institution": "MAGMA", "date": "2024" }
+  ],
+
+  "languages": [
+    "Portuguese: Native",
+    "English: Fluent (C1/C2, full professional proficiency)"
+  ],
+
+  "projects": [
+    {
+      "title": "HPDC/LPDC Mold Renewal Master Plan",
+      "subtitle": "Investment Planning · Tooling Standardization · Lead-Time Reduction",
+      "bullets": [
+        "Planned and controlled a BRL 8M annual budget for mold renovation, defining prioritization, scope, and engineering criteria.",
+        "Developed a semi-automated Excel system for scheduling, technical follow-up, and budget control.",
+        "Reduced internal mold lead time from 24 → 6 months and external from 12 → 6 months."
+      ]
+    },
+    {
+      "title": "MES Integration for HPDC/LPDC Machines",
+      "subtitle": "Real-Time Data · Process Visibility · International Presentation",
+      "bullets": [
+        "Implemented MES for die-casting machines, enabling real-time monitoring and historical tracking of key parameters.",
+        "Presented the project internationally in Taiwan, representing Yamaha in English.",
+        "Improved process control and supported reduction of chronic casting defects."
+      ]
+    }
+  ],
+
+  "publications": [
+    {
+      "title": "Vibration attenuation on spur gears through optimal profile modification",
+      "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)",
+      "year": "2023",
+      "link": "https://rdcu.be/ds3ID"
+    }
+  ]
+}
