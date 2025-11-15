@@ -2,7 +2,7 @@ fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
     // ===== HEADER =====
-    document.title = `${data.name} - Resume`; // título da aba
+    document.title = `${data.name} - Resume`;
 
     const nameEl = document.getElementById("name");
     const titleEl = document.getElementById("title");
@@ -21,13 +21,42 @@ fetch("data.json")
 
     if (linksEl) {
       linksEl.innerHTML = `
-        🌐 <a href="${data.linkedin || "#"}" target="_blank">LinkedIn</a> | 
+        🌐 <a href="${data.linkedin || "#"}" target="_blank">LinkedIn</a> |
         <a href="${data.github || "#"}" target="_blank">GitHub</a>
       `;
     }
 
     if (summaryEl) {
       summaryEl.textContent = data.summary || "";
+    }
+
+    // ===== SELECTED PROJECTS & RESEARCH =====
+    const projectsContainer = document.getElementById("projects");
+    if (projectsContainer && Array.isArray(data.projects)) {
+      data.projects.forEach((proj) => {
+        const div = document.createElement("div");
+
+        let bulletsHtml = "";
+        if (Array.isArray(proj.bullets) && proj.bullets.length > 0) {
+          bulletsHtml = `
+            <ul>
+              ${proj.bullets.map((b) => `<li>${b}</li>`).join("")}
+            </ul>
+          `;
+        }
+
+        div.innerHTML = `
+          <h3 class="project-title">${proj.title || ""}</h3>
+          <p class="project-subtitle">${proj.subtitle || ""}</p>
+          ${bulletsHtml}
+          ${
+            proj.repository
+              ? `<p class="project-link"><a href="${proj.repository}" target="_blank">GitHub Repository</a></p>`
+              : ""
+          }
+        `;
+        projectsContainer.appendChild(div);
+      });
     }
 
     // ===== EXPERIENCE =====
@@ -77,13 +106,16 @@ fetch("data.json")
       });
     }
 
-    // ===== SKILLS =====
-    const skillsContainer = document.getElementById("skills");
-    if (skillsContainer && Array.isArray(data.skills)) {
-      data.skills.forEach((skill) => {
-        const li = document.createElement("li");
-        li.textContent = skill;
-        skillsContainer.appendChild(li);
+    // ===== CORE COMPETENCIES =====
+    const coreContainer = document.getElementById("core-competencies");
+    if (coreContainer && Array.isArray(data.core_competencies)) {
+      data.core_competencies.forEach((comp) => {
+        const p = document.createElement("p");
+        const itemsText = Array.isArray(comp.items)
+          ? comp.items.join(" · ")
+          : "";
+        p.innerHTML = `<strong>${comp.category}:</strong> ${itemsText}`;
+        coreContainer.appendChild(p);
       });
     }
 
@@ -122,24 +154,6 @@ fetch("data.json")
           <p>${volunteer.description || ""}</p>
         `;
         volunteeringContainer.appendChild(div);
-      });
-    }
-
-    // ===== OPEN SOURCE (opcional e só se existir container no HTML) =====
-    const opensourceContainer = document.getElementById("opensource");
-    if (
-      opensourceContainer &&
-      Array.isArray(data.opensource) &&
-      data.opensource.length > 0
-    ) {
-      data.opensource.forEach((contribution) => {
-        const div = document.createElement("div");
-        div.innerHTML = `
-          <h3>${contribution.project || ""}</h3>
-          <p>${contribution.description || ""}</p>
-          <p><a href="${contribution.link || "#"}" target="_blank">View Contribution</a></p>
-        `;
-        opensourceContainer.appendChild(div);
       });
     }
 
