@@ -1,166 +1,138 @@
 {
-  "name": "Olavio Lacerda Bueno Junior",
-  "title": "Software Engineer",
-  "location": "Porto Alegre, Rio Grande do Sul, Brazil",
-  "email": "contact@olavio.dev",
-  "linkedin": "https://www.linkedin.com/in/olaviolacerda/",
-  "github": "https://github.com/olaviolacerda",
-  "summary": "I have a rich and diverse career path in software development, spanning over six years and three countries. I started as an intern at a startup, where I learned Ruby on Rails and ReactJS. I then joined a digital payments company, where I improved my skills in NodeJS, API development, and databases, and became a Technical Lead for a challenging project. I also provided remote software development consultancy services to Portugal, where I mastered ReactJS, NodeJS, and discovered Golang. In 2022, I earned an MBA in Software Architecture from IGTI, enhancing my vision for building robust solutions. I also mentored at Mais1Code, helping new talents enter the programming world.\nMy ultimate goal is to become an expert in developing reliable, secure, and high-quality applications, and to help as many people as possible find their place and grow in the software development field.\nLet’s connect and explore new possibilities together!",
+  "name": "Flávio Dias",
+  "title": "Mechanical Simulation & Analysis Engineer",
+  "location": "Santarém, Pará, Brazil",
+  "email": "flaviohasd@hotmail.com",
+  "linkedin": "https://www.linkedin.com/in/flaviohasd/",
+  "github": "https://github.com/flaviohasd",
+  "summary": "Mechanical engineer specialized in simulation, dynamic modeling, and process optimization, with solid industrial experience in HPDC/LPDC operations and published research achieving up to 99% reduction in gear-mesh dynamic responses through optimized tooth-profile modification. Skilled in CAE, MATLAB, and Python for dynamic, structural, and multiphysics simulation, integrating results with real production data for decision-making and process stability. Fluent in English (self-taught, C1/C2 level) with strong analytical thinking, technical communication, and international collaboration experience.",
   "experience": [
     {
-      "title": "Senior Developer",
-      "company": "ADP Brazil Labs",
-      "date": "Jan 2023 - Present",
+      "title": "Industrial & Process Engineer",
+      "company": "Yamaha Motor do Brasil",
+      "date": "Apr 2023 - Apr 2025",
       "tasks": [
-        "Development of micro-services and micro front-ends for ADP NextGen Apps.",
-        "Optimizing backend operations through robust and efficient implementations in Node.js.",
-        "Help to improve team’s productivity and code quality.",
-        "Contributing to the Accountant Connect project by integrating systems across the platforms, addressing complex challenges related to security and multi-technology compatibility."
+        "Managed and executed the BRL 8 million die-renewal project, covering redesign, validation, and manufacturing of HPDC molds in compliance with ISO 8062.",
+        "Applied MAGMASOFT multiphysics simulations to analyze flow, thermal balance, solidification, and porosity formation, supporting tooling redesign and process optimization.",
+        "Improved casting stability, reduced defect rates, and extended mold life through data-driven parameter optimization.",
+        "Eliminated chronic dimensional deviations using DMAIC/PDCA methodologies and root-cause analysis.",
+        "Supported engineering decisions by correlating simulation outputs with production and maintenance data."
       ]
     },
     {
-      "title": "Senior Engineer",
-      "company": "White Prompt",
-      "date": "May 2022 - Nov 2022",
+      "title": "Industrial Analyst",
+      "company": "Yamaha Motor do Brasil",
+      "date": "Mar 2021 - Dec 2022",
       "tasks": [
-        "Create and maintain features for Frontend/Backend and DevOps purposes.",
-        "Help to improve team’s productivity and code quality."
+        "Conducted constraint evaluation and process diagnostics in welding and stamping systems.",
+        "Applied PDCA/DMAIC to eliminate recurring issues and enhance process reliability.",
+        "Delivered measurable improvements in rework reduction and process stability."
       ]
     },
     {
-      "title": "Software Developer",
-      "company": "Adentis -> Bolttech",
-      "date": "May 2021 - May 2022",
+      "title": "Mechanical Engineering Intern",
+      "company": "UFAM - Faculty of Technology",
+      "date": "May 2022 - Aug 2022",
       "tasks": [
-        "Create new features for Frontend or Backend purposes.",
-        "Maintenance of company’s product, fixing both projects, front and back.",
-        "Help to improve team’s productivity and code quality."
+        "Led the restructuring of the Mechanical Systems and Control Laboratory, including installation of a laser cutting machine and redesign of the infrastructure.",
+        "Implemented 5S techniques, authored a best-practices manual, and improved safety and accessibility.",
+        "Enabled simultaneous experiments and supported the lab’s physical expansion."
       ]
     },
     {
-      "title": "Technical Lead Developer",
-      "company": "Phi",
-      "date": "Oct 2020 - May 2021",
+      "title": "Teaching Assistant - Mechanical Vibrations",
+      "company": "UFAM - Federal University of Amazonas",
+      "date": "May 2022 - Dec 2022",
       "tasks": [
-        "Help the team to be more confident, productive and learn a bunch of new things.",
-        "Creating whole new microservices for banking purposes.",
-        "Azure DevOps environment (documentation, deploy, repositories, scrum board).",
-        "Async and synchronous microservices communication.",
-        "Banking and providers integrations."
+        "Supported vibration measurement and analysis using accelerometers and DAQ systems.",
+        "Guided students in FFT analysis, signal interpretation, and correlation between experimental and analytical data."
       ]
     },
     {
-      "title": "Fullstack Software Developer",
-      "company": "Phi",
-      "date": "Jul 2019 - Oct 2020",
+      "title": "Engineering Intern",
+      "company": "3M do Brasil",
+      "date": "Jan 2020 - Feb 2021",
       "tasks": [
-        "Digital accounts integrations, financial transactions processing.",
-        "Card Issuing (integrations).",
-        "Build Node and Typescript APIs based on Microservice Architecture.",
-        "Async and synchronous microservices communication.",
-        "Banking and providers integrations."
-      ]
-    },
-    {
-      "title": "Fullstack Developer",
-      "company": "Real Networking",
-      "date": "Sep 2018 - Jul 2019",
-      "tasks": [
-        "Create new features for Frontend or Backend purposes.",
-        "Maintenance of PostgreSQL database hosted in the cloud.",
-        "Maintenance of company’s product, fixing both projects, front (React.js) and back (Ruby on Rails).",
-        "Configuration of the environment (From Heroku/Azure to AWS and then to Google Cloud).",
-        "Help to improve team’s productivity and code quality.",
-        "Mentoring new developers."
-      ]
-    },
-    {
-      "title": "Intern",
-      "company": "Real Networking",
-      "date": "Jul 2017 - Aug 2018",
-      "tasks": [
-        "Create new features for Frontend or Backend purposes.",
-        "Maintenance of PostgreSQL database hosted in the cloud.",
-        "Maintenance of company’s product, fixing both projects, front (React.js) and back (Ruby on Rails)."
+        "Developed reliability dashboards (OEE, MTBF, MTTR) integrating maintenance and production data.",
+        "Supported preventive maintenance planning and equipment reliability analysis."
       ]
     }
   ],
   "education": [
     {
-      "degree": "MBA",
-      "field": "Software Architecture",
-      "institution": "Institute of Management in Information Technology",
-      "date": "2021 - Jan 2022"
-    },
-    {
       "degree": "Bachelor of Science",
-      "field": "Computer Science",
-      "institution": "UniRitter",
-      "date": "Mar 2014 - Aug 2018"
+      "field": "Mechanical Engineering",
+      "institution": "Federal University of Amazonas (UFAM)",
+      "date": "2015 - 2022"
     }
   ],
   "skills": [
-    "JavaScript",
-    "TypeScript",
-    "Node.js",
-    "React.js",
-    "Linux",
-    "Docker"
+    "CAE",
+    "MATLAB",
+    "Python",
+    "Multiphysics Simulation",
+    "Optimization",
+    "CAD/CAE (SolidWorks, Inventor, Solid Edge, AutoCAD)",
+    "FEA/FEM (modal, static, dynamic, stress analysis)",
+    "Power BI",
+    "Excel Advanced",
+    "Root-Cause Analysis",
+    "DMAIC",
+    "PDCA",
+    "FMEA",
+    "PPAP",
+    "ISO 8062",
+    "ISO 9001"
   ],
   "certifications": [
     {
-      "name": "Designing an Accessible User Experience",
-      "institution": "Deque University",
-      "date": "May 2023"
+      "name": "IBM Data Analyst",
+      "institution": "IBM Skills Network",
+      "date": "2023"
     },
     {
-      "name": "JS Expert",
-      "institution": "EW Academy",
-      "date": "Dec 2022"
+      "name": "CS50: Introduction to Computer Science",
+      "institution": "MIT/edX",
+      "date": "2023"
     },
     {
-      "name": "EF SET English Certificate 78/100 (C2 Proficient)",
-      "institution": "EF SET",
-      "date": "Dec 2021"
+      "name": "Lean Six Sigma Green Belt",
+      "institution": "FM2S Education & Consulting",
+      "date": "2022"
     },
     {
-      "name": "Software Architecture Bootcamp",
-      "institution": "Institute of Management in Information Technology",
-      "date": "Sep 2020"
+      "name": "MAGMASOFT Simulation Training",
+      "institution": "Yamaha Motor do Brasil",
+      "date": "2023"
     },
     {
-      "name": "Node.js, Typescript, TDD, Clean Architecture and SOLID",
-      "institution": "Udemy",
-      "date": "Jun 2020"
+      "name": "Minitab Statistical Tools",
+      "institution": "FM2S Education & Consulting",
+      "date": "2022"
     },
     {
-      "name": "Software Architecture: Domain-Driven Design",
-      "institution": "LinkedIn",
-      "date": "Mar 2020"
-    },
-    {
-      "name": "Node.js for Beginners",
-      "institution": "NodeBR",
-      "date": "Jan 2019"
-    },
-    {
-      "name": "React.js Developer",
-      "institution": "Alura",
-      "date": "Jun 2017"
-    },
-    {
-      "name": "Ruby on Rails Developer",
-      "institution": "Alura",
-      "date": "Jan 2017"
+      "name": "Power BI - Data Visualization",
+      "institution": "Microsoft / DataCamp",
+      "date": "2022"
     }
   ],
-  "languages": ["Portuguese: Native", "English: Professional proficiency"],
-  "volunteering": [
+  "languages": [
+    "Portuguese: Native",
+    "English: Fluent (C1/C2 self-taught; full professional proficiency)"
+  ],
+  "projects": [
     {
-      "role": "Development Mentor",
-      "organization": "Mais1Code",
-      "date": "Jul 2021 - Dec 2021",
-      "description": "Taught programming to teenagers from communities at São Paulo, remotely. This initiative aimed to provide better opportunities and contribute to community development through programming education."
+      "title": "Gear Mesh Vibration Optimization",
+      "description": "Developed and validated an alternative dynamic model for spur-gear vibration prediction with improved equivalent-mass formulation. Achieved up to 99% reduction in dynamic responses through MATLAB-based simulations. Published in the Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer).",
+      "repository": "https://github.com/flaviohasd/TPM-Vibration"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Vibration attenuation on spur gears through optimal profile modification",
+      "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer)",
+      "year": "2023",
+      "link": "https://rdcu.be/ds3ID"
     }
   ]
 }
