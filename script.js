@@ -28,10 +28,22 @@ fetch("data.json")
     const educationContainer = document.getElementById("education");
     data.education.forEach((edu) => {
       const eduDiv = document.createElement("div");
+    
+      let commentsHtml = "";
+      if (edu.comments && edu.comments.length > 0) {
+        commentsHtml = `
+          <ul>
+            ${edu.comments.map((c) => `<li>${c}</li>`).join("")}
+          </ul>
+        `;
+      }
+    
       eduDiv.innerHTML = `
         <strong>${edu.degree} in ${edu.field}</strong>
         <p class="date">${edu.date}</p>
+        ${commentsHtml}
       `;
+    
       educationContainer.appendChild(eduDiv);
     });
 
