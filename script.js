@@ -1,166 +1,189 @@
-fetch("data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    // ===== HEADER =====
-    document.title = `${data.name} - Resume`;
+// ===================================================================
+// Detecta a versão do currículo pela URL
+// Ex: resume?cae  -> carrega "cae.json"
+// ===================================================================
 
-    const nameEl = document.getElementById("name");
-    const titleEl = document.getElementById("title");
-    const subsummaryEl = document.getElementById("subsummary");
-    const contactEl = document.getElementById("contact");
-    const linksEl = document.getElementById("links");
-    const summaryEl = document.getElementById("summary");
+function getProfileFile() {
+  let raw = window.location.search.replace("?", "").trim().toLowerCase();
 
-    if (nameEl) nameEl.textContent = data.name || "";
-    if (titleEl) titleEl.textContent = data.title || "";
-    if (subsummaryEl) subsummaryEl.textContent = data.subsummary || "";
+  // se nao veio nada → versão padrão
+  if (!raw) return "cae.json";
 
-    if (contactEl) {
-      contactEl.textContent = `${data.location || ""} | ✉️ ${data.email || ""}`;
-    }
+  // monta o nome do json
+  return `${raw}.json`;
+}
 
-    if (linksEl) {
-      linksEl.innerHTML = `
-        🌐 <a href="${data.linkedin || "#"}" target="_blank">LinkedIn</a> |
-        <a href="${data.github || "#"}" target="_blank">GitHub</a>
-      `;
-    }
+// Carrega o JSON correto
+const PROFILE_FILE = getProfileFile();
 
-    if (summaryEl) {
-      summaryEl.textContent = data.summary || "";
-    }
+// ===================================================================
+// Renderiza o currículo
+// ===================================================================
 
-    // ===== SELECTED PROJECTS & RESEARCH =====
-    const projectsContainer = document.getElementById("projects");
-    if (projectsContainer && Array.isArray(data.projects)) {
-      data.projects.forEach((proj) => {
-        const div = document.createElement("div");
+function loadCV(file) {
+  fetch(file)
+    .then((res) => res.json())
+    .then((data) => renderCV(data))
+    .catch((err) => console.error("Erro ao carregar JSON:", err));
+}
 
-        let bulletsHtml = "";
-        if (Array.isArray(proj.bullets) && proj.bullets.length > 0) {
-          bulletsHtml = `
-            <ul>
-              ${proj.bullets.map((b) => `<li>${b}</li>`).join("")}
-            </ul>
-          `;
-        }
+loadCV(PROFILE_FILE);
 
-        div.innerHTML = `
-          <h3 class="project-title">${proj.title || ""}</h3>
-          <p class="project-subtitle">${proj.subtitle || ""}</p>
-          ${bulletsHtml}
-          ${
-            proj.repository
-              ? `<p class="project-link"><a href="${proj.repository}" target="_blank">GitHub Repository</a></p>`
-              : ""
-          }
-        `;
-        projectsContainer.appendChild(div);
-      });
-    }
+// ===================================================================
+// Função que preenche o currículo com os dados carregados
+// ===================================================================
 
-    // ===== EXPERIENCE =====
-    const experienceContainer = document.getElementById("experience");
-    if (experienceContainer && Array.isArray(data.experience)) {
-      data.experience.forEach((job) => {
-        const jobDiv = document.createElement("div");
+function renderCV(data) {
+  // HEADER
+  document.title = `${data.name} - Resume`;
 
-        const tasksHtml =
-          Array.isArray(job.tasks) && job.tasks.length > 0
-            ? `<ul>${job.tasks.map((t) => `<li>${t}</li>`).join("")}</ul>`
-            : "";
+  document.getElementById("name").textContent = data.name || "";
+  document.getElementById("title").textContent = data.title || "";
+  document.getElementById("subsummary").textContent = data.subsummary || "";
+  document.getElementById(
+    "contact"
+  ).textContent = `${data.location || ""} | ✉️ ${data.email || ""}`;
 
-        jobDiv.innerHTML = `
-          <h3>${job.title || ""} – ${job.company || ""}</h3>
-          <p class="date">${job.date || ""}</p>
-          ${tasksHtml}
-        `;
+  document.getElementById("links").innerHTML = `
+    🌐 <a href="${data.linkedin}" target="_blank">LinkedIn</a> |
+    <a href="${data.github}" target="_blank">GitHub</a>
+  `;
 
-        experienceContainer.appendChild(jobDiv);
-      });
-    }
+  document.getElementById("summary").textContent = data.summary || "";
 
-    // ===== EDUCATION =====
-    const educationContainer = document.getElementById("education");
-    if (educationContainer && Array.isArray(data.education)) {
-      data.education.forEach((edu) => {
-        const eduDiv = document.createElement("div");
+  // LIMPA CONTAINERS
+  const containers = [
+    "experience",
+    "core-competencies",
+    "education",
+    "projects",
+    "certifications",
+    "skills",
+    "languages",
+    "volunteering",
+  ];
 
-        let commentsHtml = "";
-        if (Array.isArray(edu.comments) && edu.comments.length > 0) {
-          commentsHtml = `
-            <ul>
-              ${edu.comments.map((c) => `<li>${c}</li>`).join("")}
-            </ul>
-          `;
-        }
+  containers.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = "";
+  });
 
-        eduDiv.innerHTML = `
-          <strong>${edu.degree || ""} in ${edu.field || ""}</strong>
-          <p><em>${edu.institution || ""}</em></p>
-          <p class="date">${edu.date || ""}</p>
-          ${commentsHtml}
-        `;
+  // EXPERIENCE
+  if (Array.isArray(data.experience)) {
+    const div = document.getElementById("experience");
+    data.experience.forEach((job) => {
+      const item = document.createElement("div");
 
-        educationContainer.appendChild(eduDiv);
-      });
-    }
-
-    // ===== CORE COMPETENCIES =====
-    const coreContainer = document.getElementById("core-competencies");
-    if (coreContainer && Array.isArray(data.core_competencies)) {
-      data.core_competencies.forEach((comp) => {
-        const p = document.createElement("p");
-        const itemsText = Array.isArray(comp.items)
-          ? comp.items.join(" · ")
+      const tasks =
+        job.tasks && job.tasks.length
+          ? `<ul>${job.tasks.map((t) => `<li>${t}</li>`).join("")}</ul>`
           : "";
-        p.innerHTML = `<strong>${comp.category}:</strong> ${itemsText}`;
-        coreContainer.appendChild(p);
-      });
-    }
 
-    // ===== CERTIFICATIONS =====
-    const certificationsContainer = document.getElementById("certifications");
-    if (certificationsContainer && Array.isArray(data.certifications)) {
-      data.certifications.forEach((cert) => {
-        const li = document.createElement("li");
-        li.textContent = `${cert.name} - ${cert.institution} (${cert.date})`;
-        certificationsContainer.appendChild(li);
-      });
-    }
+      item.innerHTML = `
+        <h3>${job.title} – ${job.company}</h3>
+        <p class="date">${job.date}</p>
+        ${tasks}
+      `;
+      div.appendChild(item);
+    });
+  }
 
-    // ===== LANGUAGES =====
-    const languagesEl = document.getElementById("languages");
-    if (languagesEl) {
-      if (Array.isArray(data.languages)) {
-        languagesEl.textContent = data.languages.join(" | ");
-      } else {
-        languagesEl.textContent = data.languages || "";
-      }
-    }
+  // CORE COMPETENCIES
+  if (Array.isArray(data.core_competencies)) {
+    const div = document.getElementById("core-competencies");
+    data.core_competencies.forEach((c) => {
+      const p = document.createElement("p");
+      p.innerHTML = `<strong>${c.category}:</strong> ${c.items.join(" · ")}`;
+      div.appendChild(p);
+    });
+  }
 
-    // ===== VOLUNTEERING (opcional) =====
-    const volunteeringContainer = document.getElementById("volunteering");
-    if (
-      volunteeringContainer &&
-      Array.isArray(data.volunteering) &&
-      data.volunteering.length > 0
-    ) {
-      data.volunteering.forEach((volunteer) => {
-        const div = document.createElement("div");
-        div.innerHTML = `
-          <h3>${volunteer.role || ""} – ${volunteer.organization || ""}</h3>
-          <p class="date">${volunteer.date || ""}</p>
-          <p>${volunteer.description || ""}</p>
-        `;
-        volunteeringContainer.appendChild(div);
-      });
-    }
+  // EDUCATION
+  if (Array.isArray(data.education)) {
+    const div = document.getElementById("education");
+    data.education.forEach((edu) => {
+      const item = document.createElement("div");
 
-    // ===== FOOTER =====
-    const footerEl = document.getElementById("footer");
-    if (footerEl) {
-      footerEl.textContent = `© ${new Date().getFullYear()} - ${data.name || ""}`;
-    }
-  })
-  .catch((error) => console.error("Error loading the data:", error));
+      const comments =
+        edu.comments && edu.comments.length
+          ? `<ul>${edu.comments.map((c) => `<li>${c}</li>`).join("")}</ul>`
+          : "";
+
+      item.innerHTML = `
+        <strong>${edu.degree} in ${edu.field}</strong>
+        <p><em>${edu.institution}</em></p>
+        <p class="date">${edu.date}</p>
+        ${comments}
+      `;
+      div.appendChild(item);
+    });
+  }
+
+  // PROJECTS
+  if (Array.isArray(data.projects)) {
+    const div = document.getElementById("projects");
+    data.projects.forEach((proj) => {
+      const item = document.createElement("div");
+
+      const bullets =
+        proj.bullets && proj.bullets.length
+          ? `<ul>${proj.bullets.map((b) => `<li>${b}</li>`).join("")}</ul>`
+          : "";
+
+      item.innerHTML = `
+        <h3>${proj.title}</h3>
+        ${proj.subtitle ? `<p class="project-subtitle">${proj.subtitle}</p>` : ""}
+        ${bullets}
+        ${
+          proj.repository
+            ? `<p><a href="${proj.repository}" target="_blank">GitHub Repository</a></p>`
+            : ""
+        }
+      `;
+      div.appendChild(item);
+    });
+  }
+
+  // CERTIFICATIONS
+  if (Array.isArray(data.certifications)) {
+    const ul = document.getElementById("certifications");
+    data.certifications.forEach((cert) => {
+      const li = document.createElement("li");
+      li.textContent = `${cert.name} - ${cert.institution} (${cert.date})`;
+      ul.appendChild(li);
+    });
+  }
+
+  // SKILLS
+  if (Array.isArray(data.skills)) {
+    const ul = document.getElementById("skills");
+    data.skills.forEach((skill) => {
+      const li = document.createElement("li");
+      li.textContent = skill;
+      ul.appendChild(li);
+    });
+  }
+
+  // LANGUAGES
+  if (Array.isArray(data.languages)) {
+    document.getElementById("languages").textContent =
+      data.languages.join(" | ");
+  }
+
+  // VOLUNTEERING
+  if (Array.isArray(data.volunteering)) {
+    const div = document.getElementById("volunteering");
+    data.volunteering.forEach((v) => {
+      const item = document.createElement("div");
+      item.innerHTML = `
+        <h3>${v.role} – ${v.organization}</h3>
+        <p class="date">${v.date}</p>
+        <p>${v.description}</p>
+      `;
+      div.appendChild(item);
+    });
+  }
+
+  // FOOTER
+  document.getElementById("footer").textContent = `© ${new Date().getFullYear()} - ${data.name}`;
+}
