@@ -22,7 +22,7 @@
     {
       "title": "Industrial Analyst",
       "company": "Yamaha Motor do Brasil",
-      "date": "Mar 2021 - Dec 2022",
+      "date": "Jul 2021 - Nov 2021",
       "tasks": [
         "Conducted constraint evaluation and process diagnostics in welding and stamping systems.",
         "Applied PDCA/DMAIC to eliminate recurring issues and enhance process reliability.",
@@ -42,7 +42,7 @@
     {
       "title": "Teaching Assistant - Mechanical Vibrations",
       "company": "UFAM - Federal University of Amazonas",
-      "date": "May 2022 - Dec 2022",
+      "date": "May 2022 - Sep 2022",
       "tasks": [
         "Supported vibration measurement and analysis using accelerometers and DAQ systems.",
         "Guided students in FFT analysis, signal interpretation, and correlation between experimental and analytical data."
@@ -51,7 +51,7 @@
     {
       "title": "Engineering Intern",
       "company": "3M do Brasil",
-      "date": "Jan 2020 - Feb 2021",
+      "date": "Jan 2020 - Jul 2021",
       "tasks": [
         "Developed reliability dashboards (OEE, MTBF, MTTR) integrating maintenance and production data.",
         "Supported preventive maintenance planning and equipment reliability analysis."
@@ -67,7 +67,6 @@
     }
   ],
   "skills": [
-    "CAE",
     "MATLAB",
     "Python",
     "Multiphysics Simulation",
@@ -77,6 +76,7 @@
     "Power BI",
     "Excel Advanced",
     "Root-Cause Analysis",
+    "Lean Six Sigma",
     "DMAIC",
     "PDCA",
     "FMEA",
@@ -97,22 +97,22 @@
     },
     {
       "name": "Lean Six Sigma Green Belt",
-      "institution": "FM2S Education & Consulting",
-      "date": "2022"
+      "institution": "Escola DNC",
+      "date": "2021"
     },
     {
       "name": "MAGMASOFT Simulation Training",
-      "institution": "Yamaha Motor do Brasil",
-      "date": "2023"
+      "institution": "MAGMA",
+      "date": "2024"
     },
     {
       "name": "Minitab Statistical Tools",
-      "institution": "FM2S Education & Consulting",
+      "institution": "Escola DNC",
       "date": "2022"
     },
     {
       "name": "Power BI - Data Visualization",
-      "institution": "Microsoft / DataCamp",
+      "institution": "Escola DNC",
       "date": "2022"
     }
   ],
@@ -123,7 +123,7 @@
   "projects": [
     {
       "title": "Gear Mesh Vibration Optimization",
-      "description": "Developed and validated an alternative dynamic model for spur-gear vibration prediction with improved equivalent-mass formulation. Achieved up to 99% reduction in dynamic responses through MATLAB-based simulations. Published in the Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer).",
+      "description": "Implemented an alternative dynamic model for spur-gear vibration prediction with improved equivalent-mass formulation. Achieved up to 99% reduction in dynamic responses through MATLAB-based simulations. Published in the Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer).",
       "repository": "https://github.com/flaviohasd/TPM-Vibration"
     }
   ],
