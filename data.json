@@ -7,6 +7,7 @@
   "github": "https://github.com/flaviohasd",
   "summary": "Mechanical engineer specialized in simulation, dynamic modeling, and process optimization, with solid industrial experience in HPDC/LPDC operations and published research achieving up to 99% reduction in gear-mesh dynamic responses through optimized tooth-profile modification. Skilled in CAE, MATLAB, and Python for dynamic, structural, and multiphysics simulation, integrating results with real production data for decision-making and process stability. Fluent in English (self-taught, C1/C2 level) with strong analytical thinking, technical communication, and international collaboration experience.",
   "subsummary": "Industrial & Process Engineering background — CAE · Optimization",
+
   "experience": [
     {
       "title": "Industrial & Process Engineer",
@@ -59,6 +60,7 @@
       ]
     }
   ],
+
   "education": [
     {
       "degree": "Bachelor of Science",
@@ -80,6 +82,63 @@
       ]
     }
   ],
+
+  "core_competencies": [
+    {
+      "category": "Simulation & Modeling",
+      "items": [
+        "MATLAB",
+        "MAGMASOFT",
+        "Python",
+        "dynamic systems",
+        "numerical optimization",
+        "vibration & stress analysis"
+      ]
+    },
+    {
+      "category": "Casting Processes",
+      "items": [
+        "HPDC/LPDC simulation",
+        "thermal/flow modeling",
+        "defect prediction",
+        "parameter optimization"
+      ]
+    },
+    {
+      "category": "CAD/CAE",
+      "items": [
+        "SolidWorks",
+        "Inventor",
+        "Solid Edge",
+        "FEA/FEM (modal, static, dynamic, stress analysis)",
+        "AutoCAD",
+        "Cimatron"
+      ]
+    },
+    {
+      "category": "Data & Diagnostics",
+      "items": [
+        "Power BI",
+        "Excel (advanced)",
+        "Minitab",
+        "root-cause analysis",
+        "process monitoring"
+      ]
+    },
+    {
+      "category": "Engineering Methods",
+      "items": [
+        "DMAIC",
+        "PDCA",
+        "FMEA",
+        "PPAP",
+        "ISO 8062",
+        "ISO 9001",
+        "continuous improvement"
+      ]
+    }
+  ],
+
   "skills": [
     "MATLAB",
     "Python",
@@ -98,6 +157,7 @@
     "ISO 8062",
     "ISO 9001"
   ],
+
   "certifications": [
     {
       "name": "IBM Data Analyst",
@@ -135,17 +195,27 @@
       "date": "2022"
     }
   ],
+
   "languages": [
     "Portuguese: Native",
     "English: Fluent (C1/C2 self-taught; full professional proficiency)"
   ],
+
   "projects": [
     {
       "title": "Gear Mesh Vibration Optimization",
-      "description": "Implemented an alternative dynamic model for spur-gear vibration prediction with improved equivalent-mass formulation. Achieved up to 99% reduction in dynamic responses through MATLAB-based simulations. Published in the Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer).",
+      "subtitle": "Published Research + Open-Source Implementation (2023)",
+      "bullets": [
+        "Refined and implemented an alternative dynamic model for spur-gear vibration prediction, introducing an improved equivalent-mass formulation.",
+        "Modeled tooth-profile modification (linear addendum relief) and optimized parameters using golden-section search and polynomial interpolation.",
+        "Achieved 94–99% reduction in dynamic responses (displacement, velocity, acceleration, and mesh force), with convergence toward quasi-static behavior.",
+        "Fully implemented in MATLAB as an open-source toolkit (TPM-Vibration).",
+        "Results published in the Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer)."
+      ],
       "repository": "https://github.com/flaviohasd/TPM-Vibration"
     }
   ],
+
   "publications": [
     {
       "title": "Vibration attenuation on spur gears through optimal profile modification",
