@@ -42,7 +42,7 @@ function renderCV(data) {
   document.getElementById("subsummary").textContent = data.subsummary || "";
   document.getElementById(
     "contact"
-  ).textContent = `${data.location || ""} | ✉️ ${data.email || ""}`;
+  ).textContent = `${data.location || ""} | ✉️ ${data.email || ""} | 📱 ${data.phone || ""}`;
 
   document.getElementById("links").innerHTML = `
     🌐 <a href="${data.linkedin}" target="_blank">LinkedIn</a> |
