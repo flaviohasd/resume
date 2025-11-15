@@ -69,7 +69,7 @@
         "Excelled in the areas of strength of materials, mechanical vibrations, machine elements, modeling, analysis, and control of dynamic systems."
       ]
     }
-    {
+    {,
       "degree": "Project Manager Full Stack & Green Belt Lean Six Sigma",
       "field": "Project Management",
       "institution": "Escola DNC",
@@ -105,12 +105,12 @@
       "date": "2023"
     },
     {
-      "name": "CS50: Introduction to Computer Science",
+      "name": "CS50: Introduction to Computer Science with Python",
       "institution": "MIT/edX",
       "date": "2023"
     },
     {
-      "name": "Lean Six Sigma Green Belt",
+      "name": "Project Managment & Green Belt Lean Six Sigma & Scrum Master",
       "institution": "Escola DNC",
       "date": "2021"
     },
@@ -118,6 +118,10 @@
       "name": "MAGMASOFT Simulation Training",
       "institution": "MAGMA",
       "date": "2024"
+    },    {
+      "name": "IBM Data Science (Python, SQL, ML)",
+      "institution": "IBM Skills Network - Coursera",
+      "date": "2023"
     },
     {
       "name": "Minitab Statistical Tools",
