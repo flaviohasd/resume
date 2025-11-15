@@ -4,7 +4,7 @@ fetch("data.json")
     document.title = `${data.name} - Resume`; // Set the document title dynamically
     document.getElementById("name").textContent = data.name;
     document.getElementById("title").textContent = data.title;
-    document.getElementById("subsummary").textContent = data.title;
+    document.getElementById("subsummary").textContent = data.subsummary;
     document.getElementById(
       "contact"
     ).textContent = `${data.location} | ✉️ ${data.email}`;
