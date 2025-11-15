@@ -3,7 +3,11 @@
   box-sizing: border-box;
 }
 
-body, h1, h2, p, ul {
+body,
+h1,
+h2,
+p,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -25,14 +29,14 @@ body {
   padding: 24px 28px;
 }
 
-/* ==== HEADER / CABEÇALHO ==== */
+/* ==== HEADER ==== */
 header {
   text-align: left;
   margin-bottom: 16px;
 }
 
 #name {
-  font-size: 32px;           /* maior fonte: nome */
+  font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -41,14 +45,14 @@ header {
 }
 
 #title {
-  font-size: 18px;           /* título logo abaixo */
+  font-size: 18px;
   font-weight: 600;
   color: #333;
   margin-bottom: 2px;
 }
 
 #subsummary {
-  font-size: 14px;           /* linha de apoio (subsummary) */
+  font-size: 14px;
   font-style: italic;
   color: #555;
   margin-bottom: 8px;
@@ -76,7 +80,7 @@ section {
 }
 
 section h2 {
-  font-size: 15px;           /* título da seção */
+  font-size: 15px;
   margin-bottom: 6px;
   color: #444;
   text-transform: uppercase;
@@ -92,12 +96,7 @@ section ul {
   color: #555;
 }
 
-/* ==== PARÁGRAFOS ==== */
-section p {
-  margin-top: 4px;
-}
-
-/* ==== LISTAS GERAIS ==== */
+/* ==== LISTAS ==== */
 section ul {
   list-style: disc;
   margin-top: 4px;
@@ -111,12 +110,14 @@ section ul li {
 /* ==== EXPERIENCE / EDUCATION / VOLUNTEERING ==== */
 #experience > div,
 #education > div,
-#volunteering > div {
+#volunteering > div,
+#projects > div {
   margin-bottom: 12px;
 }
 
 #experience h3,
-#volunteering h3 {
+#volunteering h3,
+.project-title {
   font-size: 14px;
   color: #444;
   margin: 4px 0 2px 0;
@@ -136,30 +137,29 @@ section ul li {
   color: #333;
 }
 
-/* ==== SKILLS COMO GRID ==== */
-#skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  padding-left: 0;
-  margin-left: 12px;   /* alinha com o texto das seções */
+/* ==== CORE COMPETENCIES ==== */
+#core-competencies p {
+  margin-top: 4px;
 }
 
-#skills li {
-  width: calc(33.33% - 16px);
-  list-style-type: disc;
+/* ==== PROJECTS & RESEARCH ==== */
+.project-subtitle {
   font-size: 13px;
-}
-
-/* ==== VOLUNTEERING ESPECÍFICO ==== */
-#volunteering h3 {
-  font-size: 14px;
+  font-style: italic;
   color: #444;
+  margin-left: 12px;
+  margin-bottom: 4px;
 }
 
-#volunteering p {
-  color: #555;
+.project-link a {
+  margin-left: 12px;
   font-size: 13px;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.project-link a:hover {
+  text-decoration: underline;
 }
 
 /* ==== FOOTER ==== */
@@ -172,7 +172,7 @@ footer {
   padding-top: 8px;
 }
 
-/* ==== MODO IMPRESSÃO ==== */
+/* ==== IMPRESSÃO ==== */
 @media print {
   body {
     background: #fff;
