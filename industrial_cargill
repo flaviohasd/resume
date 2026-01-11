@@ -1,0 +1,198 @@
+{
+  "name": "Flávio Dias",
+  "title": "Engenheiro de Processos Industriais",
+  "location": "Santarém, Pará, Brazil (Residente)",
+  "email": "flaviohasd@hotmail.com",
+  "phone": "+55 92 984776604",
+  "linkedin": "https://www.linkedin.com/in/flaviohasd/",
+  "github": "https://github.com/flaviohasd",
+
+  "summary": "Engenheiro de Processos com experiência em ambiente fabril, atuando com análise de processo, CAPEX industrial, digitalização (MES), melhoria contínua e indicadores operacionais. Experiência conduzindo diagnóstico técnico, suporte ao chão de fábrica, redução de variabilidade e padronização operacional. Forte capacidade de tomada de decisão baseada em dados, com interfaces entre engenharia, produção, qualidade e fornecedores. Inglês avançado e histórico de representação técnica internacional.",
+
+  "subsummary": "Processos Industriais · CAPEX · MES · Lean · PDCA/DMAIC · Dados e Indicadores · Chão de Fábrica · Estabilidade de Processo",
+
+  "experience": [
+    {
+      "title": "Industrial Process Engineer",
+      "company": "Yamaha Motor Componentes da Amazônia",
+      "date": "Abr 2023 – Abr 2025",
+      "tasks": [
+        "Responsável funcional por programa de renovação de moldes com orçamento anual de R$ 8 milhões, incluindo justificativa técnica, definição de escopo, priorização, seleção de fornecedores, controle de cronograma e validação de engenharia.",
+        "Atuação direta no chão de fábrica para diagnóstico de defeitos, investigação de causas e definição de ações corretivas visando estabilização de processo e redução de perdas.",
+        "Implementação de sistema MES para monitoramento e rastreabilidade de parâmetros de processo, ampliando visibilidade operacional e suporte à tomada de decisão.",
+        "Estruturação de indicadores operacionais e relatórios em Excel e Power BI para acompanhamento de performance, variabilidade e eficiência.",
+        "Projeto de readequação de layout fabril, melhorando fluxo produtivo e integração entre produção, engenharia e manutenção.",
+        "Representação técnica internacional apresentando caso completo (diagnóstico → solução → resultados) sobre integração MES em conferência no exterior.",
+        "Reportava ao Chefe de Engenharia com autonomia técnica e interface direta com produção, qualidade e fornecedores."
+      ]
+    },
+    {
+      "title": "Engineering Analyst – Tooling & Stamping",
+      "company": "Metalúrgica Sato da Amazônia",
+      "date": "Mar 2023 – Abr 2023",
+      "tasks": [
+        "Desenvolvimento e revisão de ferramental para operação de estamparia, reduzindo desperdícios de matéria-prima.",
+        "Criação de procedimentos operacionais para garantir repetibilidade e padronização de processo.",
+        "Melhoria de controle de insumos químicos via ferramentas Excel, aumentando acuracidade de consumo e estoque.",
+        "Coordenação técnica de ajustes em ferramentas para aumentar confiabilidade produtiva."
+      ]
+    },
+    {
+      "title": "Industrial Analyst – Welding & Stamping",
+      "company": "Yamaha Motor da Amazônia",
+      "date": "Jul 2021 – Nov 2021",
+      "tasks": [
+        "Suporte a operações de soldagem e estamparia com análise de defeitos e definição de correções.",
+        "Condução de projetos PDCA visando estabilidade e redução de retrabalho.",
+        "Manutenção de documentação técnica, controles de qualidade e padronização.",
+        "Contribuição para conformidade ISO 9001 via padronização e ações corretivas."
+      ]
+    },
+    {
+      "title": "Maintenance Engineering Intern",
+      "company": "3M do Brasil",
+      "date": "Jan 2020 – Jul 2021",
+      "tasks": [
+        "Desenvolvimento de manuais de manutenção e checklists de inspeção, aumentando a confiabilidade diagnóstica.",
+        "Criação de dashboard Power BI para indicadores de manutenção (OEE, MTBF, MTTR).",
+        "Automação de ferramentas Excel para planejamento operacional e alocação de pessoal."
+      ]
+    },
+    {
+      "title": "Mechanical Engineering Intern",
+      "company": "UFAM – Mechanical Systems and Control Laboratory",
+      "date": "Mai 2022 – Ago 2022",
+      "tasks": [
+        "Reestruturação completa do laboratório com melhoria de layout, infraestrutura e segurança.",
+        "Implementação de 5S e produção de manual de melhores práticas.",
+        "Desenvolvimento de projeto de ampliação entregue ao setor de engenharia da universidade."
+      ]
+    },
+    {
+      "title": "Teaching Assistant – Mechanical Vibrations",
+      "company": "UFAM",
+      "date": "Jun 2022 – Set 2022",
+      "tasks": [
+        "Assistência em medições com acelerômetros e sistemas de aquisição (DAQ).",
+        "Análises FFT aplicadas a máquinas rotativas e diagnósticos vibracionais."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Programa de Renovação de Moldes (CAPEX industrial)",
+      "subtitle": "Planejamento Industrial · Fornecedores · Validação Técnica · R$ 8 milhões/ano",
+      "bullets": [
+        "Coordenação funcional do CAPEX com justificativa técnica, priorização e definição de critérios de engenharia.",
+        "Follow-up técnico com fornecedores, controle de prazos e validação de especificações.",
+        "Integração com produção e manutenção para garantir viabilidade operacional do investimento."
+      ]
+    },
+    {
+      "title": "Integração MES em Ambiente de Produção",
+      "subtitle": "Digitalização · Dados em Tempo Real · Rastreabilidade",
+      "bullets": [
+        "Implementação de MES para monitoramento e histórico de parâmetros de processo.",
+        "Aumento de visibilidade operacional e suporte a RCA e estabilização de processo.",
+        "Apresentado em conferência internacional com case completo (diagnóstico → solução → resultados)."
+      ]
+    }
+  ],
+
+  "core_competencies": [
+    {
+      "category": "Processos Industriais",
+      "items": [
+        "Chão de fábrica",
+        "Controle operacional",
+        "Layout fabril",
+        "Interface Engenharia-Produção-Manutenção",
+        "Digitalização (MES)"
+      ]
+    },
+    {
+      "category": "Melhoria Contínua",
+      "items": [
+        "Lean",
+        "PDCA",
+        "DMAIC",
+        "RCA (Ishikawa, 5 Porquês)",
+        "Redução de variabilidade e perdas"
+      ]
+    },
+    {
+      "category": "Projeto & CAPEX",
+      "items": [
+        "Justificativa técnica",
+        "Especificação",
+        "Fornecedores",
+        "Cronograma",
+        "Validação"
+      ]
+    },
+    {
+      "category": "Dados & Indicadores",
+      "items": [
+        "Excel (avançado)",
+        "Power BI",
+        "Minitab",
+        "KPIs",
+        "Análise de processo"
+      ]
+    }
+  ],
+
+  "skills": [
+    "CAPEX industrial",
+    "MES",
+    "PDCA",
+    "DMAIC",
+    "Lean",
+    "RCA",
+    "KPIs",
+    "Excel avançado",
+    "Power BI",
+    "Minitab",
+    "Processo fabril",
+    "Análise de defeito",
+    "Padronização",
+    "Layout fabril"
+  ],
+
+  "certifications": [
+    { "name": "Lean Six Sigma Green Belt", "institution": "Escola DNC", "date": "2021" },
+    { "name": "Project Manager Full Stack", "institution": "Escola DNC", "date": "2021" },
+    { "name": "Scrum Master", "institution": "PM Tech", "date": "2021" },
+    { "name": "IBM Data Science", "institution": "IBM / Coursera", "date": "2023" },
+    { "name": "Power BI Avançado", "institution": "DNC", "date": "2021" },
+    { "name": "Minitab Avançado", "institution": "DNC", "date": "2021" },
+    { "name": "MAGMASOFT Training", "institution": "MAGMA", "date": "2024" }
+  ],
+
+  "languages": [
+    "Português: Nativo",
+    "Inglês: Avançado (C1, proficiência profissional)"
+  ],
+
+  "education": [
+    {
+      "degree": "Bacharel em Engenharia Mecânica",
+      "institution": "Universidade Federal do Amazonas (UFAM)",
+      "date": "2015 – 2022",
+      "comments": [
+        "Formação em mecânica aplicada, materiais, manufatura e sistemas dinâmicos.",
+        "Pesquisa em vibrações de engrenagens com publicação em periódico internacional Qualis A2."
+      ]
+    }
+  ],
+
+  "publications": [
+    {
+      "title": "Vibration attenuation on spur gears through optimal profile modification",
+      "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)",
+      "year": "2023",
+      "link": "https://rdcu.be/ds3ID"
+    }
+  ]
+}
