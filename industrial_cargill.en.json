@@ -1,0 +1,198 @@
+{
+  "name": "Flávio Dias",
+  "title": "Industrial Process Engineer",
+  "location": "Santarém, Pará, Brazil (Local Resident)",
+  "email": "flaviohasd@hotmail.com",
+  "phone": "+55 92 984776604",
+  "linkedin": "https://www.linkedin.com/in/flaviohasd/",
+  "github": "https://github.com/flaviohasd",
+
+  "summary": "Industrial Process Engineer with experience in manufacturing environments focused on process analysis, industrial CAPEX, digitalization (MES), continuous improvement, and operational performance indicators. Skilled in technical diagnostics, shopfloor support, variability reduction, and process standardization. Strong data-driven decision-making with interfaces across engineering, operations, quality, and suppliers. Advanced English and previous international technical representation.",
+
+  "subsummary": "Industrial Processes · CAPEX · MES · Lean · PDCA/DMAIC · Data & KPIs · Shopfloor Operations · Process Stability",
+
+  "experience": [
+    {
+      "title": "Industrial Process Engineer",
+      "company": "Yamaha Motor Componentes da Amazônia",
+      "date": "Apr 2023 – Apr 2025",
+      "tasks": [
+        "Functional owner of an annual BRL 8M mold-renewal CAPEX program, including technical justification, scope definition, prioritization, supplier selection, schedule control, and engineering validation.",
+        "Direct shopfloor involvement for defect diagnostics, root-cause investigations, and corrective actions focused on process stabilization and loss reduction.",
+        "Implemented MES system for real-time monitoring and traceability of process parameters, increasing operational visibility and decision support.",
+        "Structured operational KPIs and performance dashboards in Excel and Power BI for tracking variability, efficiency, and throughput.",
+        " Led factory-layout reconfiguration projects improving production flow and integration between operations, engineering, and maintenance.",
+        "Represented the company internationally presenting a full case (diagnosis → solution → results) on MES integration in an industrial conference abroad.",
+        "Reported to the Engineering Manager with technical autonomy and direct interface with production, quality, and suppliers."
+      ]
+    },
+    {
+      "title": "Engineering Analyst – Tooling & Stamping",
+      "company": "Metalúrgica Sato da Amazônia",
+      "date": "Mar 2023 – Apr 2023",
+      "tasks": [
+        "Developed and reviewed stamping tooling, reducing raw-material waste and improving process capability.",
+        "Created operational procedures to ensure repeatability and process standardization.",
+        "Improved chemical-consumption control through Excel-based tools, increasing stock accuracy.",
+        "Coordinated tooling adjustments to improve reliability and production efficiency."
+      ]
+    },
+    {
+      "title": "Industrial Analyst – Welding & Stamping",
+      "company": "Yamaha Motor da Amazônia",
+      "date": "Jul 2021 – Nov 2021",
+      "tasks": [
+        "Supported welding and stamping operations through defect analysis and corrective-action planning.",
+        "Led PDCA projects focused on process stability and rework reduction.",
+        "Maintained technical documentation, quality controls, and standardized work procedures.",
+        "Supported ISO 9001 compliance through process standardization and corrective actions."
+      ]
+    },
+    {
+      "title": "Maintenance Engineering Intern",
+      "company": "3M do Brasil",
+      "date": "Jan 2020 – Jul 2021",
+      "tasks": [
+        "Developed maintenance manuals and inspection checklists, improving diagnostic accuracy.",
+        "Created Power BI dashboards integrating maintenance KPIs (OEE, MTBF, MTTR).",
+        "Automated Excel-based tools for operational planning and personnel allocation."
+      ]
+    },
+    {
+      "title": "Mechanical Engineering Intern",
+      "company": "UFAM – Mechanical Systems and Control Laboratory",
+      "date": "May 2022 – Aug 2022",
+      "tasks": [
+        "Led full laboratory restructuring including infrastructure, layout, and safety improvements.",
+        "Implemented 5S and authored a best-practice manual to standardize operations.",
+        "Developed an expansion project submitted to the university engineering office."
+      ]
+    },
+    {
+      "title": "Teaching Assistant – Mechanical Vibrations",
+      "company": "UFAM",
+      "date": "Jun 2022 – Sep 2022",
+      "tasks": [
+        "Assisted vibration measurements using accelerometers and DAQ systems.",
+        "Conducted FFT analyses for rotating-machinery diagnostics."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Mold-Renewal Program (Industrial CAPEX)",
+      "subtitle": "Investment Planning · Supplier Management · Technical Validation · BRL 8M/year",
+      "bullets": [
+        "Functional CAPEX ownership including technical justification, prioritization, and engineering criteria.",
+        "Technical follow-up with suppliers, schedule tracking, and specification validation.",
+        "Integrated production and maintenance requirements to ensure operational feasibility of the investment."
+      ]
+    },
+    {
+      "title": "MES Integration in Production Operations",
+      "subtitle": "Digitalization · Real-Time Data · Traceability",
+      "bullets": [
+        "Implemented MES for real-time monitoring and historical tracking of process parameters.",
+        "Increased process visibility supporting RCA and stabilization initiatives.",
+        "Presented as a full case (diagnosis → solution → results) in an international conference."
+      ]
+    }
+  ],
+
+  "core_competencies": [
+    {
+      "category": "Industrial Processes",
+      "items": [
+        "Shopfloor operations",
+        "Process control",
+        "Factory layout",
+        "Engineering–Operations–Maintenance interface",
+        "Digitalization (MES)"
+      ]
+    },
+    {
+      "category": "Continuous Improvement",
+      "items": [
+        "Lean",
+        "PDCA",
+        "DMAIC",
+        "RCA (Ishikawa, 5 Whys)",
+        "Variability and loss reduction"
+      ]
+    },
+    {
+      "category": "CAPEX & Projects",
+      "items": [
+        "Technical justification",
+        "Specification",
+        "Suppliers",
+        "Scheduling",
+        "Validation"
+      ]
+    },
+    {
+      "category": "Data & Performance",
+      "items": [
+        "Excel (advanced)",
+        "Power BI",
+        "Minitab",
+        "KPIs",
+        "Process analysis"
+      ]
+    }
+  ],
+
+  "skills": [
+    "Industrial CAPEX",
+    "MES",
+    "PDCA",
+    "DMAIC",
+    "Lean",
+    "RCA",
+    "KPIs",
+    "Excel (advanced)",
+    "Power BI",
+    "Minitab",
+    "Factory processes",
+    "Defect analysis",
+    "Standardization",
+    "Factory layout"
+  ],
+
+  "certifications": [
+    { "name": "Lean Six Sigma Green Belt", "institution": "Escola DNC", "date": "2021" },
+    { "name": "Project Manager Full Stack", "institution": "Escola DNC", "date": "2021" },
+    { "name": "Scrum Master", "institution": "PM Tech", "date": "2021" },
+    { "name": "IBM Data Science", "institution": "IBM / Coursera", "date": "2023" },
+    { "name": "Power BI Advanced", "institution": "DNC", "date": "2021" },
+    { "name": "Minitab Advanced", "institution": "DNC", "date": "2021" },
+    { "name": "MAGMASOFT Training", "institution": "MAGMA", "date": "2024" }
+  ],
+
+  "languages": [
+    "Portuguese: Native",
+    "English: Advanced (C1, professional proficiency)"
+  ],
+
+  "education": [
+    {
+      "degree": "B.Sc. in Mechanical Engineering",
+      "institution": "Federal University of Amazonas (UFAM)",
+      "date": "2015 – 2022",
+      "comments": [
+        "Training in applied mechanics, materials, manufacturing, and dynamic systems.",
+        "Research on gear-vibration modeling published in a Qualis A2 journal."
+      ]
+    }
+  ],
+
+  "publications": [
+    {
+      "title": "Vibration attenuation on spur gears through optimal profile modification",
+      "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)",
+      "year": "2023",
+      "link": "https://rdcu.be/ds3ID"
+    }
+  ]
+}
