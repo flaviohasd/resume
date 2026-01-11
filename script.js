@@ -27,55 +27,57 @@ const i18n = {
   }
 };
 
+// ===================================================================
+// Detecta a versão do currículo e idioma pela URL
+// ===================================================================
 
-// ===================================================================
-// Detecta a versão do currículo pela URL
-// Ex: resume?cae  -> carrega "cae.json"
-// ===================================================================
+const params = new URLSearchParams(window.location.search);
+const cv = params.get("cv") || "industrial";
+const lang = params.get("lang") || "en";
 
 function getProfileFile() {
-  const params = new URLSearchParams(window.location.search);
-  const profile = params.get("cv") || "industrial"; // default
-  const lang = params.get("lang") || "en"; // default EN
-  return `${profile}.${lang}.json`;
+  return `${cv}.${lang}.json`;
 }
 
-// Carrega o JSON correto
+// Carrega JSON correto
 const PROFILE_FILE = getProfileFile();
 
 // ===================================================================
-// Renderiza o currículo
+// Carrega e renderiza
 // ===================================================================
 
 function loadCV(file) {
   fetch(file)
     .then((res) => res.json())
-    .then((data) => renderCV(data))
+    .then((data) => {
+      renderCV(data);
+      applyI18n(lang);
+    })
     .catch((err) => console.error("Erro ao carregar JSON:", err));
 }
 
 loadCV(PROFILE_FILE);
 
-function switchLang(lang) {
-  const params = new URLSearchParams(window.location.search);
-  const cv = params.get("cv") || "industrial";
-  window.location.search = `?cv=${cv}&lang=${lang}`;
+// ===================================================================
+// Troca idioma via reload (bom para compartilhamento/ATS)
+// ===================================================================
+
+function switchLang(newLang) {
+  window.location.search = `?cv=${cv}&lang=${newLang}`;
 }
 
 // ===================================================================
-// Função que preenche o currículo com os dados carregados
+// Renderiza o currículo
 // ===================================================================
 
 function renderCV(data) {
-  // HEADER
   document.title = `${data.name} - Resume`;
 
   document.getElementById("name").textContent = data.name || "";
   document.getElementById("title").textContent = data.title || "";
   document.getElementById("subsummary").textContent = data.subsummary || "";
-  document.getElementById(
-    "contact"
-  ).textContent = `${data.location || ""} | ✉️ ${data.email || ""} | 📱 ${data.phone || ""}`;
+  document.getElementById("contact").textContent =
+    `${data.location || ""} | ✉️ ${data.email || ""} | 📱 ${data.phone || ""}`;
 
   document.getElementById("links").innerHTML = `
     🌐 <a href="${data.linkedin}" target="_blank">LinkedIn</a> |
@@ -84,7 +86,6 @@ function renderCV(data) {
 
   document.getElementById("summary").textContent = data.summary || "";
 
-  // LIMPA CONTAINERS
   const containers = [
     "experience",
     "core-competencies",
@@ -101,14 +102,13 @@ function renderCV(data) {
     if (el) el.innerHTML = "";
   });
 
-  // EXPERIENCE
   if (Array.isArray(data.experience)) {
     const div = document.getElementById("experience");
     data.experience.forEach((job) => {
       const item = document.createElement("div");
 
       const tasks =
-        job.tasks && job.tasks.length
+        job.tasks?.length
           ? `<ul>${job.tasks.map((t) => `<li>${t}</li>`).join("")}</ul>`
           : "";
 
@@ -121,7 +121,6 @@ function renderCV(data) {
     });
   }
 
-  // CORE COMPETENCIES
   if (Array.isArray(data.core_competencies)) {
     const div = document.getElementById("core-competencies");
     data.core_competencies.forEach((c) => {
@@ -131,14 +130,13 @@ function renderCV(data) {
     });
   }
 
-  // EDUCATION
   if (Array.isArray(data.education)) {
     const div = document.getElementById("education");
     data.education.forEach((edu) => {
       const item = document.createElement("div");
 
       const comments =
-        edu.comments && edu.comments.length
+        edu.comments?.length
           ? `<ul>${edu.comments.map((c) => `<li>${c}</li>`).join("")}</ul>`
           : "";
 
@@ -152,14 +150,13 @@ function renderCV(data) {
     });
   }
 
-  // PROJECTS
   if (Array.isArray(data.projects)) {
     const div = document.getElementById("projects");
     data.projects.forEach((proj) => {
       const item = document.createElement("div");
 
       const bullets =
-        proj.bullets && proj.bullets.length
+        proj.bullets?.length
           ? `<ul>${proj.bullets.map((b) => `<li>${b}</li>`).join("")}</ul>`
           : "";
 
@@ -177,7 +174,6 @@ function renderCV(data) {
     });
   }
 
-  // CERTIFICATIONS
   if (Array.isArray(data.certifications)) {
     const ul = document.getElementById("certifications");
     data.certifications.forEach((cert) => {
@@ -187,7 +183,6 @@ function renderCV(data) {
     });
   }
 
-  // SKILLS
   if (Array.isArray(data.skills)) {
     const ul = document.getElementById("skills");
     data.skills.forEach((skill) => {
@@ -197,13 +192,10 @@ function renderCV(data) {
     });
   }
 
-  // LANGUAGES
   if (Array.isArray(data.languages)) {
-    document.getElementById("languages").textContent =
-      data.languages.join(" | ");
+    document.getElementById("languages").textContent = data.languages.join(" | ");
   }
 
-  // VOLUNTEERING
   if (Array.isArray(data.volunteering)) {
     const div = document.getElementById("volunteering");
     data.volunteering.forEach((v) => {
@@ -217,21 +209,22 @@ function renderCV(data) {
     });
   }
 
-  // FOOTER
-  document.getElementById("footer").textContent = `© ${new Date().getFullYear()} - ${data.name}`;
+  document.getElementById("footer").textContent =
+    `© ${new Date().getFullYear()} - ${data.name}`;
 }
+
+// ===================================================================
+// Aplica tradução dos títulos
+// ===================================================================
 
 function applyI18n(lang) {
-  document.querySelector('section:nth-of-type(1) h2').textContent = i18n[lang].summary;
-  document.querySelector('section:nth-of-type(2) h2').textContent = i18n[lang].experience;
-  document.querySelector('section:nth-of-type(3) h2').textContent = i18n[lang].core;
-  document.querySelector('section:nth-of-type(4) h2').textContent = i18n[lang].education;
-  document.querySelector('section:nth-of-type(5) h2').textContent = i18n[lang].projects;
-  document.querySelector('section:nth-of-type(6) h2').textContent = i18n[lang].certifications;
-  document.querySelector('section:nth-of-type(7) h2').textContent = i18n[lang].skills;
-  document.querySelector('section:nth-of-type(8) h2').textContent = i18n[lang].languages;
-  document.querySelector('section:nth-of-type(9) h2').textContent = i18n[lang].volunteering;
+  document.querySelector("#summary-section h2").textContent = i18n[lang].summary;
+  document.querySelector("#experience-section h2").textContent = i18n[lang].experience;
+  document.querySelector("#core-section h2").textContent = i18n[lang].core;
+  document.querySelector("#education-section h2").textContent = i18n[lang].education;
+  document.querySelector("#projects-section h2").textContent = i18n[lang].projects;
+  document.querySelector("#certifications-section h2").textContent = i18n[lang].certifications;
+  document.querySelector("#skills-section h2").textContent = i18n[lang].skills;
+  document.querySelector("#languages-section h2").textContent = i18n[lang].languages;
+  document.querySelector("#volunteering-section h2").textContent = i18n[lang].volunteering;
 }
-
-applyI18n(lang);
-
