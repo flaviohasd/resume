@@ -1,0 +1,221 @@
+{
+  "name": "Flávio Dias",
+  "title": "Engenheiro de Processos Industriais",
+  "location": "Santarém, Pará, Brasil",
+  "email": "flaviohasd@hotmail.com",
+  "phone": "+55 92 984776604",
+  "linkedin": "https://www.linkedin.com/in/flaviohasd/",
+  "github": "https://github.com/flaviohasd",
+
+  "summary": "Engenheiro de Processos Industriais com experiência em fundição de alumínio (HPDC/LPDC), desenvolvimento de ferramentais, estamparia, soldagem, redesenho de layout e iniciativas de melhoria contínua. Liderou projetos industriais de grande porte, incluindo planos mestres de renovação de moldes, otimização de processos e planejamento técnico de manufatura (MTP). Experiência com Lean Six Sigma (Green Belt), PDCA, DMAIC e diagnósticos industriais aplicados no chão de fábrica (Gemba) para eliminar defeitos, reduzir retrabalho, otimizar fluxo e aumentar eficiência operacional. Atuação com suporte à produção, resolução de falhas crônicas, implementação de sistemas MES e melhoria de documentação técnica e trabalho padronizado. Perfil analítico com base em engenharia mecânica e forte competência em Excel, Power BI, Python e tomada de decisão orientada a dados.",
+
+  "subsummary": "Processos Industriais · Lean Six Sigma · Fundição (HPDC/LPDC) · Soldagem & Estamparia · Ferramentais · Layout · Confiabilidade · Melhoria Orientada a Dados",
+
+  "experience": [
+    {
+      "title": "Especialista em Engenharia Industrial",
+      "company": "Yamaha Motor Componentes da Amazônia",
+      "date": "Abr 2023 – Abr 2025",
+      "tasks": [
+        "Coordenou programa de renovação de moldes HPDC/LPDC com orçamento anual de R$ 8 milhões, garantindo critérios técnicos, cronograma e controle de custos.",
+        "Desenvolveu plano mestre semiautomatizado em Excel para gestão de moldes, aumentando previsibilidade e rastreabilidade de entregáveis técnicos.",
+        "Implementou e atuou como key-user do sistema MES em máquinas HPDC/LPDC, permitindo monitoramento em tempo real e maior estabilidade produtiva.",
+        "Liderou projetos de reestruturação de layout fabril, otimizando fluxo, uso de espaço e integração entre ferramentaria, engenharia e produção.",
+        "Prestou suporte técnico em análises de defeitos, troubleshooting de fundição, desvios dimensionais e problemas de fluxo.",
+        "Revisou, aprimorou e padronizou projetos de ferramentais (moldes, dispositivos e gabaritos), reduzindo tempo de tryout e aumentando confiabilidade.",
+        "Representou a Yamaha em conferência internacional de fundição em Taiwan (2024), apresentando resultados de integração MES em inglês.",
+        "Suportou planejamento técnico de manufatura (MTP) com análises e critérios de engenharia para suporte a decisões de investimento."
+      ]
+    },
+    {
+      "title": "Analista de Engenharia – Ferramentaria & Estamparia",
+      "company": "Metalúrgica Sato da Amazônia",
+      "date": "Mar 2023 – Abr 2023",
+      "tasks": [
+        "Desenvolveu e revisou ferramentais para estamparia, reduzindo desperdícios e custos de material.",
+        "Criou procedimentos operacionais para garantir padronização e repetibilidade.",
+        "Melhorou controle de produtos químicos via sistemas em Excel, aumentando acurácia de consumo e estoque.",
+        "Planejou e coordenou melhorias técnicas em ferramentas, aumentando eficiência e confiabilidade produtiva."
+      ]
+    },
+    {
+      "title": "Analista Industrial – Soldagem & Estamparia",
+      "company": "Yamaha Motor da Amazônia",
+      "date": "Jul 2021 – Nov 2021",
+      "tasks": [
+        "Responsável por operações de soldagem e estamparia de suportes de balança traseira, conduzindo análises de defeitos e estratégias corretivas.",
+        "Liderou projetos de melhoria contínua via PDCA, eliminando problemas crônicos e aumentando estabilidade operacional.",
+        "Elaborou e manteve documentação técnica, controles de qualidade e trabalho padronizado.",
+        "Contribuiu para conformidade ISO 9001 através de padronização e ações corretivas."
+      ]
+    },
+    {
+      "title": "Estágio em Engenharia de Manutenção",
+      "company": "3M do Brasil",
+      "date": "Jan 2020 – Jul 2021",
+      "tasks": [
+        "Desenvolveu manuais de manutenção e checklists de inspeção para correias, rolamentos e máquinas rotativas.",
+        "Criou dashboard em Power BI integrando indicadores de manutenção (OEE, MTBF, MTTR), suportando decisões estratégicas.",
+        "Automatizou ferramentas Excel para gestão de férias e alocação de pessoal, aumentando eficiência de planejamento."
+      ]
+    },
+    {
+      "title": "Estágio em Engenharia Mecânica",
+      "company": "UFAM – Laboratório de Sistemas Mecânicos e Controle",
+      "date": "Mai 2022 – Ago 2022",
+      "tasks": [
+        "Realizou a reestruturação completa do laboratório: redesenho de layout, expansão de infraestrutura, instalação de equipamentos e melhorias de segurança.",
+        "Implementou práticas de 5S, redigiu manual de melhores práticas e organizou o laboratório para maior acessibilidade e capacidade de experimentação.",
+        "Desenvolveu projeto detalhado de planta e infraestrutura entregue ao setor de engenharia da universidade."
+      ]
+    },
+    {
+      "title": "Monitor – Vibrações Mecânicas",
+      "company": "UFAM",
+      "date": "Jun 2022 – Set 2022",
+      "tasks": [
+        "Apoiou alunos em medições vibracionais com acelerômetros e sistemas DAQ.",
+        "Conduziu análises FFT em máquinas rotativas, reforçando raciocínio diagnóstico aplicado ao ambiente industrial."
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bacharel em Engenharia Mecânica",
+      "field": "Engenharia Mecânica",
+      "institution": "Universidade Federal do Amazonas (UFAM)",
+      "date": "2015 – 2022",
+      "comments": [
+        "Formação sólida em estática, dinâmica, vibrações, projeto mecânico, materiais e processos de manufatura.",
+        "Experiência em pesquisa com modelagem dinâmica e vibrações de engrenagens (publicação em periódico Qualis A2)."
+      ]
+    },
+    {
+      "degree": "Green Belt Lean Six Sigma & Gestão de Projetos",
+      "field": "Melhoria Contínua & Gestão de Projetos",
+      "institution": "Escola DNC",
+      "date": "2021",
+      "comments": [
+        "Aplicação de DMAIC e Lean Six Sigma em projeto industrial real, obtendo aumento de 33% em produtividade e redução de custos superior a R$ 200 mil/ano.",
+        "Formação com Scrum, automação Excel, Power BI, Minitab e projetos práticos."
+      ]
+    }
+  ],
+
+  "core_competencies": [
+    {
+      "category": "Processos Industriais",
+      "items": [
+        "fundição HPDC/LPDC",
+        "operações de soldagem e estamparia",
+        "análise de fluxo e otimização de layout",
+        "padronização e documentação técnica",
+        "integração MES & planejamento técnico"
+      ]
+    },
+    {
+      "category": "Melhoria Contínua",
+      "items": [
+        "Lean Six Sigma (Green Belt)",
+        "PDCA / DMAIC",
+        "análise de causa raiz (Ishikawa, 5 Porquês)",
+        "FMEA / APQP",
+        "redução de refugos e retrabalho"
+      ]
+    },
+    {
+      "category": "Ferramentaria & Manufatura",
+      "items": [
+        "revisão de moldes e matrizes",
+        "tryout & troubleshooting de ferramentas",
+        "interpretação de dispositivos e projetos",
+        "fundamentos de GD&T",
+        "otimização de fluxo de materiais"
+      ]
+    },
+    {
+      "category": "Confiabilidade & Manutenção",
+      "items": [
+        "OEE, MTBF, MTTR",
+        "manutenção preventiva/preditiva",
+        "análise de modos de falha",
+        "desenvolvimento de manuais & checklists"
+      ]
+    },
+    {
+      "category": "Dados & Tomada de Decisão",
+      "items": [
+        "Excel avançado (automação, dashboards)",
+        "Power BI",
+        "Python",
+        "Minitab (estatística)",
+        "estruturar KPIs",
+        "SQL (básico)"
+      ]
+    }
+  ],
+
+  "skills": [
+    "fundição HPDC/LPDC",
+    "diagnóstico de soldagem & estamparia",
+    "otimização de layout & fluxo",
+    "ferramentaria (moldes, matrizes, dispositivos)",
+    "Lean Six Sigma (Green Belt)",
+    "PDCA, DMAIC, APQP, FMEA",
+    "integração MES",
+    "OEE / MTBF / MTTR",
+    "Excel avançado",
+    "Power BI",
+    "Minitab",
+    "análise de causa raiz",
+    "documentação de processo & trabalho padronizado",
+    "conformidade ISO 9001",
+    "fundamentos de GD&T"
+  ],
+
+  "certifications": [
+    { "name": "Lean Six Sigma Green Belt", "institution": "Escola DNC", "date": "2021" },
+    { "name": "Project Manager Full Stack", "institution": "Escola DNC", "date": "2021" },
+    { "name": "Scrum Master", "institution": "PM Tech", "date": "2021" },
+    { "name": "IBM Data Science (Python, SQL, ML)", "institution": "IBM / Coursera", "date": "2023" },
+    { "name": "Power BI Avançado", "institution": "DNC", "date": "2021" },
+    { "name": "Minitab Avançado", "institution": "DNC", "date": "2021" },
+    { "name": "Treinamento MAGMASOFT", "institution": "MAGMA", "date": "2024" }
+  ],
+
+  "languages": [
+    "Português: Nativo",
+    "Inglês: Fluente (C1/C2, proficiência profissional)"
+  ],
+
+  "projects": [
+    {
+      "title": "Plano Mestre de Renovação de Moldes HPDC/LPDC",
+      "subtitle": "Planejamento de Investimento · Padronização de Ferramentais · Redução de Lead Time",
+      "bullets": [
+        "Planejou e controlou orçamento anual de R$ 8 milhões para renovação de moldes, definindo priorização, escopo e critérios de engenharia.",
+        "Desenvolveu sistema semiautomatizado em Excel para agendamento, follow-up técnico e controle orçamentário.",
+        "Reduziu lead time interno de moldes de 24 → 6 meses e externo de 12 → 6 meses."
+      ]
+    },
+    {
+      "title": "Integração MES em Máquinas HPDC/LPDC",
+      "subtitle": "Dados em Tempo Real · Visibilidade de Processo · Representação Internacional",
+      "bullets": [
+        "Implementou MES em máquinas de fundição sob pressão, permitindo monitoramento em tempo real e histórico de parâmetros.",
+        "Apresentou o projeto internacionalmente em Taiwan, representando a Yamaha em inglês.",
+        "Melhorou controle de processo e suportou redução de defeitos crônicos de fundição."
+      ]
+    }
+  ],
+
+  "publications": [
+    {
+      "title": "Vibration attenuation on spur gears through optimal profile modification",
+      "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)",
+      "year": "2023",
+      "link": "https://rdcu.be/ds3ID"
+    }
+  ]
+}
