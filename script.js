@@ -220,3 +220,18 @@ function renderCV(data) {
   // FOOTER
   document.getElementById("footer").textContent = `© ${new Date().getFullYear()} - ${data.name}`;
 }
+
+function applyI18n(lang) {
+  document.querySelector('section:nth-of-type(1) h2').textContent = i18n[lang].summary;
+  document.querySelector('section:nth-of-type(2) h2').textContent = i18n[lang].experience;
+  document.querySelector('section:nth-of-type(3) h2').textContent = i18n[lang].core;
+  document.querySelector('section:nth-of-type(4) h2').textContent = i18n[lang].education;
+  document.querySelector('section:nth-of-type(5) h2').textContent = i18n[lang].projects;
+  document.querySelector('section:nth-of-type(6) h2').textContent = i18n[lang].certifications;
+  document.querySelector('section:nth-of-type(7) h2').textContent = i18n[lang].skills;
+  document.querySelector('section:nth-of-type(8) h2').textContent = i18n[lang].languages;
+  document.querySelector('section:nth-of-type(9) h2').textContent = i18n[lang].volunteering;
+}
+
+applyI18n(lang);
+
