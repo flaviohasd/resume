@@ -1,0 +1,230 @@
+{
+  "name": "Flávio Dias",
+  "title": "Engenheiro de Simulação e Análise Mecânica",
+  "location": "Santarém, Pará, Brasil",
+  "email": "flaviohasd@hotmail.com",
+  "phone": "+55 92 984776604",
+  "linkedin": "https://www.linkedin.com/in/flaviohasd/",
+  "github": "https://github.com/flaviohasd",
+
+  "summary": "Engenheiro mecânico especializado em simulação, modelagem dinâmica e otimização de processos, com sólida experiência industrial em operações HPDC/LPDC e pesquisa publicada obtendo até 99% de redução em respostas dinâmicas de engrenagens por otimização do perfil de dente. Experiência com CAE, MATLAB e Python para simulações dinâmicas, estruturais e multiphysics, correlacionando resultados com dados reais de produção para suporte à tomada de decisão e estabilidade de processo. Inglês avançado e domínio de comunicação técnica e colaboração internacional.",
+
+  "subsummary": "Processos Industriais + CAE · Otimização",
+
+  "experience": [
+    {
+      "title": "Engenheiro de Processos Industriais",
+      "company": "Yamaha Motor do Brasil",
+      "date": "Abr 2023 - Abr 2025",
+      "tasks": [
+        "Gerenciamento e execução de projeto de renovação de moldes no valor de R$ 8 milhões, incluindo redesign, validação e fabricação de moldes HPDC conforme ISO 8062.",
+        "Aplicação de simulações multiphysics em MAGMASOFT para análise de fluxo, balanço térmico, solidificação e formação de porosidade, suportando redesign de ferramentais e otimização de processo.",
+        "Melhoria da estabilidade da fundição, redução de defeitos e aumento da vida útil de moldes através de otimização paramétrica baseada em dados.",
+        "Eliminação de desvios dimensionais crônicos via metodologias DMAIC/PDCA e análise de causa raiz.",
+        "Tomada de decisão de engenharia correlacionando resultados de simulação com dados de produção e manutenção."
+      ]
+    },
+    {
+      "title": "Analista Industrial",
+      "company": "Yamaha Motor do Brasil",
+      "date": "Jul 2021 - Nov 2021",
+      "tasks": [
+        "Avaliação de restrições e diagnósticos de processo em sistemas de soldagem e estamparia.",
+        "Aplicação de PDCA/DMAIC para eliminar falhas recorrentes e aumentar a confiabilidade do processo.",
+        "Resultados mensuráveis em redução de retrabalho e aumento de estabilidade operacional."
+      ]
+    },
+    {
+      "title": "Estágio em Engenharia Mecânica",
+      "company": "UFAM - Faculdade de Tecnologia",
+      "date": "Mai 2022 - Ago 2022",
+      "tasks": [
+        "Liderança da reestruturação do Laboratório de Sistemas Mecânicos e Controle, incluindo instalação de máquina de corte a laser e redesign da infraestrutura.",
+        "Implementação de 5S, elaboração de manual de melhores práticas e melhorias de segurança e acessibilidade.",
+        "Aumento da capacidade de experimentação e suporte à expansão física do laboratório."
+      ]
+    },
+    {
+      "title": "Monitor - Vibrações Mecânicas",
+      "company": "UFAM - Universidade Federal do Amazonas",
+      "date": "Mai 2022 - Set 2022",
+      "tasks": [
+        "Suporte em medições de vibração com acelerômetros e sistemas DAQ.",
+        "Orientação em análises FFT, interpretação de sinais e correlação entre dados experimentais e analíticos."
+      ]
+    },
+    {
+      "title": "Estagiário de Engenharia",
+      "company": "3M do Brasil",
+      "date": "Jan 2020 - Jul 2021",
+      "tasks": [
+        "Desenvolvimento de dashboards de confiabilidade (OEE, MTBF, MTTR) integrando dados de manutenção e produção.",
+        "Suporte no planejamento de manutenção preventiva e análises de confiabilidade de equipamentos."
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Bacharelado",
+      "field": "Engenharia Mecânica",
+      "institution": "Universidade Federal do Amazonas (UFAM)",
+      "date": "2015 - 2022",
+      "comments": [
+        "Destaque nas áreas de resistência dos materiais, vibrações mecânicas, elementos de máquinas, modelagem e controle de sistemas dinâmicos."
+      ]
+    },
+    {
+      "degree": "Green Belt Lean Six Sigma",
+      "field": "Gestão de Projetos",
+      "institution": "Escola DNC",
+      "date": "2021 - 2021",
+      "comments": [
+        "Formação aplicada envolvendo Lean Six Sigma, Scrum, Excel, Power BI e Minitab aplicada em projeto real para redução de custos e otimização de processos.",
+        "Objetivo de reduzir lead time em 20% em empresa de médio porte de racks automotivos no polo industrial de São Paulo. O projeto resultou em aumento de 33% na capacidade produtiva, equivalente a retorno financeiro superior a R$ 200 mil/ano."
+      ]
+    }
+  ],
+
+  "core_competencies": [
+    {
+      "category": "Simulação & Modelagem",
+      "items": [
+        "MATLAB",
+        "MAGMASOFT",
+        "Python",
+        "sistemas dinâmicos",
+        "otimização numérica",
+        "análise de vibração e tensão"
+      ]
+    },
+    {
+      "category": "Processos de Fundição",
+      "items": [
+        "simulação HPDC/LPDC",
+        "modelagem térmica/fluxo",
+        "predição de defeitos",
+        "otimização paramétrica"
+      ]
+    },
+    {
+      "category": "CAD/CAE",
+      "items": [
+        "SolidWorks",
+        "Inventor",
+        "Solid Edge",
+        "FEA/FEM (modal, estática, dinâmica, análise de tensão)",
+        "AutoCAD",
+        "Cimatron"
+      ]
+    },
+    {
+      "category": "Dados & Diagnóstico",
+      "items": [
+        "Power BI",
+        "Excel (avançado)",
+        "Minitab",
+        "análise de causa raiz",
+        "monitoramento de processo"
+      ]
+    },
+    {
+      "category": "Métodos de Engenharia",
+      "items": [
+        "DMAIC",
+        "PDCA",
+        "FMEA",
+        "PPAP",
+        "ISO 8062",
+        "ISO 9001",
+        "melhoria contínua"
+      ]
+    }
+  ],
+
+  "skills": [
+    "MATLAB",
+    "Python",
+    "Simulação multiphysics",
+    "Otimização",
+    "CAD/CAE (SolidWorks, Inventor, Solid Edge, AutoCAD)",
+    "FEA/FEM (modal, estática, dinâmica, análise de tensão)",
+    "Power BI",
+    "Excel avançado",
+    "Análise de causa raiz",
+    "Lean Six Sigma",
+    "DMAIC",
+    "PDCA",
+    "FMEA",
+    "PPAP",
+    "ISO 8062",
+    "ISO 9001"
+  ],
+
+  "certifications": [
+    {
+      "name": "IBM Data Analyst",
+      "institution": "IBM Skills Network",
+      "date": "2023"
+    },
+    {
+      "name": "CS50: Introdução à Computação com Python",
+      "institution": "MIT/edX",
+      "date": "2023"
+    },
+    {
+      "name": "Gestão de Projetos, Green Belt Lean Six Sigma & Scrum Master",
+      "institution": "Escola DNC",
+      "date": "2021"
+    },
+    {
+      "name": "Treinamento MAGMASOFT",
+      "institution": "MAGMA",
+      "date": "2024"
+    },
+    {
+      "name": "IBM Data Science (Python, SQL, ML)",
+      "institution": "IBM Skills Network - Coursera",
+      "date": "2023"
+    },
+    {
+      "name": "Minitab - Ferramentas Estatísticas",
+      "institution": "Escola DNC",
+      "date": "2022"
+    },
+    {
+      "name": "Power BI - Visualização de Dados",
+      "institution": "Escola DNC",
+      "date": "2022"
+    }
+  ],
+
+  "languages": [
+    "Português: Nativo",
+    "Inglês: Avançado (C1/C2; proficiência profissional)"
+  ],
+
+  "projects": [
+    {
+      "title": "Otimização de Vibração de Engrenagens",
+      "subtitle": "Pesquisa Publicada + Implementação Open-Source (2023)",
+      "bullets": [
+        "Modelagem dinâmica alternativa para predição de vibração em engrenagens de dentes retos, introduzindo formulação de massa equivalente aprimorada.",
+        "Modelagem de modificação de perfil (alívio de adendo linear) e otimização por busca da razão áurea e interpolação polinomial.",
+        "Redução de 94–99% em respostas dinâmicas (deslocamento, velocidade, aceleração e força de engrenamento), convergindo ao regime quase-estático.",
+        "Implementado integralmente em MATLAB como toolkit open-source (TPM-Vibration).",
+        "Resultados publicados no Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer)."
+      ],
+      "repository": "https://github.com/flaviohasd/TPM-Vibration"
+    }
+  ],
+
+  "publications": [
+    {
+      "title": "Vibration attenuation on spur gears through optimal profile modification",
+      "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer)",
+      "year": "2023",
+      "link": "https://rdcu.be/ds3ID"
+    }
+  ]
+}
