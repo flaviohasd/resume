@@ -4,13 +4,10 @@
 // ===================================================================
 
 function getProfileFile() {
-  let raw = window.location.search.replace("?", "").trim().toLowerCase();
-
-  // se nao veio nada → versão padrão
-  if (!raw) return "cae.json";
-
-  // monta o nome do json
-  return `${raw}.json`;
+  const params = new URLSearchParams(window.location.search);
+  const profile = params.get("cv") || "industrial"; // default
+  const lang = params.get("lang") || "en"; // default EN
+  return `${profile}.${lang}.json`;
 }
 
 // Carrega o JSON correto
