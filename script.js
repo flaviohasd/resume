@@ -1,4 +1,34 @@
 // ===================================================================
+// Detecta a lingua selecionada e exibe o texto de página adequado
+// ===================================================================
+
+const i18n = {
+  en: {
+    summary: "Professional Summary",
+    experience: "Professional Experience",
+    core: "Core Competencies",
+    education: "Education",
+    projects: "Selected Projects & Research",
+    certifications: "Certifications",
+    skills: "Skills",
+    languages: "Languages",
+    volunteering: "Volunteering"
+  },
+  pt: {
+    summary: "Resumo Profissional",
+    experience: "Experiência Profissional",
+    core: "Competências",
+    education: "Formação Acadêmica",
+    projects: "Projetos & Pesquisa",
+    certifications: "Certificações",
+    skills: "Competências Técnicas",
+    languages: "Idiomas",
+    volunteering: "Voluntariado"
+  }
+};
+
+
+// ===================================================================
 // Detecta a versão do currículo pela URL
 // Ex: resume?cae  -> carrega "cae.json"
 // ===================================================================
