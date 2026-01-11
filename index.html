@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="container">
+      
       <header>
         <h1 id="name"></h1>
         <h2 id="title"></h2>
@@ -17,73 +18,74 @@
         <p id="links"></p>
       </header>
 
-      <div id="lang-switch">
-        <button onclick="switchLang('en')">EN</button>
-        <button onclick="switchLang('pt')">PT</button>
+      <!-- Switch de idioma -->
+      <div id="lang-switch" style="margin-top:10px;">
+        <button onclick="switchLang('en')">🇺🇸 English</button>
+        <button onclick="switchLang('pt')">🇧🇷 Português</button>
       </div>
-      
-     <main>
-    
-      <!-- 1. Professional Summary -->
-      <section>
-        <h2>Professional Summary</h2>
-        <p id="summary"></p>
-      </section>
-    
-      <!-- 2. Professional Experience -->
-      <section>
-        <h2>Professional Experience</h2>
-        <div id="experience"></div>
-      </section>
-    
-      <!-- 3. Core Competencies -->
-      <section>
-        <h2>Core Competencies</h2>
-        <div id="core-competencies"></div>
-      </section>
-    
-      <!-- 4. Education -->
-      <section>
-        <h2>Education</h2>
-        <div id="education"></div>
-      </section>
-    
-      <!-- 5. Selected Projects & Research -->
-      <section>
-        <h2>Selected Projects & Research</h2>
-        <div id="projects"></div>
-      </section>
-    
-      <!-- 6. Certifications -->
-      <section>
-        <h2>Certifications</h2>
-        <ul id="certifications"></ul>
-      </section>
-    
-      <!-- 7. Skills -->
-      <section>
-        <h2>Skills</h2>
-        <ul id="skills"></ul>
-      </section>
-    
-      <!-- 8. Languages -->
-      <section>
-        <h2>Languages</h2>
-        <p id="languages"></p>
-      </section>
-    
-      <!-- 9. Volunteering -->
-      <section>
-        <h2>Volunteering</h2>
-        <div id="volunteering"></div>
-      </section>
-    
-    </main>
 
+      <main>
+
+        <!-- 1. Summary -->
+        <section id="summary-section">
+          <h2>Professional Summary</h2>
+          <p id="summary"></p>
+        </section>
+
+        <!-- 2. Experience -->
+        <section id="experience-section">
+          <h2>Professional Experience</h2>
+          <div id="experience"></div>
+        </section>
+
+        <!-- 3. Core -->
+        <section id="core-section">
+          <h2>Core Competencies</h2>
+          <div id="core-competencies"></div>
+        </section>
+
+        <!-- 4. Education -->
+        <section id="education-section">
+          <h2>Education</h2>
+          <div id="education"></div>
+        </section>
+
+        <!-- 5. Projects -->
+        <section id="projects-section">
+          <h2>Selected Projects & Research</h2>
+          <div id="projects"></div>
+        </section>
+
+        <!-- 6. Certifications -->
+        <section id="certifications-section">
+          <h2>Certifications</h2>
+          <ul id="certifications"></ul>
+        </section>
+
+        <!-- 7. Skills -->
+        <section id="skills-section">
+          <h2>Skills</h2>
+          <ul id="skills"></ul>
+        </section>
+
+        <!-- 8. Languages -->
+        <section id="languages-section">
+          <h2>Languages</h2>
+          <p id="languages"></p>
+        </section>
+
+        <!-- 9. Volunteering -->
+        <section id="volunteering-section">
+          <h2>Volunteering</h2>
+          <div id="volunteering"></div>
+        </section>
+
+      </main>
 
       <footer>
         <p id="footer"></p>
       </footer>
+
     </div>
   </body>
 </html>
