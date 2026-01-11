@@ -26,6 +26,12 @@ function loadCV(file) {
 
 loadCV(PROFILE_FILE);
 
+function switchLang(lang) {
+  const params = new URLSearchParams(window.location.search);
+  const cv = params.get("cv") || "industrial";
+  window.location.search = `?cv=${cv}&lang=${lang}`;
+}
+
 // ===================================================================
 // Função que preenche o currículo com os dados carregados
 // ===================================================================
