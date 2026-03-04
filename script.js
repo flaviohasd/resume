@@ -8,8 +8,8 @@ const i18n = {
     experience: "Professional Experience",
     core: "Core Competencies",
     education: "Education",
-    projects: "Selected Projects & Research",
     publications: "Publications",
+    projects: "Selected Projects & Research",
     certifications: "Certifications",
     skills: "Skills",
     languages: "Languages",
@@ -20,8 +20,8 @@ const i18n = {
     experience: "Experiência Profissional",
     core: "Competências",
     education: "Formação Acadêmica",
-    projects: "Projetos & Pesquisa",
     publications: "Publicações",
+    projects: "Projetos & Pesquisa",
     certifications: "Certificações",
     skills: "Competências Técnicas",
     languages: "Idiomas",
@@ -41,7 +41,6 @@ function getProfileFile() {
   return `${cv}.${lang}.json`;
 }
 
-// Carrega JSON correto
 const PROFILE_FILE = getProfileFile();
 
 // ===================================================================
@@ -51,19 +50,18 @@ const PROFILE_FILE = getProfileFile();
 function loadCV(file) {
   fetch(file)
     .then((res) => {
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status} ao buscar ${file}`);
-      }
+      if (!res.ok) throw new Error(`HTTP ${res.status} ao buscar ${file}`);
       return res.text();
     })
     .then((text) => {
-      // Alguns erros "silenciosos" vêm de BOM (Byte Order Mark) ou lixo no fim do arquivo
+      // Remove BOM e lixo de espaços
       const cleaned = text.replace(/^\uFEFF/, "").trim();
+
       let data;
       try {
         data = JSON.parse(cleaned);
       } catch (e) {
-        console.error("JSON inválido. Conteúdo recebido (início):", cleaned.slice(0, 200));
+        console.error("JSON inválido. Início do conteúdo:", cleaned.slice(0, 200));
         throw e;
       }
 
@@ -100,6 +98,16 @@ function joinOrEmpty(arr, sep = " · ") {
   return a.length ? a.join(sep) : "";
 }
 
+function setTextById(id, text) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text;
+}
+
+function clearById(id) {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = "";
+}
+
 // ===================================================================
 // Renderiza o currículo
 // ===================================================================
@@ -107,57 +115,59 @@ function joinOrEmpty(arr, sep = " · ") {
 function renderCV(data) {
   document.title = `${safeText(data.name)} - Resume`;
 
-  document.getElementById("name").textContent = safeText(data.name);
-  document.getElementById("title").textContent = safeText(data.title);
-  document.getElementById("subsummary").textContent = safeText(data.subsummary);
+  setTextById("name", safeText(data.name));
+  setTextById("title", safeText(data.title));
+  setTextById("subsummary", safeText(data.subsummary));
 
-  document.getElementById("contact").textContent =
-    `${safeText(data.location)} | ✉️ ${safeText(data.email)} | 📱 ${safeText(data.phone)}`;
+  setTextById(
+    "contact",
+    `${safeText(data.location)} | ✉️ ${safeText(data.email)} | 📱 ${safeText(data.phone)}`
+  );
 
-  document.getElementById("links").innerHTML = `
-    🌐 <a href="${safeText(data.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-    <a href="${safeText(data.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>
-  `;
+  const linksEl = document.getElementById("links");
+  if (linksEl) {
+    linksEl.innerHTML = `
+      🌐 <a href="${safeText(data.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+      <a href="${safeText(data.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>
+    `;
+  }
 
-  document.getElementById("summary").textContent = safeText(data.summary);
+  setTextById("summary", safeText(data.summary));
 
-  const containers = [
+  // Limpa containers
+  [
     "experience",
     "core-competencies",
     "education",
-    "projects",
     "publications",
+    "projects",
     "certifications",
     "skills",
     "languages",
     "volunteering",
-  ];
-
-  containers.forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = "";
-  });
+  ].forEach(clearById);
 
   // ---------------------------------------------------------------
   // Experience
   // ---------------------------------------------------------------
   if (Array.isArray(data.experience)) {
     const div = document.getElementById("experience");
-    data.experience.forEach((job) => {
-      const item = document.createElement("div");
+    if (div) {
+      data.experience.forEach((job) => {
+        const item = document.createElement("div");
 
-      const tasks =
-        job?.tasks?.length
+        const tasks = job?.tasks?.length
           ? `<ul>${job.tasks.map((t) => `<li>${t}</li>`).join("")}</ul>`
           : "";
 
-      item.innerHTML = `
-        <h3>${safeText(job.title)} – ${safeText(job.company)}</h3>
-        <p class="date">${safeText(job.date)}</p>
-        ${tasks}
-      `;
-      div.appendChild(item);
-    });
+        item.innerHTML = `
+          <h3>${safeText(job.title)} – ${safeText(job.company)}</h3>
+          <p class="date">${safeText(job.date)}</p>
+          ${tasks}
+        `;
+        div.appendChild(item);
+      });
+    }
   }
 
   // ---------------------------------------------------------------
@@ -165,39 +175,69 @@ function renderCV(data) {
   // ---------------------------------------------------------------
   if (Array.isArray(data.core_competencies)) {
     const div = document.getElementById("core-competencies");
-    data.core_competencies.forEach((c) => {
-      const p = document.createElement("p");
-      p.innerHTML = `<strong>${safeText(c.category)}:</strong> ${joinOrEmpty(c.items)}`;
-      div.appendChild(p);
-    });
+    if (div) {
+      data.core_competencies.forEach((c) => {
+        const p = document.createElement("p");
+        p.innerHTML = `<strong>${safeText(c.category)}:</strong> ${joinOrEmpty(c.items)}`;
+        div.appendChild(p);
+      });
+    }
   }
 
   // ---------------------------------------------------------------
-  // Education
+  // Education (corrige "in" vs "em" conforme idioma)
   // ---------------------------------------------------------------
   if (Array.isArray(data.education)) {
     const div = document.getElementById("education");
-    data.education.forEach((edu) => {
-      const item = document.createElement("div");
+    if (div) {
+      data.education.forEach((edu) => {
+        const item = document.createElement("div");
 
-      const comments =
-        edu?.comments?.length
+        const comments = edu?.comments?.length
           ? `<ul>${edu.comments.map((c) => `<li>${c}</li>`).join("")}</ul>`
           : "";
 
-      // Se não tiver field, evita "in undefined"
-      const degreeLine = edu.field
-        ? `<strong>${safeText(edu.degree)} in ${safeText(edu.field)}</strong>`
-        : `<strong>${safeText(edu.degree)}</strong>`;
+        const connector = lang === "pt" ? "em" : "in";
+        const degreeLine = edu.field
+          ? `<strong>${safeText(edu.degree)} ${connector} ${safeText(edu.field)}</strong>`
+          : `<strong>${safeText(edu.degree)}</strong>`;
 
-      item.innerHTML = `
-        ${degreeLine}
-        <p><em>${safeText(edu.institution)}</em></p>
-        <p class="date">${safeText(edu.date)}</p>
-        ${comments}
-      `;
-      div.appendChild(item);
-    });
+        item.innerHTML = `
+          ${degreeLine}
+          <p><em>${safeText(edu.institution)}</em></p>
+          <p class="date">${safeText(edu.date)}</p>
+          ${comments}
+        `;
+        div.appendChild(item);
+      });
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // Publications (NOVO)
+  // Espera array: [{ title, journal, year, link }]
+  // ---------------------------------------------------------------
+  if (Array.isArray(data.publications)) {
+    const div = document.getElementById("publications");
+    if (div) {
+      data.publications.forEach((pub) => {
+        const item = document.createElement("div");
+
+        const journal = pub.journal ? `<p><em>${safeText(pub.journal)}</em></p>` : "";
+        const year = pub.year ? `<p class="date">${safeText(pub.year)}</p>` : "";
+        const link = pub.link
+          ? `<p><a href="${pub.link}" target="_blank" rel="noopener noreferrer">Link da publicação</a></p>`
+          : "";
+
+        item.innerHTML = `
+          <h3>${safeText(pub.title)}</h3>
+          ${journal}
+          ${year}
+          ${link}
+        `;
+        div.appendChild(item);
+      });
+    }
   }
 
   // ---------------------------------------------------------------
@@ -205,70 +245,46 @@ function renderCV(data) {
   // ---------------------------------------------------------------
   if (Array.isArray(data.projects)) {
     const div = document.getElementById("projects");
-    data.projects.forEach((proj) => {
-      const item = document.createElement("div");
+    if (div) {
+      data.projects.forEach((proj) => {
+        const item = document.createElement("div");
 
-      const bullets =
-        proj?.bullets?.length
+        const bullets = proj?.bullets?.length
           ? `<ul>${proj.bullets.map((b) => `<li>${b}</li>`).join("")}</ul>`
           : "";
 
-      const repoLink = proj.repository
-        ? `<p><a href="${proj.repository}" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>`
-        : "";
+        const repoLink = proj.repository
+          ? `<p><a href="${proj.repository}" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>`
+          : "";
 
-      const pubLink = proj.link
-        ? `<p><a href="${proj.link}" target="_blank" rel="noopener noreferrer">Link</a></p>`
-        : "";
+        const link = proj.link
+          ? `<p><a href="${proj.link}" target="_blank" rel="noopener noreferrer">Link</a></p>`
+          : "";
 
-      item.innerHTML = `
-        <h3>${safeText(proj.title)}</h3>
-        ${proj.subtitle ? `<p class="project-subtitle">${safeText(proj.subtitle)}</p>` : ""}
-        ${bullets}
-        ${repoLink}
-        ${pubLink}
-      `;
-      div.appendChild(item);
-    });
+        item.innerHTML = `
+          <h3>${safeText(proj.title)}</h3>
+          ${proj.subtitle ? `<p class="project-subtitle">${safeText(proj.subtitle)}</p>` : ""}
+          ${bullets}
+          ${repoLink}
+          ${link}
+        `;
+        div.appendChild(item);
+      });
+    }
   }
-
-/// ---------------------------------------------------------------
-// Publications
-// Espera array: [{ title, journal, year, link }]
-// ---------------------------------------------------------------
-if (Array.isArray(data.publications)) {
-  const div = document.getElementById("publications");
-  if (div) {
-    data.publications.forEach((pub) => {
-      const item = document.createElement("div");
-
-      const journal = pub.journal ? `<p><em>${safeText(pub.journal)}</em></p>` : "";
-      const year = pub.year ? `<p class="date">${safeText(pub.year)}</p>` : "";
-      const link = pub.link
-        ? `<p><a href="${pub.link}" target="_blank" rel="noopener noreferrer">Link da publicação</a></p>`
-        : "";
-
-      item.innerHTML = `
-        <h3>${safeText(pub.title)}</h3>
-        ${journal}
-        ${year}
-        ${link}
-      `;
-      div.appendChild(item);
-    });
-  }
-}
 
   // ---------------------------------------------------------------
   // Certifications
   // ---------------------------------------------------------------
   if (Array.isArray(data.certifications)) {
     const ul = document.getElementById("certifications");
-    data.certifications.forEach((cert) => {
-      const li = document.createElement("li");
-      li.textContent = `${safeText(cert.name)} - ${safeText(cert.institution)} (${safeText(cert.date)})`;
-      ul.appendChild(li);
-    });
+    if (ul) {
+      data.certifications.forEach((cert) => {
+        const li = document.createElement("li");
+        li.textContent = `${safeText(cert.name)} - ${safeText(cert.institution)} (${safeText(cert.date)})`;
+        ul.appendChild(li);
+      });
+    }
   }
 
   // ---------------------------------------------------------------
@@ -276,18 +292,20 @@ if (Array.isArray(data.publications)) {
   // ---------------------------------------------------------------
   if (Array.isArray(data.skills)) {
     const ul = document.getElementById("skills");
-    data.skills.forEach((skill) => {
-      const li = document.createElement("li");
-      li.textContent = skill;
-      ul.appendChild(li);
-    });
+    if (ul) {
+      data.skills.forEach((skill) => {
+        const li = document.createElement("li");
+        li.textContent = skill;
+        ul.appendChild(li);
+      });
+    }
   }
 
   // ---------------------------------------------------------------
   // Languages
   // ---------------------------------------------------------------
   if (Array.isArray(data.languages)) {
-    document.getElementById("languages").textContent = data.languages.join(" | ");
+    setTextById("languages", data.languages.join(" | "));
   }
 
   // ---------------------------------------------------------------
@@ -295,19 +313,20 @@ if (Array.isArray(data.publications)) {
   // ---------------------------------------------------------------
   if (Array.isArray(data.volunteering)) {
     const div = document.getElementById("volunteering");
-    data.volunteering.forEach((v) => {
-      const item = document.createElement("div");
-      item.innerHTML = `
-        <h3>${safeText(v.role)} – ${safeText(v.organization)}</h3>
-        <p class="date">${safeText(v.date)}</p>
-        <p>${safeText(v.description)}</p>
-      `;
-      div.appendChild(item);
-    });
+    if (div) {
+      data.volunteering.forEach((v) => {
+        const item = document.createElement("div");
+        item.innerHTML = `
+          <h3>${safeText(v.role)} – ${safeText(v.organization)}</h3>
+          <p class="date">${safeText(v.date)}</p>
+          <p>${safeText(v.description)}</p>
+        `;
+        div.appendChild(item);
+      });
+    }
   }
 
-  document.getElementById("footer").textContent =
-    `© ${new Date().getFullYear()} - ${safeText(data.name)}`;
+  setTextById("footer", `© ${new Date().getFullYear()} - ${safeText(data.name)}`);
 }
 
 // ===================================================================
@@ -315,7 +334,6 @@ if (Array.isArray(data.publications)) {
 // ===================================================================
 
 function applyI18n(lang) {
-  // Evita crash se alguma section não existir no HTML
   const set = (selector, text) => {
     const el = document.querySelector(selector);
     if (el) el.textContent = text;
@@ -325,8 +343,8 @@ function applyI18n(lang) {
   set("#experience-section h2", i18n[lang].experience);
   set("#core-section h2", i18n[lang].core);
   set("#education-section h2", i18n[lang].education);
-  set("#projects-section h2", i18n[lang].projects);
   set("#publications-section h2", i18n[lang].publications);
+  set("#projects-section h2", i18n[lang].projects);
   set("#certifications-section h2", i18n[lang].certifications);
   set("#skills-section h2", i18n[lang].skills);
   set("#languages-section h2", i18n[lang].languages);
