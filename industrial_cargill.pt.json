@@ -1,163 +1,191 @@
 {
   "name": "Flávio Dias",
-  "title": "Engenheiro de Processos Industriais",
-  "location": "Santarém, Pará, Brazil (Residente)",
+  "title": "Engenheiro Mecânico | Manutenção & Confiabilidade | PCM | Gestão de Ativos (CAPEX/OPEX) | KPIs | Melhoria Contínua (PDCA/DMAIC)",
+  "location": "Santarém, Pará, Brasil (Residente)",
   "email": "flaviohasd@hotmail.com",
   "phone": "+55 92 984776604",
   "linkedin": "https://www.linkedin.com/in/flaviohasd/?locale=pt_BR",
   "github": "https://github.com/flaviohasd",
 
-  "summary": "Engenheiro de Processos com experiência em ambiente fabril, atuando com análise de processo, CAPEX industrial, digitalização (MES), melhoria contínua e indicadores operacionais. Experiência conduzindo diagnóstico técnico, suporte ao chão de fábrica, redução de variabilidade e padronização operacional. Forte capacidade de tomada de decisão baseada em dados, com interfaces entre engenharia, produção, qualidade e fornecedores. Inglês avançado e histórico de representação técnica internacional.",
+  "summary": "Engenheiro Mecânico com experiência em manutenção, confiabilidade e gestão de ativos em ambiente industrial de alta criticidade, atuando na interface entre operação, manutenção, qualidade e fornecedores/terceiros. Responsável funcional por CAPEX (Capital Expenditure) de R$ 8 milhões/ano, implantação de MES (Manufacturing Execution System) e estruturação de KPIs (Key Performance Indicators) para suportar estabilidade operacional, rastreabilidade e tomada de decisão baseada em dados. Experiência com indicadores de manutenção (OEE, MTBF, MTTR), padronização, investigação de falhas (RCA) e melhoria contínua (PDCA/DMAIC). Em transição direcionada para manutenção de embarcações e ativos críticos, com plano de ramp-up em NORMAM (Normas da Autoridade Marítima), ISM Code (International Safety Management Code), ISPS Code (International Ship and Port Facility Security Code) e interface com Sociedade Classificadora.",
 
-  "subsummary": "Processos Industriais · CAPEX · MES · Lean · PDCA/DMAIC · Dados e Indicadores · Chão de Fábrica · Estabilidade de Processo",
+  "subsummary": "Manutenção & Confiabilidade · PCM · Gestão de Ativos · CAPEX/OPEX · Terceiros · KPIs (OEE/MTBF/MTTR) · RCA · Excel/Power BI · Melhoria Contínua",
 
   "experience": [
     {
-      "title": "Industrial Process Engineer",
-      "company": "Yamaha Motor Componentes da Amazônia",
+      "title": "Especialista em Engenharia Industrial (Interface Produção–Manutenção–Ferramentaria)",
+      "company": "Grupo Yamaha Brasil",
       "date": "Abr 2023 – Abr 2025",
       "tasks": [
-        "Responsável funcional por programa de renovação de moldes com orçamento anual de R$ 8 milhões, incluindo justificativa técnica, definição de escopo, priorização, seleção de fornecedores, controle de cronograma e validação de engenharia.",
-        "Atuação direta no chão de fábrica para diagnóstico de defeitos, investigação de causas e definição de ações corretivas visando estabilização de processo e redução de perdas.",
-        "Implementação de sistema MES para monitoramento e rastreabilidade de parâmetros de processo, ampliando visibilidade operacional e suporte à tomada de decisão.",
-        "Estruturação de indicadores operacionais e relatórios em Excel e Power BI para acompanhamento de performance, variabilidade e eficiência.",
-        "Projeto de readequação de layout fabril, melhorando fluxo produtivo e integração entre produção, engenharia e manutenção.",
-        "Representação técnica internacional apresentando caso completo (diagnóstico → solução → resultados) sobre integração MES em conferência no exterior.",
-        "Reportava ao Chefe de Engenharia com autonomia técnica e interface direta com produção, qualidade e fornecedores."
+        "Responsável funcional por programa anual de CAPEX (Capital Expenditure) de R$ 8 milhões, incluindo justificativa técnica, definição de escopo, priorização, seleção de fornecedores, controle de cronograma e validação de engenharia.",
+        "Atuação direta no chão de fábrica (Gemba) com diagnóstico técnico de falhas recorrentes, definição e follow-up de ações corretivas e padronização para estabilidade operacional.",
+        "Implementação e atuação como key-user de MES (Manufacturing Execution System) para monitoramento e rastreabilidade de parâmetros, ampliando visibilidade operacional e suporte a RCA (Root Cause Analysis).",
+        "Estruturação de indicadores (KPIs) e relatórios em Excel e Power BI para acompanhamento de performance, variabilidade e eficiência, apoiando priorização baseada em criticidade.",
+        "Integração técnica com manutenção, produção, qualidade e fornecedores/terceiros para garantir execução com padrão, segurança e cumprimento de prazos.",
+        "Reconhecimento formal por excelência (mérito/aumento) pela última empregadora."
       ]
     },
     {
-      "title": "Engineering Analyst – Tooling & Stamping",
+      "title": "Analista de Engenharia – Ferramentaria & Estamparia",
       "company": "Metalúrgica Sato da Amazônia",
       "date": "Mar 2023 – Abr 2023",
       "tasks": [
-        "Desenvolvimento e revisão de ferramental para operação de estamparia, reduzindo desperdícios de matéria-prima.",
-        "Criação de procedimentos operacionais para garantir repetibilidade e padronização de processo.",
-        "Melhoria de controle de insumos químicos via ferramentas Excel, aumentando acuracidade de consumo e estoque.",
-        "Coordenação técnica de ajustes em ferramentas para aumentar confiabilidade produtiva."
+        "Desenvolvimento e revisão de ferramental para estamparia, com foco em repetibilidade, qualidade e redução de perdas.",
+        "Criação e revisão de procedimentos e padrões de operação para garantir estabilidade e controle.",
+        "Melhoria de controles em Excel para consumo/estoque de insumos, aumentando previsibilidade e acuracidade.",
+        "Coordenação técnica de ajustes em ferramentas e suporte a execução em oficina."
       ]
     },
     {
-      "title": "Industrial Analyst – Welding & Stamping",
-      "company": "Yamaha Motor da Amazônia",
+      "title": "Analista Industrial – Soldagem & Estamparia",
+      "company": "Grupo Yamaha Brasil",
       "date": "Jul 2021 – Nov 2021",
       "tasks": [
-        "Suporte a operações de soldagem e estamparia com análise de defeitos e definição de correções.",
-        "Condução de projetos PDCA visando estabilidade e redução de retrabalho.",
-        "Manutenção de documentação técnica, controles de qualidade e padronização.",
-        "Contribuição para conformidade ISO 9001 via padronização e ações corretivas."
+        "Suporte a operações de soldagem e estamparia com análise de defeitos, definição de correções e padronização.",
+        "Condução de projetos PDCA visando estabilidade, redução de retrabalho e melhoria de qualidade.",
+        "Manutenção de documentação técnica, controles de qualidade e ações corretivas para conformidade ISO 9001.",
+        "Interface com produção, qualidade e engenharia para fechamento de desvios e sustentação de resultados."
       ]
     },
     {
-      "title": "Maintenance Engineering Intern",
+      "title": "Estagiário de Engenharia de Manutenção (Confiabilidade)",
       "company": "3M do Brasil",
       "date": "Jan 2020 – Jul 2021",
       "tasks": [
-        "Desenvolvimento de manuais de manutenção e checklists de inspeção, aumentando a confiabilidade diagnóstica.",
-        "Criação de dashboard Power BI para indicadores de manutenção (OEE, MTBF, MTTR).",
-        "Automação de ferramentas Excel para planejamento operacional e alocação de pessoal."
+        "Criação de dashboards e rotinas de indicadores de manutenção (OEE, MTBF, MTTR) para suporte a decisões e priorização de ações.",
+        "Desenvolvimento de manuais de manutenção e checklists de inspeção, aumentando confiabilidade diagnóstica e padronização.",
+        "Automação de ferramentas em Excel para planejamento operacional e alocação de recursos."
       ]
     },
     {
-      "title": "Mechanical Engineering Intern",
+      "title": "Estagiário de Engenharia Mecânica",
       "company": "UFAM – Mechanical Systems and Control Laboratory",
       "date": "Mai 2022 – Ago 2022",
       "tasks": [
-        "Reestruturação completa do laboratório com melhoria de layout, infraestrutura e segurança.",
+        "Reestruturação do laboratório com melhorias de layout, infraestrutura e segurança.",
         "Implementação de 5S e produção de manual de melhores práticas.",
         "Desenvolvimento de projeto de ampliação entregue ao setor de engenharia da universidade."
       ]
     },
     {
-      "title": "Teaching Assistant – Mechanical Vibrations",
+      "title": "Monitor – Vibrações Mecânicas",
       "company": "UFAM",
       "date": "Jun 2022 – Set 2022",
       "tasks": [
-        "Assistência em medições com acelerômetros e sistemas de aquisição (DAQ).",
-        "Análises FFT aplicadas a máquinas rotativas e diagnósticos vibracionais."
+        "Assistência em medições com acelerômetros e DAQ (Data Acquisition).",
+        "Análises FFT (Fast Fourier Transform) aplicadas a máquinas rotativas e diagnósticos vibracionais."
       ]
     }
   ],
 
   "projects": [
     {
-      "title": "Programa de Renovação de Moldes (CAPEX industrial)",
-      "subtitle": "Planejamento Industrial · Fornecedores · Validação Técnica · R$ 8 milhões/ano",
+      "title": "Gestão de Ativos e Investimentos (CAPEX)",
+      "subtitle": "CAPEX (Capital Expenditure) · Fornecedores/Terceiros · Priorização por Criticidade · R$ 8 milhões/ano",
       "bullets": [
-        "Coordenação funcional do CAPEX com justificativa técnica, priorização e definição de critérios de engenharia.",
-        "Follow-up técnico com fornecedores, controle de prazos e validação de especificações.",
-        "Integração com produção e manutenção para garantir viabilidade operacional do investimento."
+        "Coordenação funcional de CAPEX anual com justificativa técnica, priorização, especificação e critérios de engenharia.",
+        "Integração com fornecedores/terceiros: alinhamento de escopo, follow-up de prazos e validação técnica das entregas.",
+        "Interface com manutenção e produção para garantir viabilidade operacional, qualidade e segurança na implantação."
       ]
     },
     {
-      "title": "Integração MES em Ambiente de Produção",
-      "subtitle": "Digitalização · Dados em Tempo Real · Rastreabilidade",
+      "title": "Digitalização e Confiabilidade com MES",
+      "subtitle": "MES (Manufacturing Execution System) · Dados em Tempo Real · Rastreabilidade · Suporte a RCA",
       "bullets": [
-        "Implementação de MES para monitoramento e histórico de parâmetros de processo.",
-        "Aumento de visibilidade operacional e suporte a RCA e estabilização de processo.",
-        "Apresentado em conferência internacional com case completo (diagnóstico → solução → resultados)."
+        "Implementação e atuação como key-user de MES para monitoramento e histórico de parâmetros críticos.",
+        "Aumento de visibilidade operacional para estabilização, redução de variabilidade e suporte a RCA (Root Cause Analysis).",
+        "Estruturação de relatórios e indicadores (KPIs) para tomada de decisão baseada em dados (Excel/Power BI)."
+      ]
+    },
+    {
+      "title": "Indicadores de Manutenção e Rotinas de Confiabilidade (3M)",
+      "subtitle": "OEE · MTBF · MTTR · Dashboards · Padronização",
+      "bullets": [
+        "Estruturação de indicadores de manutenção e confiabilidade (OEE, MTBF, MTTR) para apoiar priorização e melhoria contínua.",
+        "Criação de dashboards (Power BI) e rotinas em Excel para acompanhamento de performance e disponibilidade.",
+        "Padronização via manuais e checklists de inspeção para elevar qualidade diagnóstica."
       ]
     }
   ],
 
   "core_competencies": [
     {
-      "category": "Processos Industriais",
+      "category": "Manutenção & Confiabilidade",
       "items": [
-        "Chão de fábrica",
-        "Controle operacional",
-        "Layout fabril",
-        "Interface Engenharia-Produção-Manutenção",
-        "Digitalização (MES)"
+        "PCM (Planejamento e Controle de Manutenção)",
+        "Indicadores (OEE, MTBF, MTTR)",
+        "RCA (Root Cause Analysis) e investigação de falhas",
+        "Padronização de inspeções e checklists",
+        "Priorização por criticidade e risco"
       ]
     },
     {
-      "category": "Melhoria Contínua",
+      "category": "Gestão de Ativos & Orçamento",
       "items": [
-        "Lean",
+        "CAPEX (Capital Expenditure)",
+        "OPEX (Operational Expenditure)",
+        "Justificativa técnica e especificação",
+        "Gestão de fornecedores/terceiros",
+        "Controle de cronograma e validação técnica"
+      ]
+    },
+    {
+      "category": "Operação & Melhoria Contínua",
+      "items": [
+        "Chão de fábrica (Gemba)",
         "PDCA",
         "DMAIC",
-        "RCA (Ishikawa, 5 Porquês)",
+        "Kaizen",
         "Redução de variabilidade e perdas"
       ]
     },
     {
-      "category": "Projeto & CAPEX",
-      "items": [
-        "Justificativa técnica",
-        "Especificação",
-        "Fornecedores",
-        "Cronograma",
-        "Validação"
-      ]
-    },
-    {
-      "category": "Dados & Indicadores",
+      "category": "Dados & Ferramentas",
       "items": [
         "Excel (avançado)",
         "Power BI",
         "Minitab",
-        "KPIs",
-        "Análise de processo"
+        "KPIs (Key Performance Indicators)",
+        "Dashboards e reporting executivo"
+      ]
+    },
+    {
+      "category": "Compliance Marítimo (Ramp-up)",
+      "items": [
+        "NORMAM (Normas da Autoridade Marítima) – em desenvolvimento",
+        "ISM Code (International Safety Management Code) – em desenvolvimento",
+        "ISPS Code (International Ship and Port Facility Security Code) – em desenvolvimento",
+        "Interface com Sociedade Classificadora – em desenvolvimento"
       ]
     }
   ],
 
   "skills": [
-    "CAPEX industrial",
-    "MES",
+    "Manutenção",
+    "Confiabilidade",
+    "PCM (Planejamento e Controle de Manutenção)",
+    "Gestão de Ativos",
+    "CAPEX (Capital Expenditure)",
+    "OPEX (Operational Expenditure)",
+    "Gestão de fornecedores/terceiros",
+    "KPIs (Key Performance Indicators)",
+    "OEE",
+    "MTBF",
+    "MTTR",
+    "RCA (Root Cause Analysis)",
     "PDCA",
     "DMAIC",
-    "Lean",
-    "RCA",
-    "KPIs",
+    "Kaizen",
     "Excel avançado",
     "Power BI",
     "Minitab",
-    "Processo fabril",
-    "Análise de defeito",
     "Padronização",
-    "Layout fabril"
+    "Chão de fábrica (Gemba)",
+    "Segurança operacional",
+    "Máquinas rotativas",
+    "Diagnóstico de falhas",
+    "Planejamento",
+    "Gestão de rotina"
   ],
 
   "certifications": [
