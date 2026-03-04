@@ -196,19 +196,7 @@
     "Inglês: Fluente (C2 autodidata; proficiência profissional)"
   ],
   "projects": [
-    {
-      "title": "Otimização de Vibrações em Engrenagens (Gear Mesh)",
-      "subtitle": "Pesquisa publicada + implementação open-source (2023)",
-      "bullets": [
-        "Desenvolvimento e implementação de um modelo dinâmico alternativo para predição de vibrações em engrenagens de dentes retos, com formulação aprimorada de massa equivalente.",
-        "Modelagem de modificação de perfil de dente (alívio linear no adendo) e otimização de parâmetros via busca da seção áurea e interpolação polinomial.",
-        "Redução de 94–99% das respostas dinâmicas (deslocamento, velocidade, aceleração e força de engrenamento), com convergência para comportamento quase-estático.",
-        "Implementação completa em MATLAB como toolkit open-source (TPM-Vibration).",
-        "Resultados publicados no Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)."
-      ],
-      "repository": "https://github.com/flaviohasd/TPM-Vibration"
-    },
-{
+  {
     "title": "Gestão de Ativos e Investimentos (CAPEX)",
     "subtitle": "CAPEX (Capital Expenditure) · Priorização por criticidade · Fornecedores/terceiros · R$ 8 milhões/ano",
     "bullets": [
