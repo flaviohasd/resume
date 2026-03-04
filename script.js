@@ -9,10 +9,11 @@ const i18n = {
     core: "Core Competencies",
     education: "Education",
     projects: "Selected Projects & Research",
+    publications: "Publications",
     certifications: "Certifications",
     skills: "Skills",
     languages: "Languages",
-    volunteering: "Volunteering"
+    volunteering: "Volunteering",
   },
   pt: {
     summary: "Resumo Profissional",
@@ -20,11 +21,12 @@ const i18n = {
     core: "Competências",
     education: "Formação Acadêmica",
     projects: "Projetos & Pesquisa",
+    publications: "Publicações",
     certifications: "Certificações",
     skills: "Competências Técnicas",
     languages: "Idiomas",
-    volunteering: "Voluntariado"
-  }
+    volunteering: "Voluntariado",
+  },
 };
 
 // ===================================================================
@@ -48,8 +50,23 @@ const PROFILE_FILE = getProfileFile();
 
 function loadCV(file) {
   fetch(file)
-    .then((res) => res.json())
-    .then((data) => {
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status} ao buscar ${file}`);
+      }
+      return res.text();
+    })
+    .then((text) => {
+      // Alguns erros "silenciosos" vêm de BOM (Byte Order Mark) ou lixo no fim do arquivo
+      const cleaned = text.replace(/^\uFEFF/, "").trim();
+      let data;
+      try {
+        data = JSON.parse(cleaned);
+      } catch (e) {
+        console.error("JSON inválido. Conteúdo recebido (início):", cleaned.slice(0, 200));
+        throw e;
+      }
+
       renderCV(data);
       applyI18n(lang);
     })
@@ -67,30 +84,49 @@ function switchLang(newLang) {
 }
 
 // ===================================================================
+// Helpers
+// ===================================================================
+
+function safeText(v) {
+  return typeof v === "string" ? v : "";
+}
+
+function safeArray(a) {
+  return Array.isArray(a) ? a : [];
+}
+
+function joinOrEmpty(arr, sep = " · ") {
+  const a = safeArray(arr).filter(Boolean);
+  return a.length ? a.join(sep) : "";
+}
+
+// ===================================================================
 // Renderiza o currículo
 // ===================================================================
 
 function renderCV(data) {
-  document.title = `${data.name} - Resume`;
+  document.title = `${safeText(data.name)} - Resume`;
 
-  document.getElementById("name").textContent = data.name || "";
-  document.getElementById("title").textContent = data.title || "";
-  document.getElementById("subsummary").textContent = data.subsummary || "";
+  document.getElementById("name").textContent = safeText(data.name);
+  document.getElementById("title").textContent = safeText(data.title);
+  document.getElementById("subsummary").textContent = safeText(data.subsummary);
+
   document.getElementById("contact").textContent =
-    `${data.location || ""} | ✉️ ${data.email || ""} | 📱 ${data.phone || ""}`;
+    `${safeText(data.location)} | ✉️ ${safeText(data.email)} | 📱 ${safeText(data.phone)}`;
 
   document.getElementById("links").innerHTML = `
-    🌐 <a href="${data.linkedin}" target="_blank">LinkedIn</a> |
-    <a href="${data.github}" target="_blank">GitHub</a>
+    🌐 <a href="${safeText(data.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+    <a href="${safeText(data.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>
   `;
 
-  document.getElementById("summary").textContent = data.summary || "";
+  document.getElementById("summary").textContent = safeText(data.summary);
 
   const containers = [
     "experience",
     "core-competencies",
     "education",
     "projects",
+    "publications",
     "certifications",
     "skills",
     "languages",
@@ -102,87 +138,140 @@ function renderCV(data) {
     if (el) el.innerHTML = "";
   });
 
+  // ---------------------------------------------------------------
+  // Experience
+  // ---------------------------------------------------------------
   if (Array.isArray(data.experience)) {
     const div = document.getElementById("experience");
     data.experience.forEach((job) => {
       const item = document.createElement("div");
 
       const tasks =
-        job.tasks?.length
+        job?.tasks?.length
           ? `<ul>${job.tasks.map((t) => `<li>${t}</li>`).join("")}</ul>`
           : "";
 
       item.innerHTML = `
-        <h3>${job.title} – ${job.company}</h3>
-        <p class="date">${job.date}</p>
+        <h3>${safeText(job.title)} – ${safeText(job.company)}</h3>
+        <p class="date">${safeText(job.date)}</p>
         ${tasks}
       `;
       div.appendChild(item);
     });
   }
 
+  // ---------------------------------------------------------------
+  // Core competencies
+  // ---------------------------------------------------------------
   if (Array.isArray(data.core_competencies)) {
     const div = document.getElementById("core-competencies");
     data.core_competencies.forEach((c) => {
       const p = document.createElement("p");
-      p.innerHTML = `<strong>${c.category}:</strong> ${c.items.join(" · ")}`;
+      p.innerHTML = `<strong>${safeText(c.category)}:</strong> ${joinOrEmpty(c.items)}`;
       div.appendChild(p);
     });
   }
 
+  // ---------------------------------------------------------------
+  // Education
+  // ---------------------------------------------------------------
   if (Array.isArray(data.education)) {
     const div = document.getElementById("education");
     data.education.forEach((edu) => {
       const item = document.createElement("div");
 
       const comments =
-        edu.comments?.length
+        edu?.comments?.length
           ? `<ul>${edu.comments.map((c) => `<li>${c}</li>`).join("")}</ul>`
           : "";
 
+      // Se não tiver field, evita "in undefined"
+      const degreeLine = edu.field
+        ? `<strong>${safeText(edu.degree)} in ${safeText(edu.field)}</strong>`
+        : `<strong>${safeText(edu.degree)}</strong>`;
+
       item.innerHTML = `
-        <strong>${edu.degree} in ${edu.field}</strong>
-        <p><em>${edu.institution}</em></p>
-        <p class="date">${edu.date}</p>
+        ${degreeLine}
+        <p><em>${safeText(edu.institution)}</em></p>
+        <p class="date">${safeText(edu.date)}</p>
         ${comments}
       `;
       div.appendChild(item);
     });
   }
 
+  // ---------------------------------------------------------------
+  // Projects
+  // ---------------------------------------------------------------
   if (Array.isArray(data.projects)) {
     const div = document.getElementById("projects");
     data.projects.forEach((proj) => {
       const item = document.createElement("div");
 
       const bullets =
-        proj.bullets?.length
+        proj?.bullets?.length
           ? `<ul>${proj.bullets.map((b) => `<li>${b}</li>`).join("")}</ul>`
           : "";
 
+      const repoLink = proj.repository
+        ? `<p><a href="${proj.repository}" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>`
+        : "";
+
+      const pubLink = proj.link
+        ? `<p><a href="${proj.link}" target="_blank" rel="noopener noreferrer">Link</a></p>`
+        : "";
+
       item.innerHTML = `
-        <h3>${proj.title}</h3>
-        ${proj.subtitle ? `<p class="project-subtitle">${proj.subtitle}</p>` : ""}
+        <h3>${safeText(proj.title)}</h3>
+        ${proj.subtitle ? `<p class="project-subtitle">${safeText(proj.subtitle)}</p>` : ""}
         ${bullets}
-        ${
-          proj.repository
-            ? `<p><a href="${proj.repository}" target="_blank">GitHub Repository</a></p>`
-            : ""
-        }
+        ${repoLink}
+        ${pubLink}
       `;
       div.appendChild(item);
     });
   }
 
+  // ---------------------------------------------------------------
+  // Publications (NOVO)
+  // Espera array: [{ title, journal, year, link }]
+  // ---------------------------------------------------------------
+  if (Array.isArray(data.publications)) {
+    const div = document.getElementById("publications");
+    data.publications.forEach((pub) => {
+      const item = document.createElement("div");
+
+      const journal = pub.journal ? `<p><em>${safeText(pub.journal)}</em></p>` : "";
+      const year = pub.year ? `<p class="date">${safeText(pub.year)}</p>` : "";
+      const link = pub.link
+        ? `<p><a href="${pub.link}" target="_blank" rel="noopener noreferrer">Link da publicação</a></p>`
+        : "";
+
+      item.innerHTML = `
+        <h3>${safeText(pub.title)}</h3>
+        ${journal}
+        ${year}
+        ${link}
+      `;
+      div.appendChild(item);
+    });
+  }
+
+  // ---------------------------------------------------------------
+  // Certifications
+  // ---------------------------------------------------------------
   if (Array.isArray(data.certifications)) {
     const ul = document.getElementById("certifications");
     data.certifications.forEach((cert) => {
       const li = document.createElement("li");
-      li.textContent = `${cert.name} - ${cert.institution} (${cert.date})`;
+      li.textContent = `${safeText(cert.name)} - ${safeText(cert.institution)} (${safeText(cert.date)})`;
       ul.appendChild(li);
     });
   }
 
+  // ---------------------------------------------------------------
+  // Skills
+  // ---------------------------------------------------------------
   if (Array.isArray(data.skills)) {
     const ul = document.getElementById("skills");
     data.skills.forEach((skill) => {
@@ -192,25 +281,31 @@ function renderCV(data) {
     });
   }
 
+  // ---------------------------------------------------------------
+  // Languages
+  // ---------------------------------------------------------------
   if (Array.isArray(data.languages)) {
     document.getElementById("languages").textContent = data.languages.join(" | ");
   }
 
+  // ---------------------------------------------------------------
+  // Volunteering
+  // ---------------------------------------------------------------
   if (Array.isArray(data.volunteering)) {
     const div = document.getElementById("volunteering");
     data.volunteering.forEach((v) => {
       const item = document.createElement("div");
       item.innerHTML = `
-        <h3>${v.role} – ${v.organization}</h3>
-        <p class="date">${v.date}</p>
-        <p>${v.description}</p>
+        <h3>${safeText(v.role)} – ${safeText(v.organization)}</h3>
+        <p class="date">${safeText(v.date)}</p>
+        <p>${safeText(v.description)}</p>
       `;
       div.appendChild(item);
     });
   }
 
   document.getElementById("footer").textContent =
-    `© ${new Date().getFullYear()} - ${data.name}`;
+    `© ${new Date().getFullYear()} - ${safeText(data.name)}`;
 }
 
 // ===================================================================
@@ -218,13 +313,20 @@ function renderCV(data) {
 // ===================================================================
 
 function applyI18n(lang) {
-  document.querySelector("#summary-section h2").textContent = i18n[lang].summary;
-  document.querySelector("#experience-section h2").textContent = i18n[lang].experience;
-  document.querySelector("#core-section h2").textContent = i18n[lang].core;
-  document.querySelector("#education-section h2").textContent = i18n[lang].education;
-  document.querySelector("#projects-section h2").textContent = i18n[lang].projects;
-  document.querySelector("#certifications-section h2").textContent = i18n[lang].certifications;
-  document.querySelector("#skills-section h2").textContent = i18n[lang].skills;
-  document.querySelector("#languages-section h2").textContent = i18n[lang].languages;
-  document.querySelector("#volunteering-section h2").textContent = i18n[lang].volunteering;
+  // Evita crash se alguma section não existir no HTML
+  const set = (selector, text) => {
+    const el = document.querySelector(selector);
+    if (el) el.textContent = text;
+  };
+
+  set("#summary-section h2", i18n[lang].summary);
+  set("#experience-section h2", i18n[lang].experience);
+  set("#core-section h2", i18n[lang].core);
+  set("#education-section h2", i18n[lang].education);
+  set("#projects-section h2", i18n[lang].projects);
+  set("#publications-section h2", i18n[lang].publications);
+  set("#certifications-section h2", i18n[lang].certifications);
+  set("#skills-section h2", i18n[lang].skills);
+  set("#languages-section h2", i18n[lang].languages);
+  set("#volunteering-section h2", i18n[lang].volunteering);
 }
