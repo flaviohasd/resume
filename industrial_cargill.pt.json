@@ -1,15 +1,15 @@
 {
   "name": "Flávio Dias",
   "title": "Engenheiro Mecânico | Manutenção & Confiabilidade | PCM | Gestão de Ativos (CAPEX/OPEX) | KPIs | Melhoria Contínua (PDCA/DMAIC)",
-  "location": "Santarém, Pará, Brasil (Residente)",
+  "location": "Santarém, Pará, Brazil (Residente)",
   "email": "flaviohasd@hotmail.com",
   "phone": "+55 92 984776604",
   "linkedin": "https://www.linkedin.com/in/flaviohasd/?locale=pt_BR",
   "github": "https://github.com/flaviohasd",
 
-  "summary": "Engenheiro Mecânico com experiência em manutenção, confiabilidade e gestão de ativos em ambiente industrial de alta criticidade, atuando na interface entre operação, manutenção, qualidade e fornecedores/terceiros. Responsável funcional por CAPEX (Capital Expenditure) de R$ 8 milhões/ano, implantação de MES (Manufacturing Execution System) e estruturação de KPIs (Key Performance Indicators) para suportar estabilidade operacional, rastreabilidade e tomada de decisão baseada em dados. Experiência com indicadores de manutenção (OEE, MTBF, MTTR), padronização, investigação de falhas (RCA) e melhoria contínua (PDCA/DMAIC). Em transição direcionada para manutenção de embarcações e ativos críticos, com plano de ramp-up em NORMAM (Normas da Autoridade Marítima), ISM Code (International Safety Management Code), ISPS Code (International Ship and Port Facility Security Code) e interface com Sociedade Classificadora.",
+  "summary": "Engenheiro Mecânico com experiência em manutenção, confiabilidade e gestão de ativos em ambiente industrial de alta criticidade, atuando na interface entre operação, manutenção, qualidade e fornecedores/terceiros. Responsável funcional por CAPEX (Capital Expenditure) de R$ 8 milhões/ano, implantação de MES (Manufacturing Execution System) e estruturação de KPIs (Key Performance Indicators) para suportar estabilidade operacional, rastreabilidade e tomada de decisão baseada em dados. Experiência com indicadores de manutenção (OEE, MTBF, MTTR), padronização, investigação de falhas (RCA) e melhoria contínua (PDCA/DMAIC). Histórico de representação técnica internacional apresentando caso completo (diagnóstico → solução → resultados). Pesquisa aplicada em vibrações de engrenagens com publicação Qualis A2 (relevante para máquinas rotativas e diagnóstico). Em transição direcionada para manutenção de embarcações e ativos críticos, com plano de ramp-up em NORMAM (Normas da Autoridade Marítima), ISM Code (International Safety Management Code), ISPS Code (International Ship and Port Facility Security Code) e interface com Sociedade Classificadora.",
 
-  "subsummary": "Manutenção & Confiabilidade · PCM · Gestão de Ativos · CAPEX/OPEX · Terceiros · KPIs (OEE/MTBF/MTTR) · RCA · Excel/Power BI · Melhoria Contínua",
+  "subsummary": "Manutenção & Confiabilidade · PCM · Gestão de Ativos · CAPEX/OPEX · Terceiros · KPIs (OEE/MTBF/MTTR) · RCA · Vibrações/Máquinas Rotativas · MES · Excel/Power BI · Experiência Internacional",
 
   "experience": [
     {
@@ -22,6 +22,7 @@
         "Implementação e atuação como key-user de MES (Manufacturing Execution System) para monitoramento e rastreabilidade de parâmetros, ampliando visibilidade operacional e suporte a RCA (Root Cause Analysis).",
         "Estruturação de indicadores (KPIs) e relatórios em Excel e Power BI para acompanhamento de performance, variabilidade e eficiência, apoiando priorização baseada em criticidade.",
         "Integração técnica com manutenção, produção, qualidade e fornecedores/terceiros para garantir execução com padrão, segurança e cumprimento de prazos.",
+        "Representação técnica internacional apresentando caso completo (diagnóstico → solução → resultados) sobre integração MES e melhoria de estabilidade operacional em conferência no exterior.",
         "Reconhecimento formal por excelência (mérito/aumento) pela última empregadora."
       ]
     },
@@ -73,7 +74,8 @@
       "date": "Jun 2022 – Set 2022",
       "tasks": [
         "Assistência em medições com acelerômetros e DAQ (Data Acquisition).",
-        "Análises FFT (Fast Fourier Transform) aplicadas a máquinas rotativas e diagnósticos vibracionais."
+        "Análises FFT (Fast Fourier Transform) aplicadas a máquinas rotativas e diagnósticos vibracionais.",
+        "Suporte a alunos em interpretação de espectros e correlação com falhas típicas em sistemas mecânicos."
       ]
     }
   ],
@@ -89,12 +91,12 @@
       ]
     },
     {
-      "title": "Digitalização e Confiabilidade com MES",
-      "subtitle": "MES (Manufacturing Execution System) · Dados em Tempo Real · Rastreabilidade · Suporte a RCA",
+      "title": "Digitalização e Confiabilidade com MES (Case Internacional)",
+      "subtitle": "MES (Manufacturing Execution System) · Dados em Tempo Real · Rastreabilidade · KPIs · Apresentação no exterior",
       "bullets": [
         "Implementação e atuação como key-user de MES para monitoramento e histórico de parâmetros críticos.",
-        "Aumento de visibilidade operacional para estabilização, redução de variabilidade e suporte a RCA (Root Cause Analysis).",
-        "Estruturação de relatórios e indicadores (KPIs) para tomada de decisão baseada em dados (Excel/Power BI)."
+        "Estruturação de KPIs (Key Performance Indicators) e relatórios para tomada de decisão baseada em dados (Excel/Power BI).",
+        "Apresentação técnica internacional de case completo (diagnóstico → solução → resultados) envolvendo integração MES e estabilidade operacional."
       ]
     },
     {
@@ -117,6 +119,16 @@
         "RCA (Root Cause Analysis) e investigação de falhas",
         "Padronização de inspeções e checklists",
         "Priorização por criticidade e risco"
+      ]
+    },
+    {
+      "category": "Máquinas Rotativas & Vibrações",
+      "items": [
+        "FFT (Fast Fourier Transform) aplicada a diagnóstico",
+        "Aquisição de dados (DAQ - Data Acquisition)",
+        "Interpretação de espectros e correlação com falhas",
+        "Base acadêmica em vibrações de engrenagens",
+        "Aplicação em confiabilidade e análise de falhas"
       ]
     },
     {
@@ -176,16 +188,21 @@
     "PDCA",
     "DMAIC",
     "Kaizen",
+    "Vibrações mecânicas",
+    "FFT (Fast Fourier Transform)",
+    "DAQ (Data Acquisition)",
+    "Máquinas rotativas",
+    "Diagnóstico de falhas",
     "Excel avançado",
     "Power BI",
     "Minitab",
+    "MES (Manufacturing Execution System)",
     "Padronização",
     "Chão de fábrica (Gemba)",
     "Segurança operacional",
-    "Máquinas rotativas",
-    "Diagnóstico de falhas",
     "Planejamento",
-    "Gestão de rotina"
+    "Gestão de rotina",
+    "Comunicação técnica (apresentação internacional)"
   ],
 
   "certifications": [
@@ -220,7 +237,8 @@
       "title": "Vibration attenuation on spur gears through optimal profile modification",
       "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)",
       "year": "2023",
-      "link": "https://rdcu.be/ds3ID"
+      "link": "https://rdcu.be/ds3ID",
+      "relevance": "Vibrações e máquinas rotativas: base para diagnóstico e confiabilidade (correlação espectral, modificação de perfil e redução de excitação)."
     }
   ]
 }
