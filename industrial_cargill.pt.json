@@ -1,220 +1,41 @@
-{
-  "name": "Flávio Dias",
-  "title": "Engenheiro Mecânico | Manutenção & Confiabilidade | PCM | Gestão de Ativos (CAPEX/OPEX) | KPIs | Melhoria Contínua (PDCA/DMAIC)",
-  "location": "Santarém, Pará, Brazil",
-  "email": "flaviohasd@hotmail.com",
-  "phone": "+55 92 984776604",
-  "linkedin": "https://www.linkedin.com/in/flaviohasd/?locale=pt_BR",
-  "github": "https://github.com/flaviohasd",
-  "summary": "Engenheiro Mecânico com experiência em manutenção, confiabilidade e gestão de ativos em ambiente industrial de alta criticidade. Atuação na interface entre operação, manutenção, qualidade e fornecedores/terceiros, com tomada de decisão baseada em dados e foco em estabilidade operacional. Responsável funcional por CAPEX (Capital Expenditure) de R$ 8 milhões/ano, implantação de MES (Manufacturing Execution System) e estruturação de KPIs (Key Performance Indicators) para rastreabilidade e controle. Experiência com indicadores de manutenção (OEE, MTBF, MTTR), padronização, investigação de falhas (RCA) e melhoria contínua (PDCA/DMAIC). Diferenciais: representação técnica internacional apresentando case completo (diagnóstico → solução → resultados) e publicação Qualis A2 (Springer) em vibrações de engrenagens, com aplicação direta em máquinas rotativas e confiabilidade. Em transição direcionada para manutenção de embarcações e ativos críticos, com ramp-up estruturado em NORMAM (Normas da Autoridade Marítima), ISM Code (International Safety Management Code), ISPS Code (International Ship and Port Facility Security Code) e interface com Sociedade Classificadora.",
-  "subsummary": "Manutenção & Confiabilidade — PCM · Gestão de Ativos · CAPEX/OPEX · Terceiros · KPIs (OEE/MTBF/MTTR) · RCA · Vibrações/Máquinas Rotativas",
-  "experience": [
-    {
-      "title": "Especialista em Engenharia Industrial (Interface Produção–Manutenção–Ferramentaria)",
-      "company": "Grupo Yamaha Brasil",
-      "date": "Abr 2023 - Abr 2025",
-      "tasks": [
-        "Responsável funcional por programa anual de CAPEX (Capital Expenditure) de R$ 8 milhões, incluindo justificativa técnica, escopo, priorização, seleção de fornecedores, controle de cronograma e validação de engenharia.",
-        "Atuação direta em chão de fábrica (Gemba) no diagnóstico de falhas recorrentes, definição de ações corretivas e padronização para estabilização operacional e redução de perdas.",
-        "Implementação e atuação como key-user de MES (Manufacturing Execution System) para monitoramento e rastreabilidade de parâmetros, ampliando visibilidade operacional e suporte a RCA (Root Cause Analysis).",
-        "Estruturação de KPIs (Key Performance Indicators) e relatórios em Excel e Power BI para acompanhamento de desempenho, variabilidade e eficiência, apoiando priorização baseada em criticidade.",
-        "Interface técnica com manutenção, produção, qualidade e fornecedores/terceiros para garantir execução com padrão, segurança e cumprimento de prazos.",
-        "Representação técnica internacional apresentando case completo (diagnóstico → solução → resultados) sobre integração MES e estabilidade operacional em conferência no exterior.",
-        "Reconhecimento formal por excelência (mérito)."
-      ]
-    },
-    {
-      "title": "Analista Industrial – Soldagem & Estamparia",
-      "company": "Grupo Yamaha Brasil",
-      "date": "Jul 2021 - Nov 2021",
-      "tasks": [
-        "Suporte a operações de soldagem e estamparia com diagnóstico de processo, análise de defeitos e definição de correções.",
-        "Condução de projetos PDCA/DMAIC para eliminar recorrências e aumentar confiabilidade e estabilidade de processo.",
-        "Padronização e controle de documentação técnica e qualidade para conformidade ISO 9001."
-      ]
-    },
-    {
-      "title": "Estagiário de Engenharia Mecânica",
-      "company": "UFAM - Faculdade de Tecnologia",
-      "date": "Mai 2022 - Ago 2022",
-      "tasks": [
-        "Reestruturação do Laboratório de Sistemas Mecânicos e Controle, com melhorias de layout, infraestrutura e segurança.",
-        "Implementação de 5S, elaboração de manual de boas práticas e aumento de acessibilidade operacional.",
-        "Suporte à ampliação física do laboratório e à execução simultânea de experimentos."
-      ]
-    },
-    {
-      "title": "Monitor – Vibrações Mecânicas",
-      "company": "UFAM - Universidade Federal do Amazonas",
-      "date": "Jun 2022 - Set 2022",
-      "tasks": [
-        "Apoio em medições vibracionais com acelerômetros e sistemas de aquisição (DAQ - Data Acquisition).",
-        "Orientação a alunos em FFT (Fast Fourier Transform), interpretação de sinais e correlação entre dados experimentais e modelos analíticos.",
-        "Aplicação prática em diagnóstico de máquinas rotativas e fundamentos de confiabilidade."
-      ]
-    },
-    {
-      "title": "Estagiário de Engenharia de Manutenção (Confiabilidade)",
-      "company": "3M do Brasil",
-      "date": "Jan 2020 - Jul 2021",
-      "tasks": [
-        "Desenvolvimento de dashboards de confiabilidade (OEE, MTBF, MTTR) integrando dados de manutenção e produção.",
-        "Suporte ao planejamento de manutenção preventiva e análise de confiabilidade de equipamentos.",
-        "Criação de manuais e checklists de inspeção para padronização e melhoria de confiabilidade diagnóstica."
-      ]
-    }
-  ],
-  "education": [
-    {
-      "degree": "Bacharelado",
-      "field": "Engenharia Mecânica",
-      "institution": "Universidade Federal do Amazonas (UFAM)",
-      "date": "2015 - 2022",
-      "comments": [
-        "Ênfase em resistência dos materiais, vibrações mecânicas, elementos de máquinas, modelagem, análise e controle de sistemas dinâmicos.",
-        "Pesquisa em vibrações de engrenagens com publicação Qualis A2 (Springer)."
-      ]
-    },
-    {
-      "degree": "Lean Six Sigma Green Belt",
-      "field": "Gestão de Projetos e Melhoria Contínua",
-      "institution": "Escola DNC",
-      "date": "2021 - 2021",
-      "comments": [
-        "Treinamento prático em Lean Six Sigma, Scrum, Excel, Power BI e Minitab aplicado a um projeto real de redução de custos e otimização de processos.",
-        "Projeto com objetivo de reduzir lead time em 20% em empresa automotiva; resultado: +33% de capacidade produtiva e retorno financeiro superior a 200k/ano."
-      ]
-    }
-  ],
-  "core_competencies": [
-    {
-      "category": "Manutenção & Confiabilidade",
-      "items": [
-        "PCM (Planejamento e Controle de Manutenção)",
-        "KPIs (Key Performance Indicators)",
-        "OEE",
-        "MTBF",
-        "MTTR",
-        "RCA (Root Cause Analysis)",
-        "padronização e inspeções"
-      ]
-    },
-    {
-      "category": "Máquinas Rotativas & Vibrações",
-      "items": [
-        "vibrações mecânicas",
-        "FFT (Fast Fourier Transform)",
-        "DAQ (Data Acquisition)",
-        "diagnóstico vibracional",
-        "análise de sinais",
-        "correlação experimental vs. analítico"
-      ]
-    },
-    {
-      "category": "Gestão de Ativos & Orçamento",
-      "items": [
-        "CAPEX (Capital Expenditure)",
-        "OPEX (Operational Expenditure)",
-        "justificativa técnica",
-        "especificação",
-        "gestão de fornecedores/terceiros",
-        "cronograma e validação"
-      ]
-    },
-    {
-      "category": "Dados & Diagnóstico",
-      "items": [
-        "Excel (avançado)",
-        "Power BI",
-        "Minitab",
-        "monitoramento de processo",
-        "tomada de decisão baseada em dados"
-      ]
-    },
-    {
-      "category": "Métodos de Engenharia",
-      "items": [
-        "DMAIC",
-        "PDCA",
-        "FMEA",
-        "5 Porquês",
-        "Ishikawa",
-        "melhoria contínua",
-        "ISO 9001"
-      ]
-    }
-  ],
-  "skills": [
-    "PCM (Planejamento e Controle de Manutenção)",
-    "Confiabilidade e Gestão de Ativos",
-    "Gestão de Terceiros (Contratos e Fornecedores)",
-    "CAPEX (Capital Expenditure) e OPEX (Operational Expenditure)",
-    "KPIs (Key Performance Indicators) de Manutenção (OEE, MTBF, MTTR)",
-    "RCA (Root Cause Analysis) e Análise de Falhas",
-    "Melhoria Contínua (PDCA, DMAIC, Kaizen)",
-    "Máquinas Rotativas e Diagnóstico Vibracional",
-    "FFT (Fast Fourier Transform) e DAQ (Data Acquisition)",
-    "Excel Avançado, Power BI e Minitab",
-    "MES (Manufacturing Execution System) e Rastreabilidade",
-    "ISO 9001 e Padronização Operacional",
-    "Comunicação Técnica (Apresentação Internacional)"
-  ],
-  "certifications": [
-    {
-      "name": "Project Management & Green Belt Lean Six Sigma & Scrum Master",
-      "institution": "Escola DNC",
-      "date": "2021"
-    },
-    {
-      "name": "Minitab Statistical Tools",
-      "institution": "Escola DNC",
-      "date": "2022"
-    },
-    {
-      "name": "Power BI - Data Visualization",
-      "institution": "Escola DNC",
-      "date": "2022"
-    },
-    {
-      "name": "MAGMASOFT Simulation Training",
-      "institution": "MAGMA",
-      "date": "2024"
-    },
-    {
-      "name": "IBM Data Science (Python, SQL, ML)",
-      "institution": "IBM Skills Network - Coursera",
-      "date": "2023"
-    },
-    {
-      "name": "CS50: Introduction to Computer Science with Python",
-      "institution": "MIT/edX",
-      "date": "2023"
-    }
-  ],
-  "languages": [
-    "Português: Nativo",
-    "Inglês: Fluente (C2 autodidata; proficiência profissional)"
-  ],
-  "projects": [
-    {
-      "title": "Otimização de Vibrações em Engrenagens (Gear Mesh)",
-      "subtitle": "Pesquisa publicada + implementação open-source (2023)",
-      "bullets": [
-        "Desenvolvimento e implementação de um modelo dinâmico alternativo para predição de vibrações em engrenagens de dentes retos, com formulação aprimorada de massa equivalente.",
-        "Modelagem de modificação de perfil de dente (alívio linear no adendo) e otimização de parâmetros via busca da seção áurea e interpolação polinomial.",
-        "Redução de 94–99% das respostas dinâmicas (deslocamento, velocidade, aceleração e força de engrenamento), com convergência para comportamento quase-estático.",
-        "Implementação completa em MATLAB como toolkit open-source (TPM-Vibration).",
-        "Resultados publicados no Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)."
-      ],
-      "repository": "https://github.com/flaviohasd/TPM-Vibration"
-    }
-  ],
-  "publications": [
-    {
-      "title": "Vibration attenuation on spur gears through optimal profile modification",
-      "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)",
-      "year": "2023",
-      "link": "https://rdcu.be/ds3ID"
-    }
-  ]
-}
+"projects": [
+  {
+    "title": "Gestão de Ativos e Investimentos (CAPEX)",
+    "subtitle": "CAPEX (Capital Expenditure) · Priorização por criticidade · Fornecedores/terceiros · R$ 8 milhões/ano",
+    "bullets": [
+      "Coordenação funcional do programa anual de CAPEX, desde justificativa técnica e definição de escopo até priorização, seleção de fornecedores, cronograma e validação de engenharia.",
+      "Follow-up técnico com fornecedores/terceiros para garantir cumprimento de prazos, conformidade de especificações e padrão de entrega.",
+      "Integração com manutenção, produção e qualidade para assegurar viabilidade operacional, segurança e sustentação dos resultados após implantação."
+    ]
+  },
+  {
+    "title": "Integração MES e Rastreabilidade Operacional",
+    "subtitle": "MES (Manufacturing Execution System) · Dados em tempo real · Rastreabilidade · Suporte a RCA",
+    "bullets": [
+      "Implantação e atuação como key-user de MES (Manufacturing Execution System) para monitoramento e histórico de parâmetros críticos.",
+      "Estruturação de rastreabilidade e rotinas de análise para suportar investigação de falhas (RCA) e estabilização operacional.",
+      "Correlação de dados de produção e manutenção para tomada de decisão baseada em dados e redução de variabilidade."
+    ]
+  },
+  {
+    "title": "KPIs de Manutenção e Confiabilidade (OEE, MTBF, MTTR)",
+    "subtitle": "Excel/Power BI · Dashboards · Rotina de gestão · Confiabilidade",
+    "bullets": [
+      "Definição e acompanhamento de KPIs (Key Performance Indicators) operacionais e de manutenção, com foco em disponibilidade, eficiência e confiabilidade.",
+      "Construção de relatórios e dashboards em Excel e Power BI para priorização baseada em criticidade e melhoria contínua.",
+      "Padronização de rotinas (checklists e indicadores) para aumentar previsibilidade e qualidade diagnóstica."
+    ]
+  },
+  {
+    "title": "Otimização de Vibrações em Engrenagens (Gear Mesh)",
+    "subtitle": "Pesquisa publicada + implementação open-source (2023)",
+    "bullets": [
+      "Desenvolvimento e implementação de um modelo dinâmico alternativo para predição de vibrações em engrenagens de dentes retos, com formulação aprimorada de massa equivalente.",
+      "Modelagem de modificação de perfil de dente (alívio linear no adendo) e otimização de parâmetros via busca da seção áurea e interpolação polinomial.",
+      "Redução de 94–99% das respostas dinâmicas (deslocamento, velocidade, aceleração e força de engrenamento), com convergência para comportamento quase-estático.",
+      "Implementação completa em MATLAB como toolkit open-source (TPM-Vibration).",
+      "Resultados publicados no Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)."
+    ],
+    "repository": "https://github.com/flaviohasd/TPM-Vibration"
+  }
+],
