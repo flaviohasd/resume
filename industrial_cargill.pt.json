@@ -6,11 +6,8 @@
   "phone": "+55 92 984776604",
   "linkedin": "https://www.linkedin.com/in/flaviohasd/?locale=pt_BR",
   "github": "https://github.com/flaviohasd",
-
   "summary": "Engenheiro Mecânico com experiência em manutenção, confiabilidade e gestão de ativos em ambiente industrial de alta criticidade. Atuação na interface entre operação, manutenção, qualidade e fornecedores/terceiros, com tomada de decisão baseada em dados e foco em estabilidade operacional. Responsável funcional por CAPEX (Capital Expenditure) de R$ 8 milhões/ano, implantação de MES (Manufacturing Execution System) e estruturação de KPIs (Key Performance Indicators) para rastreabilidade e controle. Experiência com indicadores de manutenção (OEE, MTBF, MTTR), padronização, investigação de falhas (RCA) e melhoria contínua (PDCA/DMAIC). Diferenciais: representação técnica internacional apresentando case completo (diagnóstico → solução → resultados) e publicação Qualis A2 (Springer) em vibrações de engrenagens, com aplicação direta em máquinas rotativas e confiabilidade. Em transição direcionada para manutenção de embarcações e ativos críticos, com ramp-up estruturado em NORMAM (Normas da Autoridade Marítima), ISM Code (International Safety Management Code), ISPS Code (International Ship and Port Facility Security Code) e interface com Sociedade Classificadora.",
-
   "subsummary": "Manutenção & Confiabilidade — PCM · Gestão de Ativos · CAPEX/OPEX · Terceiros · KPIs (OEE/MTBF/MTTR) · RCA · Vibrações/Máquinas Rotativas",
-
   "experience": [
     {
       "title": "Especialista em Engenharia Industrial (Interface Produção–Manutenção–Ferramentaria)",
@@ -67,7 +64,6 @@
       ]
     }
   ],
-
   "education": [
     {
       "degree": "Bacharelado",
@@ -90,7 +86,6 @@
       ]
     }
   ],
-
   "core_competencies": [
     {
       "category": "Manutenção & Confiabilidade",
@@ -149,7 +144,6 @@
       ]
     }
   ],
-
   "skills": [
     "PCM (Planejamento e Controle de Manutenção)",
     "Confiabilidade e Gestão de Ativos",
@@ -165,7 +159,6 @@
     "ISO 9001 e Padronização Operacional",
     "Comunicação Técnica (Apresentação Internacional)"
   ],
-  
   "certifications": [
     {
       "name": "Project Management & Green Belt Lean Six Sigma & Scrum Master",
@@ -181,7 +174,7 @@
       "name": "Power BI - Data Visualization",
       "institution": "Escola DNC",
       "date": "2022"
-    }
+    },
     {
       "name": "MAGMASOFT Simulation Training",
       "institution": "MAGMA",
@@ -196,14 +189,12 @@
       "name": "CS50: Introduction to Computer Science with Python",
       "institution": "MIT/edX",
       "date": "2023"
-    },
+    }
   ],
-
   "languages": [
     "Português: Nativo",
     "Inglês: Fluente (C2 autodidata; proficiência profissional)"
   ],
-
   "projects": [
     {
       "title": "Otimização de Vibrações em Engrenagens (Gear Mesh)",
@@ -218,7 +209,6 @@
       "repository": "https://github.com/flaviohasd/TPM-Vibration"
     }
   ],
-
   "publications": [
     {
       "title": "Vibration attenuation on spur gears through optimal profile modification",
