@@ -224,16 +224,15 @@
     ]
   },
   {
-    "title": "Otimização de Vibrações em Engrenagens (Gear Mesh)",
-    "subtitle": "Pesquisa publicada + implementação open-source (2023)",
+    "title": "Diagnóstico Vibracional e Confiabilidade em Projeto (base acadêmica + toolkit)",
+    "subtitle": "Aplicação em máquinas rotativas · modelagem dinâmica · análise de sinais",
     "bullets": [
-      "Desenvolvimento e implementação de um modelo dinâmico alternativo para predição de vibrações em engrenagens de dentes retos, com formulação aprimorada de massa equivalente.",
-      "Modelagem de modificação de perfil de dente (alívio linear no adendo) e otimização de parâmetros via busca da seção áurea e interpolação polinomial.",
-      "Redução de 94–99% das respostas dinâmicas (deslocamento, velocidade, aceleração e força de engrenamento), com convergência para comportamento quase-estático.",
-      "Implementação completa em MATLAB como toolkit open-source (TPM-Vibration).",
-      "Resultados publicados no Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer, Qualis A2)."
+      "Base acadêmica em vibrações de engrenagens com aplicação direta em confiabilidade e máquinas rotativas.",
+      "Toolkit open-source (MATLAB) para modelagem/otimização e estudo de respostas dinâmicas.",
+      "Publicação Qualis A2 (Springer) listada na seção Publicações."
     ],
-    "repository": "https://github.com/flaviohasd/TPM-Vibration"
+    "repository": "https://github.com/flaviohasd/TPM-Vibration",
+    "link": "https://rdcu.be/ds3ID"
   }
   ],
   "publications": [
