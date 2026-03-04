@@ -232,12 +232,13 @@ function renderCV(data) {
     });
   }
 
-  // ---------------------------------------------------------------
-  // Publications (NOVO)
-  // Espera array: [{ title, journal, year, link }]
-  // ---------------------------------------------------------------
-  if (Array.isArray(data.publications)) {
-    const div = document.getElementById("publications");
+/// ---------------------------------------------------------------
+// Publications
+// Espera array: [{ title, journal, year, link }]
+// ---------------------------------------------------------------
+if (Array.isArray(data.publications)) {
+  const div = document.getElementById("publications");
+  if (div) {
     data.publications.forEach((pub) => {
       const item = document.createElement("div");
 
@@ -256,6 +257,7 @@ function renderCV(data) {
       div.appendChild(item);
     });
   }
+}
 
   // ---------------------------------------------------------------
   // Certifications
