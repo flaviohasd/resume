@@ -48,20 +48,28 @@ const PROFILE_FILE = getProfileFile();
 // ===================================================================
 
 function loadCV(file) {
-  fetch(file)
+  // Cache-bust para evitar CDN/Browser cache
+  const bust = Date.now();
+  const url = `${file}?v=${bust}`;
+
+  console.log("[CV] cv param:", cv);
+  console.log("[CV] lang param:", lang);
+  console.log("[CV] loading file:", file);
+  console.log("[CV] request url:", url);
+
+  fetch(url, { cache: "no-store" })
     .then((res) => {
       if (!res.ok) throw new Error(`HTTP ${res.status} ao buscar ${file}`);
       return res.text();
     })
     .then((text) => {
-      // Remove BOM e lixo de espaços
+      // Remove BOM e espaços
       const cleaned = text.replace(/^\uFEFF/, "").trim();
-
       let data;
       try {
         data = JSON.parse(cleaned);
       } catch (e) {
-        console.error("JSON inválido. Início do conteúdo:", cleaned.slice(0, 200));
+        console.error("[CV] JSON inválido. Início:", cleaned.slice(0, 300));
         throw e;
       }
 
@@ -89,12 +97,8 @@ function safeText(v) {
   return typeof v === "string" ? v : "";
 }
 
-function safeArray(a) {
-  return Array.isArray(a) ? a : [];
-}
-
 function joinOrEmpty(arr, sep = " · ") {
-  const a = safeArray(arr).filter(Boolean);
+  const a = Array.isArray(arr) ? arr.filter(Boolean) : [];
   return a.length ? a.join(sep) : "";
 }
 
@@ -156,7 +160,7 @@ function renderCV(data) {
       data.experience.forEach((job) => {
         const item = document.createElement("div");
 
-        const tasks = job?.tasks?.length
+        const tasks = Array.isArray(job?.tasks) && job.tasks.length
           ? `<ul>${job.tasks.map((t) => `<li>${t}</li>`).join("")}</ul>`
           : "";
 
@@ -185,7 +189,7 @@ function renderCV(data) {
   }
 
   // ---------------------------------------------------------------
-  // Education (corrige "in" vs "em" conforme idioma)
+  // Education (in/em conforme idioma)
   // ---------------------------------------------------------------
   if (Array.isArray(data.education)) {
     const div = document.getElementById("education");
@@ -193,7 +197,7 @@ function renderCV(data) {
       data.education.forEach((edu) => {
         const item = document.createElement("div");
 
-        const comments = edu?.comments?.length
+        const comments = Array.isArray(edu?.comments) && edu.comments.length
           ? `<ul>${edu.comments.map((c) => `<li>${c}</li>`).join("")}</ul>`
           : "";
 
@@ -214,8 +218,7 @@ function renderCV(data) {
   }
 
   // ---------------------------------------------------------------
-  // Publications (NOVO)
-  // Espera array: [{ title, journal, year, link }]
+  // Publications
   // ---------------------------------------------------------------
   if (Array.isArray(data.publications)) {
     const div = document.getElementById("publications");
@@ -226,7 +229,7 @@ function renderCV(data) {
         const journal = pub.journal ? `<p><em>${safeText(pub.journal)}</em></p>` : "";
         const year = pub.year ? `<p class="date">${safeText(pub.year)}</p>` : "";
         const link = pub.link
-          ? `<p><a href="${pub.link}" target="_blank" rel="noopener noreferrer">Link da publicação</a></p>`
+          ? `<p><a href="${pub.link}" target="_blank" rel="noopener noreferrer">Publication link</a></p>`
           : "";
 
         item.innerHTML = `
@@ -249,7 +252,7 @@ function renderCV(data) {
       data.projects.forEach((proj) => {
         const item = document.createElement("div");
 
-        const bullets = proj?.bullets?.length
+        const bullets = Array.isArray(proj?.bullets) && proj.bullets.length
           ? `<ul>${proj.bullets.map((b) => `<li>${b}</li>`).join("")}</ul>`
           : "";
 
