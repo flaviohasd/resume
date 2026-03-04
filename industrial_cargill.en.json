@@ -1,192 +1,240 @@
 {
   "name": "Flávio Dias",
-  "title": "Industrial Process Engineer",
-  "location": "Santarém, Pará, Brazil (Local Resident)",
+  "title": "Mechanical Engineer | Maintenance & Reliability | Maintenance Planning and Control (PCM) | Asset Management (CAPEX/OPEX) | Key Performance Indicators (KPIs) | Continuous Improvement (PDCA/DMAIC)",
+  "location": "Santarém, Pará, Brazil",
   "email": "flaviohasd@hotmail.com",
   "phone": "+55 92 984776604",
-  "linkedin": "https://www.linkedin.com/in/flaviohasd/?locale=pt_BR",
+  "linkedin": "https://www.linkedin.com/in/flaviohasd/?locale=en_US",
   "github": "https://github.com/flaviohasd",
-
-  "summary": "Industrial Process Engineer with experience in manufacturing environments focused on process analysis, industrial CAPEX, digitalization (MES), continuous improvement, and operational performance indicators. Skilled in technical diagnostics, shopfloor support, variability reduction, and process standardization. Strong data-driven decision-making with interfaces across engineering, operations, quality, and suppliers. Advanced English and previous international technical representation.",
-
-  "subsummary": "Industrial Processes · CAPEX · MES · Lean · PDCA/DMAIC · Data & KPIs · Shopfloor Operations · Process Stability",
-
+  "summary": "Mechanical Engineer with experience in maintenance, reliability, and asset management in high-criticality industrial environments. Strong cross-functional work with operations, maintenance, quality, and vendors/contractors, using data-driven decision-making to improve operational stability. Led an annual CAPEX (Capital Expenditure) program of BRL 8 million, implemented MES (Manufacturing Execution System), and built KPIs (Key Performance Indicators) for traceability and control. Hands-on background with maintenance performance metrics (OEE, MTBF, MTTR), standardization, failure investigation (RCA), and continuous improvement (PDCA/DMAIC). Key differentiators: international technical representation presenting an end-to-end case (diagnosis -> solution -> results), and a Qualis A2 (Springer) publication on gear vibration mitigation, directly applicable to rotating equipment and reliability. Transitioning into vessel maintenance and critical assets, with a structured ramp-up plan for NORMAM (Brazilian Maritime Authority Standards), ISM Code (International Safety Management Code), ISPS Code (International Ship and Port Facility Security Code), and Class Society interface.",
+  "subsummary": "Maintenance & Reliability - Maintenance Planning and Control (PCM) - Asset Management - CAPEX/OPEX - Contractors - KPIs (OEE/MTBF/MTTR) - Root Cause Analysis (RCA) - Vibration/Rotating Equipment",
   "experience": [
     {
-      "title": "Industrial Process Engineer",
-      "company": "Yamaha Motor Componentes da Amazônia",
-      "date": "Apr 2023 – Apr 2025",
+      "title": "Industrial Engineering Specialist (Operations-Maintenance-Tooling Interface)",
+      "company": "Grupo Yamaha Brasil",
+      "date": "Apr 2023 - Apr 2025",
       "tasks": [
-        "Functional owner of an annual BRL 8M mold-renewal CAPEX program, including technical justification, scope definition, prioritization, supplier selection, schedule control, and engineering validation.",
-        "Direct shopfloor involvement for defect diagnostics, root-cause investigations, and corrective actions focused on process stabilization and loss reduction.",
-        "Implemented MES system for real-time monitoring and traceability of process parameters, increasing operational visibility and decision support.",
-        "Structured operational KPIs and performance dashboards in Excel and Power BI for tracking variability, efficiency, and throughput.",
-        " Led factory-layout reconfiguration projects improving production flow and integration between operations, engineering, and maintenance.",
-        "Represented the company internationally presenting a full case (diagnosis → solution → results) on MES integration in an industrial conference abroad.",
-        "Reported to the Engineering Manager with technical autonomy and direct interface with production, quality, and suppliers."
+        "Functional lead for an annual CAPEX (Capital Expenditure) program of BRL 8 million, including technical justification, scope definition, prioritization, supplier selection, schedule control, and engineering validation.",
+        "On-site shopfloor (Gemba) work diagnosing recurring issues, defining corrective actions, and standardizing practices to stabilize operations and reduce losses.",
+        "Implemented and acted as MES (Manufacturing Execution System) key-user for parameter monitoring and traceability, increasing operational visibility and supporting RCA (Root Cause Analysis).",
+        "Built KPIs (Key Performance Indicators) and reports in Excel and Power BI to track performance, variability, and efficiency, enabling criticality-based prioritization.",
+        "Technical interface with maintenance, production, quality, and vendors/contractors to ensure execution quality, safety, and on-time delivery.",
+        "International technical representation presenting an end-to-end case (diagnosis -> solution -> results) on MES integration and operational stability at an overseas conference.",
+        "Formal recognition for excellence (merit award)."
       ]
     },
     {
-      "title": "Engineering Analyst – Tooling & Stamping",
-      "company": "Metalúrgica Sato da Amazônia",
-      "date": "Mar 2023 – Apr 2023",
+      "title": "Industrial Analyst - Welding & Stamping",
+      "company": "Grupo Yamaha Brasil",
+      "date": "Jul 2021 - Nov 2021",
       "tasks": [
-        "Developed and reviewed stamping tooling, reducing raw-material waste and improving process capability.",
-        "Created operational procedures to ensure repeatability and process standardization.",
-        "Improved chemical-consumption control through Excel-based tools, increasing stock accuracy.",
-        "Coordinated tooling adjustments to improve reliability and production efficiency."
-      ]
-    },
-    {
-      "title": "Industrial Analyst – Welding & Stamping",
-      "company": "Yamaha Motor da Amazônia",
-      "date": "Jul 2021 – Nov 2021",
-      "tasks": [
-        "Supported welding and stamping operations through defect analysis and corrective-action planning.",
-        "Led PDCA projects focused on process stability and rework reduction.",
-        "Maintained technical documentation, quality controls, and standardized work procedures.",
-        "Supported ISO 9001 compliance through process standardization and corrective actions."
-      ]
-    },
-    {
-      "title": "Maintenance Engineering Intern",
-      "company": "3M do Brasil",
-      "date": "Jan 2020 – Jul 2021",
-      "tasks": [
-        "Developed maintenance manuals and inspection checklists, improving diagnostic accuracy.",
-        "Created Power BI dashboards integrating maintenance KPIs (OEE, MTBF, MTTR).",
-        "Automated Excel-based tools for operational planning and personnel allocation."
+        "Supported welding and stamping operations with process diagnostics, defect analysis, and corrective actions.",
+        "Applied PDCA/DMAIC to eliminate recurring issues and improve process reliability and stability.",
+        "Standardized documentation and quality controls to support ISO 9001 compliance."
       ]
     },
     {
       "title": "Mechanical Engineering Intern",
-      "company": "UFAM – Mechanical Systems and Control Laboratory",
-      "date": "May 2022 – Aug 2022",
+      "company": "UFAM - Faculty of Technology",
+      "date": "May 2022 - Aug 2022",
       "tasks": [
-        "Led full laboratory restructuring including infrastructure, layout, and safety improvements.",
-        "Implemented 5S and authored a best-practice manual to standardize operations.",
-        "Developed an expansion project submitted to the university engineering office."
+        "Restructured the Mechanical Systems and Control Laboratory with improvements in layout, infrastructure, and safety.",
+        "Implemented 5S and authored a best-practices manual to improve operational accessibility and consistency.",
+        "Supported the lab physical expansion and enabled simultaneous experiments."
       ]
     },
     {
-      "title": "Teaching Assistant – Mechanical Vibrations",
-      "company": "UFAM",
-      "date": "Jun 2022 – Sep 2022",
+      "title": "Teaching Assistant - Mechanical Vibrations",
+      "company": "UFAM - Federal University of Amazonas",
+      "date": "Jun 2022 - Sep 2022",
       "tasks": [
-        "Assisted vibration measurements using accelerometers and DAQ systems.",
-        "Conducted FFT analyses for rotating-machinery diagnostics."
-      ]
-    }
-  ],
-
-  "projects": [
-    {
-      "title": "Mold-Renewal Program (Industrial CAPEX)",
-      "subtitle": "Investment Planning · Supplier Management · Technical Validation · BRL 8M/year",
-      "bullets": [
-        "Functional CAPEX ownership including technical justification, prioritization, and engineering criteria.",
-        "Technical follow-up with suppliers, schedule tracking, and specification validation.",
-        "Integrated production and maintenance requirements to ensure operational feasibility of the investment."
+        "Supported vibration measurements using accelerometers and DAQ (Data Acquisition) systems.",
+        "Guided students in FFT (Fast Fourier Transform), signal interpretation, and correlation between experimental data and analytical models.",
+        "Applied fundamentals to rotating equipment vibration diagnostics and reliability concepts."
       ]
     },
     {
-      "title": "MES Integration in Production Operations",
-      "subtitle": "Digitalization · Real-Time Data · Traceability",
-      "bullets": [
-        "Implemented MES for real-time monitoring and historical tracking of process parameters.",
-        "Increased process visibility supporting RCA and stabilization initiatives.",
-        "Presented as a full case (diagnosis → solution → results) in an international conference."
+      "title": "Maintenance Engineering Intern (Reliability)",
+      "company": "3M do Brasil",
+      "date": "Jan 2020 - Jul 2021",
+      "tasks": [
+        "Developed reliability dashboards (OEE, MTBF, MTTR) integrating maintenance and production data.",
+        "Supported preventive maintenance planning and equipment reliability analysis.",
+        "Created maintenance manuals and inspection checklists to improve standardization and diagnostic reliability."
       ]
     }
   ],
-
+  "education": [
+    {
+      "degree": "Bachelor's Degree",
+      "field": "Mechanical Engineering",
+      "institution": "Federal University of Amazonas (UFAM)",
+      "date": "2015 - 2022",
+      "comments": [
+        "Focus areas: strength of materials, mechanical vibrations, machine elements, modeling, analysis, and control of dynamic systems.",
+        "Research in gear vibrations with a Qualis A2 (Springer) publication."
+      ]
+    },
+    {
+      "degree": "Lean Six Sigma Green Belt",
+      "field": "Project Management & Continuous Improvement",
+      "institution": "Escola DNC",
+      "date": "2021 - 2021",
+      "comments": [
+        "Hands-on training in Lean Six Sigma, Scrum, Excel, Power BI, and Minitab applied to a real cost-reduction and process-optimization project.",
+        "Project goal: reduce lead time by 20% in an automotive supplier; outcome: +33% production capacity and >200k/year financial return."
+      ]
+    }
+  ],
   "core_competencies": [
     {
-      "category": "Industrial Processes",
+      "category": "Maintenance & Reliability",
       "items": [
-        "Shopfloor operations",
-        "Process control",
-        "Factory layout",
-        "Engineering–Operations–Maintenance interface",
-        "Digitalization (MES)"
+        "Maintenance Planning and Control (PCM)",
+        "KPIs (Key Performance Indicators)",
+        "OEE",
+        "MTBF",
+        "MTTR",
+        "RCA (Root Cause Analysis)",
+        "standardization and inspections"
       ]
     },
     {
-      "category": "Continuous Improvement",
+      "category": "Rotating Equipment & Vibration",
       "items": [
-        "Lean",
-        "PDCA",
-        "DMAIC",
-        "RCA (Ishikawa, 5 Whys)",
-        "Variability and loss reduction"
+        "mechanical vibrations",
+        "FFT (Fast Fourier Transform)",
+        "DAQ (Data Acquisition)",
+        "vibration diagnostics",
+        "signal analysis",
+        "experimental vs. analytical correlation"
       ]
     },
     {
-      "category": "CAPEX & Projects",
+      "category": "Asset Management & Budgeting",
       "items": [
-        "Technical justification",
-        "Specification",
-        "Suppliers",
-        "Scheduling",
-        "Validation"
+        "CAPEX (Capital Expenditure)",
+        "OPEX (Operational Expenditure)",
+        "technical justification",
+        "specification",
+        "vendor/contractor management",
+        "schedule and validation"
       ]
     },
     {
-      "category": "Data & Performance",
+      "category": "Data & Diagnostics",
       "items": [
         "Excel (advanced)",
         "Power BI",
         "Minitab",
-        "KPIs",
-        "Process analysis"
+        "process monitoring",
+        "data-driven decision making"
+      ]
+    },
+    {
+      "category": "Engineering Methods",
+      "items": [
+        "DMAIC",
+        "PDCA",
+        "FMEA",
+        "5 Whys",
+        "Ishikawa",
+        "continuous improvement",
+        "ISO 9001"
       ]
     }
   ],
-
   "skills": [
-    "Industrial CAPEX",
-    "MES",
-    "PDCA",
-    "DMAIC",
-    "Lean",
-    "RCA",
-    "KPIs",
-    "Excel (advanced)",
-    "Power BI",
-    "Minitab",
-    "Factory processes",
-    "Defect analysis",
-    "Standardization",
-    "Factory layout"
+    "Maintenance Planning and Control (PCM)",
+    "Reliability and Asset Management",
+    "Contractor Management (Contracts and Vendors)",
+    "CAPEX (Capital Expenditure) and OPEX (Operational Expenditure)",
+    "Maintenance KPIs (Key Performance Indicators): OEE, MTBF, MTTR",
+    "Root Cause Analysis (RCA) and Failure Analysis",
+    "Continuous Improvement (PDCA, DMAIC, Kaizen)",
+    "Rotating Equipment and Vibration Diagnostics",
+    "FFT (Fast Fourier Transform) and DAQ (Data Acquisition)",
+    "Advanced Excel, Power BI, and Minitab",
+    "MES (Manufacturing Execution System) and Traceability",
+    "ISO 9001 and Operational Standardization",
+    "Technical Communication (International Presentation)"
   ],
-
   "certifications": [
-    { "name": "Lean Six Sigma Green Belt", "institution": "Escola DNC", "date": "2021" },
-    { "name": "Project Manager Full Stack", "institution": "Escola DNC", "date": "2021" },
-    { "name": "Scrum Master", "institution": "PM Tech", "date": "2021" },
-    { "name": "IBM Data Science", "institution": "IBM / Coursera", "date": "2023" },
-    { "name": "Power BI Advanced", "institution": "DNC", "date": "2021" },
-    { "name": "Minitab Advanced", "institution": "DNC", "date": "2021" },
-    { "name": "MAGMASOFT Training", "institution": "MAGMA", "date": "2024" }
+    {
+      "name": "Project Management & Green Belt Lean Six Sigma & Scrum Master",
+      "institution": "Escola DNC",
+      "date": "2021"
+    },
+    {
+      "name": "Minitab Statistical Tools",
+      "institution": "Escola DNC",
+      "date": "2022"
+    },
+    {
+      "name": "Power BI - Data Visualization",
+      "institution": "Escola DNC",
+      "date": "2022"
+    },
+    {
+      "name": "MAGMASOFT Simulation Training",
+      "institution": "MAGMA",
+      "date": "2024"
+    },
+    {
+      "name": "IBM Data Science (Python, SQL, ML)",
+      "institution": "IBM Skills Network - Coursera",
+      "date": "2023"
+    },
+    {
+      "name": "CS50: Introduction to Computer Science with Python",
+      "institution": "MIT/edX",
+      "date": "2023"
+    }
   ],
-
   "languages": [
     "Portuguese: Native",
-    "English: Advanced (C1, professional proficiency)"
+    "English: Fluent (C2 self-taught; full professional proficiency)"
   ],
-
-  "education": [
+  "projects": [
     {
-      "degree": "B.Sc. in Mechanical Engineering",
-      "institution": "Federal University of Amazonas (UFAM)",
-      "date": "2015 – 2022",
-      "comments": [
-        "Training in applied mechanics, materials, manufacturing, and dynamic systems.",
-        "Research on gear-vibration modeling published in a Qualis A2 journal."
+      "title": "Asset Investments and Asset Management (CAPEX)",
+      "subtitle": "CAPEX (Capital Expenditure) · Criticality-based prioritization · Vendors/contractors · BRL 8 million/year",
+      "bullets": [
+        "Functional coordination of the annual CAPEX program from technical justification and scope definition to prioritization, supplier selection, schedule control, and engineering validation.",
+        "Technical follow-up with vendors/contractors to ensure deadlines, specification compliance, and delivery quality.",
+        "Cross-functional integration with maintenance, production, and quality to ensure operational feasibility, safety, and sustained results after implementation."
       ]
+    },
+    {
+      "title": "MES Integration and Operational Traceability",
+      "subtitle": "MES (Manufacturing Execution System) · Real-time data · Traceability · RCA support",
+      "bullets": [
+        "Implemented and acted as MES (Manufacturing Execution System) key-user for monitoring and historical tracking of critical parameters.",
+        "Structured traceability and analysis routines to support failure investigation (RCA) and operational stabilization.",
+        "Correlated production and maintenance data to drive decision-making and reduce variability."
+      ]
+    },
+    {
+      "title": "Maintenance & Reliability KPIs (OEE, MTBF, MTTR)",
+      "subtitle": "Excel/Power BI · Dashboards · Management routines · Reliability",
+      "bullets": [
+        "Defined and tracked operational and maintenance KPIs (Key Performance Indicators) focused on availability, efficiency, and reliability.",
+        "Built reports and dashboards in Excel and Power BI for criticality-based prioritization and continuous improvement.",
+        "Standardized routines (checklists and indicators) to increase predictability and diagnostic quality."
+      ]
+    },
+    {
+      "title": "Vibration Diagnostics and Reliability Project (academic foundation + toolkit)",
+      "subtitle": "Rotating equipment applications · dynamic modeling · signal analysis",
+      "bullets": [
+        "Academic foundation in gear vibrations with direct application to rotating equipment reliability.",
+        "Open-source toolkit (MATLAB) for modeling/optimization and dynamic response studies.",
+        "Qualis A2 (Springer) publication listed in the Publications section."
+      ],
+      "repository": "https://github.com/flaviohasd/TPM-Vibration",
+      "link": "https://rdcu.be/ds3ID"
     }
   ],
-
   "publications": [
     {
       "title": "Vibration attenuation on spur gears through optimal profile modification",
