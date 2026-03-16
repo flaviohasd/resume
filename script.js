@@ -161,9 +161,7 @@ function renderCore(data) {
 
     if (typeof c === "string") {
       li.textContent = c;
-    }
-
-    else if (c && c.category && Array.isArray(c.items) && c.items.length) {
+    } else if (c && c.category && Array.isArray(c.items)) {
       li.innerHTML = `<strong>${safe(c.category)}:</strong> ${c.items.join(" · ")}`;
     }
 
