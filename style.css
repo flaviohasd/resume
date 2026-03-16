@@ -162,13 +162,30 @@ section ul li {
   color: #333;
 }
 
-/* ============================================================
-   CORE COMPETENCIES
-   ============================================================ */
-#core-competencies p {
-  margin-top: 4px;
-  font-size: 13px;
-  line-height: 1.45;
+// ---------------------------------------------------------------
+// Core competencies
+// ---------------------------------------------------------------
+if (Array.isArray(data.core_competencies) && data.core_competencies.length) {
+  const div = document.getElementById("core-competencies");
+
+  data.core_competencies.forEach((c) => {
+    const p = document.createElement("p");
+
+    if (typeof c === "string") {
+      // formato simples
+      p.textContent = c;
+    } else if (c && c.category && Array.isArray(c.items) && c.items.length) {
+      // formato categoria + itens
+      p.innerHTML = `<strong>${safeText(c.category)}:</strong> ${c.items.join(" · ")}`;
+    } else {
+      return; // ignora entradas inválidas
+    }
+
+    div.appendChild(p);
+  });
+
+} else {
+  hideSection("core-section");
 }
 
 /* ============================================================
