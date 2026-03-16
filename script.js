@@ -47,14 +47,9 @@ function safe(v) {
   return typeof v === "string" ? v : "";
 }
 
-function hideSection(id) {
-  const el = document.getElementById(id);
-  if (el) el.style.display = "none";
-}
-
 function setText(id, text) {
   const el = document.getElementById(id);
-  if (el) el.textContent = text;
+  if (el) el.textContent = text || "";
 }
 
 // ============================================================
@@ -66,6 +61,7 @@ fetch(PROFILE_FILE)
   .then((data) => {
     renderCV(data);
     applyI18n(lang);
+    cleanupEmptySections();
   })
   .catch((e) => console.error("Erro carregando JSON:", e));
 
@@ -121,10 +117,7 @@ function renderCV(data) {
 
 function renderExperience(data) {
 
-  if (!Array.isArray(data.experience) || !data.experience.length) {
-    hideSection("experience-section");
-    return;
-  }
+  if (!Array.isArray(data.experience)) return;
 
   const div = document.getElementById("experience");
 
@@ -153,10 +146,7 @@ function renderExperience(data) {
 
 function renderCore(data) {
 
-  if (!Array.isArray(data.core_competencies) || !data.core_competencies.length) {
-    hideSection("core-section");
-    return;
-  }
+  if (!Array.isArray(data.core_competencies)) return;
 
   const div = document.getElementById("core-competencies");
 
@@ -182,10 +172,7 @@ function renderCore(data) {
 
 function renderEducation(data) {
 
-  if (!Array.isArray(data.education) || !data.education.length) {
-    hideSection("education-section");
-    return;
-  }
+  if (!Array.isArray(data.education)) return;
 
   const div = document.getElementById("education");
 
@@ -215,10 +202,7 @@ function renderEducation(data) {
 
 function renderPublications(data) {
 
-  if (!Array.isArray(data.publications) || !data.publications.length) {
-    hideSection("publications-section");
-    return;
-  }
+  if (!Array.isArray(data.publications)) return;
 
   const div = document.getElementById("publications");
 
@@ -244,10 +228,7 @@ function renderPublications(data) {
 
 function renderProjects(data) {
 
-  if (!Array.isArray(data.projects) || !data.projects.length) {
-    hideSection("projects-section");
-    return;
-  }
+  if (!Array.isArray(data.projects)) return;
 
   const div = document.getElementById("projects");
 
@@ -277,10 +258,7 @@ function renderProjects(data) {
 
 function renderCertifications(data) {
 
-  if (!Array.isArray(data.certifications) || !data.certifications.length) {
-    hideSection("certifications-section");
-    return;
-  }
+  if (!Array.isArray(data.certifications)) return;
 
   const ul = document.getElementById("certifications");
 
@@ -308,10 +286,7 @@ function renderCertifications(data) {
 
 function renderSkills(data) {
 
-  if (!Array.isArray(data.skills) || !data.skills.length) {
-    hideSection("skills-section");
-    return;
-  }
+  if (!Array.isArray(data.skills)) return;
 
   const ul = document.getElementById("skills");
 
@@ -329,10 +304,7 @@ function renderSkills(data) {
 
 function renderLanguages(data) {
 
-  if (!Array.isArray(data.languages) || !data.languages.length) {
-    hideSection("languages-section");
-    return;
-  }
+  if (!Array.isArray(data.languages)) return;
 
   setText("languages", data.languages.join(" | "));
 
@@ -344,10 +316,7 @@ function renderLanguages(data) {
 
 function renderVolunteering(data) {
 
-  if (!Array.isArray(data.volunteering) || !data.volunteering.length) {
-    hideSection("volunteering-section");
-    return;
-  }
+  if (!Array.isArray(data.volunteering)) return;
 
   const div = document.getElementById("volunteering");
 
@@ -364,6 +333,26 @@ function renderVolunteering(data) {
     div.appendChild(el);
 
   });
+}
+
+// ============================================================
+// Hide empty sections automatically
+// ============================================================
+
+function cleanupEmptySections() {
+
+  const sections = document.querySelectorAll("main section");
+
+  sections.forEach(section => {
+
+    const content = section.querySelector("div, ul, p");
+
+    if (!content || content.innerHTML.trim() === "") {
+      section.style.display = "none";
+    }
+
+  });
+
 }
 
 // ============================================================
