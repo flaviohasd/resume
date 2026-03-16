@@ -282,20 +282,3 @@ footer {
 section:empty {
   display: none;
 }
-
-/* >>> ADIÇÃO — ESTILO DO SWITCH DE IDIOMA <<< */
-
-#lang-switch button {
-  border: 1px solid #0073e6;
-  background: #fff;
-  color: #0073e6;
-  border-radius: 4px;
-}
-
-#lang-switch button.active {
-  background: #0073e6;
-  color: #fff;
-  font-weight: bold;
-}
-
-/* <<< FIM DA ADIÇÃO */
