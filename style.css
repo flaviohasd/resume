@@ -36,18 +36,6 @@ header {
   text-align: left;
 }
 
-#lang-switch {
-  margin-bottom: 12px;
-  text-align: right;
-}
-
-#lang-switch button {
-  margin-left: 6px;
-  padding: 4px 8px;
-  font-size: 13px;
-  cursor: pointer;
-}
-
 #name {
   font-size: 30px;
   font-weight: bold;
