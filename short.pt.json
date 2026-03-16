@@ -7,7 +7,7 @@
   "linkedin": "https://www.linkedin.com/in/flaviohasd/",
   "github": "https://github.com/flaviohasd",
 
-  "summary": "Engenheiro Mecânico com experiência em ambiente fabril, atuando com análise de processo, CAPEX industrial, digitalização (MES) e indicadores operacionais, de qualidade e manutenção. Forte atuação com Lean Six Sigma (Green Belt), PDCA, DMAIC, RCA e diagnósticos industriais aplicados no chão de fábrica (Gemba) para eliminar defeitos, reduzir retrabalho, otimizar fluxo e aumentar eficiência operacional. Perfil analítico com tomada de decisão orientada a dados e interface entre engenharia, produção, manutenção, qualidade e fornecedores. Inglês fluente e experiência em representação técnica internacional.",
+  "summary": "Engenheiro Mecânico com experiência em engenharia de processos industriais em ambiente fabril. Atuação em análise e estabilização de processos produtivos, gestão de CAPEX industrial, digitalização de manufatura (MES) e estruturação de indicadores operacionais de produção, qualidade e manutenção. Forte atuação com Lean Six Sigma (Green Belt), PDCA, DMAIC, RCA e diagnósticos industriais aplicados no chão de fábrica (Gemba) para redução de defeitos, retrabalho e variabilidade de processo. Perfil analítico com tomada de decisão orientada a dados e interface constante entre engenharia, produção, manutenção, qualidade e fornecedores. Inglês fluente e experiência em apresentação técnica internacional.",
 
   "experience": [
     {
@@ -15,12 +15,12 @@
       "company": "Yamaha Motor Componentes da Amazônia",
       "date": "Abr 2023 – Abr 2025",
       "tasks": [
-        "Responsável funcional por programa de renovação de moldes com CAPEX anual de R$ 8 milhões, incluindo justificativa técnica, priorização, seleção de fornecedores e validação de engenharia.",
-        "Atuação direta no chão de fábrica para diagnóstico de defeitos, análise de causas e definição de ações corretivas visando estabilização de processo.",
-        "Implementação de sistema MES para monitoramento e rastreabilidade de parâmetros de processo.",
-        "Estruturação de indicadores operacionais e relatórios em Excel e Power BI para análise de performance e variabilidade.",
+        "Responsável funcional por programa de renovação de moldes com CAPEX anual de R$ 8 milhões, incluindo justificativa técnica, priorização de investimentos, seleção de fornecedores e validação de engenharia.",
+        "Atuação direta no chão de fábrica para diagnóstico de defeitos, análise de causas e definição de ações corretivas visando estabilização e melhoria de processos produtivos.",
+        "Implementação de sistema MES para monitoramento em tempo real e rastreabilidade de parâmetros de processo.",
+        "Estruturação de indicadores operacionais e relatórios em Excel e Power BI para análise de performance, variabilidade e suporte à tomada de decisão.",
         "Projeto de readequação de layout fabril melhorando fluxo produtivo e integração entre produção, qualidade, engenharia e manutenção.",
-        "Apresentação internacional de case técnico sobre integração MES em conferência no exterior."
+        "Apresentação internacional de case técnico sobre integração MES e estabilização de processo produtivo em conferência no exterior."
       ]
     },
     {
@@ -28,9 +28,9 @@
       "company": "Metalúrgica Sato da Amazônia",
       "date": "Mar 2023 – Abr 2023",
       "tasks": [
-        "Desenvolvimento e revisão de ferramental para operações de estamparia reduzindo desperdícios de matéria-prima.",
-        "Criação de procedimentos operacionais padronizados para aumento de repetibilidade de processo.",
-        "Melhoria de controle de insumos químicos utilizando ferramentas Excel."
+        "Desenvolvimento e revisão de ferramental para operações de estamparia com foco na redução de desperdícios de matéria-prima.",
+        "Criação de procedimentos operacionais padronizados para aumento de repetibilidade e controle de processo.",
+        "Melhoria de controle de insumos químicos utilizando ferramentas Excel para gestão operacional."
       ]
     },
     {
@@ -48,9 +48,9 @@
       "company": "3M do Brasil",
       "date": "Jan 2020 – Jul 2021",
       "tasks": [
-        "Desenvolvimento de manuais de manutenção e checklists de inspeção.",
+        "Desenvolvimento de manuais de manutenção e checklists de inspeção para aumento da confiabilidade operacional.",
         "Criação de dashboard Power BI para indicadores de manutenção (OEE, MTBF, MTTR).",
-        "Automação de ferramentas Excel para planejamento operacional."
+        "Automação de ferramentas Excel para planejamento operacional e organização de atividades."
       ]
     }
   ],
@@ -62,20 +62,23 @@
     "Lean Six Sigma (Green Belt)",
     "PDCA / DMAIC",
     "Análise de Causa Raiz (RCA)",
-    "Excel e Power BI Avançado",
-    "Indicadores Operacionais (KPIs)"
+    "Ferramentas da Qualidade",
+    "Excel Avançado e Power BI",
+    "Indicadores Operacionais (KPIs)",
+    "Análise de Dados Industriais"
   ],
 
   "certifications": [
     "Lean Six Sigma Green Belt — Escola DNC",
     "Project Manager & Scrum Master — Escola DNC",
-    "IBM Data Science — Coursera",
-    "MAGMASOFT Training — MAGMA"
+    "MAGMASOFT Training — MAGMA",
+    "Data Science — IBM"
   ],
 
   "languages": [
-    "Português: Nativo",
-    "Inglês: Fluente"
+    "Português — Nativo",
+    "Inglês — Fluente",
+    "Espanhol — Básico"
   ],
 
   "education": [
@@ -84,7 +87,7 @@
       "institution": "Universidade Federal do Amazonas (UFAM)",
       "date": "2015 – 2022",
       "comments": [
-        "Pesquisa em vibrações de engrenagens com publicação em periódico internacional Qualis A2. Link: https://rdcu.be/ds3ID"
+        "Pesquisa em vibrações de engrenagens com publicação em periódico internacional Qualis A2. Artigo: https://rdcu.be/ds3ID"
       ]
     }
   ]
