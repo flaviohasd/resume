@@ -352,9 +352,17 @@ function cleanupEmptySections() {
 
   sections.forEach(section => {
 
-    const content = section.querySelectorAll("div, ul, p, li");
+    const container = section.querySelector("div, ul, p");
 
-    if (!content.length) {
+    if (!container) {
+      section.style.display = "none";
+      return;
+    }
+
+    // remove espaços e quebras de linha
+    const text = container.textContent.trim();
+
+    if (text === "") {
       section.style.display = "none";
     }
 
