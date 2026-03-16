@@ -1,3 +1,6 @@
+Short (1 page) - Industrial:
+https://flaviohasd.github.io/resume/?cv=short&lang=pt
+
 Industrial:
 https://flaviohasd.github.io/resume/?cv=industrial&lang=en
 
