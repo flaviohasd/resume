@@ -1,6 +1,6 @@
 {
   "name": "Flávio Dias",
-  "title": "Engenheiro de Processos Industriais",
+  "title": "Engenheiro Mecânico - Especialista em processos",
   "location": "Santarém, Pará, Brasil",
   "email": "flaviohasd@hotmail.com",
   "phone": "+55 92 984776604",
@@ -19,7 +19,7 @@
         "Atuação direta no chão de fábrica para diagnóstico de defeitos, análise de causas e definição de ações corretivas visando estabilização de processo.",
         "Implementação de sistema MES para monitoramento e rastreabilidade de parâmetros de processo.",
         "Estruturação de indicadores operacionais e relatórios em Excel e Power BI para análise de performance e variabilidade.",
-        "Projeto de readequação de layout fabril melhorando fluxo produtivo e integração entre produção, engenharia e manutenção.",
+        "Projeto de readequação de layout fabril melhorando fluxo produtivo e integração entre produção, qualidade, engenharia e manutenção.",
         "Apresentação internacional de case técnico sobre integração MES em conferência no exterior."
       ]
     },
@@ -62,14 +62,14 @@
     "Lean Six Sigma (Green Belt)",
     "PDCA / DMAIC",
     "Análise de Causa Raiz (RCA)",
-    "Excel Avançado e Power BI",
+    "Excel e Power BI Avançado",
     "Indicadores Operacionais (KPIs)"
   ],
 
   "certifications": [
     "Lean Six Sigma Green Belt — Escola DNC",
+    "Project Manager & Scrum Master — Escola DNC",
     "IBM Data Science — Coursera",
-    "Scrum Master — PM Tech",
     "MAGMASOFT Training — MAGMA"
   ],
 
