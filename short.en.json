@@ -1,0 +1,103 @@
+{
+  "name": "Flávio Dias",
+  "title": "Mechanical / Industrial Process Engineer",
+  "location": "Santarém, Pará, Brazil",
+  "email": "flaviohasd@hotmail.com",
+  "phone": "+55 92 984776604",
+  "linkedin": "https://www.linkedin.com/in/flaviohasd/",
+  "github": "https://github.com/flaviohasd",
+
+  "summary": "Mechanical Engineer with experience in industrial processes, aluminum die casting (HPDC/LPDC), tooling development and manufacturing engineering. Led large-scale industrial initiatives including R$8M/year tooling renewal programs and MES implementation in die casting lines. Strong background in Lean Six Sigma, troubleshooting, layout optimization and data-driven decision making using Excel, Power BI and Python.",
+
+  "experience": [
+
+    {
+      "title": "Industrial Engineering Specialist",
+      "company": "Yamaha Motor Componentes da Amazônia",
+      "date": "Apr 2023 – Apr 2025",
+      "tasks": [
+        "Led annual R$8M HPDC/LPDC mold renewal program, defining engineering criteria, investment priorities and supplier coordination.",
+        "Implemented MES monitoring in die casting machines, enabling real-time process visibility and improved defect tracking.",
+        "Developed semi-automated tooling master plan in Excel, improving planning accuracy and technical traceability.",
+        "Presented MES integration case internationally in Taiwan representing Yamaha."
+      ]
+    },
+
+    {
+      "title": "Engineering Analyst – Tooling & Stamping",
+      "company": "Metalúrgica Sato da Amazônia",
+      "date": "Mar 2023 – Apr 2023",
+      "tasks": [
+        "Developed and improved stamping tools reducing material waste and production cost.",
+        "Created standardized operational procedures increasing process repeatability.",
+        "Implemented chemical consumption control systems using Excel."
+      ]
+    },
+
+    {
+      "title": "Industrial Analyst – Welding & Stamping",
+      "company": "Yamaha Motor da Amazônia",
+      "date": "Jul 2021 – Nov 2021",
+      "tasks": [
+        "Managed welding and stamping operations for motorcycle swingarm brackets.",
+        "Led PDCA improvement initiatives eliminating chronic process defects.",
+        "Improved technical documentation and standardized work procedures supporting ISO 9001 compliance."
+      ]
+    },
+
+    {
+      "title": "Maintenance Engineering Intern",
+      "company": "3M Brazil",
+      "date": "Jan 2020 – Jul 2021",
+      "tasks": [
+        "Developed maintenance manuals and inspection checklists for rotating equipment.",
+        "Built Power BI dashboard integrating OEE, MTBF and MTTR maintenance indicators.",
+        "Automated workforce planning tools using Excel."
+      ]
+    }
+
+  ],
+
+  "education": [
+    {
+      "degree": "B.Sc. Mechanical Engineering",
+      "institution": "Federal University of Amazonas (UFAM)",
+      "date": "2015 – 2022",
+      "comments": [
+        "Research in dynamic modeling and gear vibration published in Springer (Qualis A2 journal)."
+      ]
+    }
+  ],
+
+  "core_competencies": [
+    "Industrial Processes & Manufacturing Engineering",
+    "HPDC/LPDC Aluminum Die Casting",
+    "Tooling Development & Tryout",
+    "Lean Six Sigma (Green Belt)",
+    "Process Troubleshooting & Root Cause Analysis",
+    "MES Implementation & Process Monitoring",
+    "Manufacturing Layout Optimization",
+    "Data Analysis (Excel, Power BI, Python)"
+  ],
+
+  "certifications": [
+    "Lean Six Sigma Green Belt — Escola DNC",
+    "IBM Data Science (Python, SQL) — Coursera",
+    "Scrum Master — PM Tech",
+    "MAGMASOFT Training — MAGMA"
+  ],
+
+  "languages": [
+    "Portuguese: Native",
+    "English: Fluent"
+  ],
+
+  "publications": [
+    {
+      "title": "Vibration attenuation on spur gears through optimal profile modification",
+      "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer)",
+      "year": "2023",
+      "link": "https://rdcu.be/ds3ID"
+    }
+  ]
+}
