@@ -108,12 +108,11 @@ function renderCV(data) {
   renderCore(data);
   renderEducation(data);
   renderPublications(data);
+  renderProjects(data);
   renderCertifications(data);
   renderSkills(data);
   renderLanguages(data);
   renderVolunteering(data);
-
-  setText("footer", `© ${new Date().getFullYear()} - ${safe(data.name)}`);
 }
 
 // ============================================================
@@ -237,6 +236,39 @@ function renderPublications(data) {
     div.appendChild(el);
 
   });
+}
+
+// ============================================================
+// Projects
+// ============================================================
+
+function renderProjects(data) {
+
+  if (!Array.isArray(data.projects) || !data.projects.length) {
+    hideSection("projects-section");
+    return;
+  }
+
+  const div = document.getElementById("projects");
+
+  data.projects.forEach((proj) => {
+
+    const el = document.createElement("div");
+
+    const bullets = Array.isArray(proj.bullets)
+      ? `<ul>${proj.bullets.map(b => `<li>${b}</li>`).join("")}</ul>`
+      : "";
+
+    el.innerHTML = `
+      <h3>${safe(proj.title)}</h3>
+      ${proj.subtitle ? `<p class="project-subtitle">${safe(proj.subtitle)}</p>` : ""}
+      ${bullets}
+    `;
+
+    div.appendChild(el);
+
+  });
+
 }
 
 // ============================================================
