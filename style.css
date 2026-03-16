@@ -1,6 +1,7 @@
 /* ============================================================
-   RESET E BASE
+   RESET
    ============================================================ */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,31 +10,30 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.45;
-  background-color: #f4f4f9;
+  line-height: 1.55;
+  background: #f4f4f9;
   color: #333;
-  padding: 0;
-  margin: 0;
 }
 
 /* ============================================================
    CONTAINER
    ============================================================ */
+
 .container {
   max-width: 850px;
   margin: 24px auto;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
   padding: 24px 28px;
 }
 
 /* ============================================================
    HEADER
    ============================================================ */
+
 header {
-  margin-bottom: 10px;
-  text-align: left;
+  margin-bottom: 16px;
 }
 
 #name {
@@ -41,14 +41,12 @@ header {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #333;
   margin-bottom: 4px;
 }
 
 #title {
   font-size: 18px;
   font-weight: 600;
-  color: #333;
   margin-bottom: 4px;
 }
 
@@ -56,15 +54,10 @@ header {
   font-size: 14px;
   font-style: italic;
   color: #555;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-#contact {
-  font-size: 13px;
-  color: #555;
-  margin-bottom: 2px;
-}
-
+#contact,
 #links {
   font-size: 13px;
   color: #555;
@@ -80,10 +73,11 @@ header {
 }
 
 /* ============================================================
-   SEÇÕES
+   SECTIONS
    ============================================================ */
+
 section {
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 section h2 {
@@ -97,16 +91,17 @@ section h2 {
   padding-bottom: 4px;
 }
 
-section ul,
-section p {
+section p,
+section ul {
   margin-left: 12px;
   font-size: 13px;
   color: #555;
 }
 
 /* ============================================================
-   LISTAS
+   LISTS
    ============================================================ */
+
 section ul {
   list-style: disc;
   margin-top: 4px;
@@ -114,71 +109,94 @@ section ul {
 }
 
 section ul li {
-  margin-bottom: 1px;
+  margin-bottom: 3px;
 }
 
 /* ============================================================
-   EXPERIENCE & EDUCATION & VOLUNTEERING & PROJECTS
+   EXPERIENCE / EDUCATION / PROJECTS
    ============================================================ */
+
 #experience > div,
 #education > div,
-#volunteering > div,
-#projects > div {
-  margin-bottom: 8px;
+#projects > div,
+#volunteering > div {
+  margin-bottom: 12px;
 }
 
 #experience h3,
-#volunteering h3,
-.project-title {
+#volunteering h3 {
   font-size: 14px;
   color: #444;
   margin: 4px 0 2px 0;
   font-weight: 600;
 }
 
-/* Datas */
 .date {
   font-style: italic;
   color: #777;
   font-size: 12px;
-  margin-top: 2px;
 }
 
-/* Instituições */
 #education em {
   font-size: 13px;
   color: #333;
 }
 
-// ---------------------------------------------------------------
-// Core competencies
-// ---------------------------------------------------------------
-if (Array.isArray(data.core_competencies) && data.core_competencies.length) {
-  const div = document.getElementById("core-competencies");
+/* ============================================================
+   CORE COMPETENCIES (3 COLUNAS)
+   ============================================================ */
 
-  data.core_competencies.forEach((c) => {
-    const p = document.createElement("p");
+#core-competencies ul {
+  column-count: 3;
+  column-gap: 28px;
+  padding-left: 12px;
+  list-style-position: inside;
+}
 
-    if (typeof c === "string") {
-      // formato simples
-      p.textContent = c;
-    } else if (c && c.category && Array.isArray(c.items) && c.items.length) {
-      // formato categoria + itens
-      p.innerHTML = `<strong>${safeText(c.category)}:</strong> ${c.items.join(" · ")}`;
-    } else {
-      return; // ignora entradas inválidas
-    }
+#core-competencies li {
+  break-inside: avoid;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
 
-    div.appendChild(p);
-  });
+/* ============================================================
+   CERTIFICATIONS (3 COLUNAS)
+   ============================================================ */
 
-} else {
-  hideSection("core-section");
+#certifications {
+  column-count: 3;
+  column-gap: 28px;
+  padding-left: 12px;
+  list-style-position: inside;
+}
+
+#certifications li {
+  break-inside: avoid;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+/* ============================================================
+   SKILLS (3 COLUNAS)
+   ============================================================ */
+
+#skills {
+  column-count: 3;
+  column-gap: 28px;
+  padding-left: 12px;
+  list-style-position: inside;
+}
+
+#skills li {
+  break-inside: avoid;
+  margin-bottom: 6px;
+  font-size: 13px;
 }
 
 /* ============================================================
    PROJECTS
    ============================================================ */
+
 .project-subtitle {
   font-size: 13px;
   font-style: italic;
@@ -199,41 +217,39 @@ if (Array.isArray(data.core_competencies) && data.core_competencies.length) {
 }
 
 /* ============================================================
-   SKILLS — 3 COLUNAS RESPONSIVAS
+   RESPONSIVO
    ============================================================ */
-#skills {
-  column-count: 3;
-  column-gap: 32px;
-  padding-left: 12px;
-  list-style-position: inside;
-}
 
-#skills li {
-  break-inside: avoid;
-  margin-bottom: 6px;
-  font-size: 13px;
-}
-
-/* Ajustes responsivos */
 @media (max-width: 900px) {
+
+  #core-competencies ul,
+  #certifications,
   #skills {
     column-count: 2;
   }
+
 }
 
 @media (max-width: 600px) {
+
+  #core-competencies ul,
+  #certifications,
   #skills {
     column-count: 1;
   }
+
 }
 
 /* ============================================================
-   IMPRESSÃO (PDF)
+   PRINT (PDF)
    ============================================================ */
+
 @media print {
+
   body {
-    background: #fff;
-    color: #000;
+    background: white;
+    color: black;
+    line-height: 1.45;
   }
 
   .container {
@@ -246,15 +262,13 @@ if (Array.isArray(data.core_competencies) && data.core_competencies.length) {
 
   a {
     text-decoration: none;
-    color: #000;
+    color: black;
   }
 
+  #core-competencies ul,
+  #certifications,
   #skills {
     column-count: 3;
   }
-}
 
-/* esconder seções vazias */
-section:empty {
-  display: none;
 }
