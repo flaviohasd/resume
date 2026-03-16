@@ -1,61 +1,81 @@
 {
   "name": "Flávio Dias",
-  "title": "Engenheiro Mecânico / Processos Industriais",
+  "title": "Engenheiro de Processos Industriais",
   "location": "Santarém, Pará, Brasil",
   "email": "flaviohasd@hotmail.com",
   "phone": "+55 92 984776604",
   "linkedin": "https://www.linkedin.com/in/flaviohasd/",
   "github": "https://github.com/flaviohasd",
 
-  "summary": "Engenheiro Mecânico com experiência em processos industriais, fundição de alumínio (HPDC/LPDC), desenvolvimento de ferramentais e engenharia de manufatura. Liderou iniciativas industriais de grande porte, incluindo programas de renovação de moldes com orçamento anual de R$ 8 milhões e implementação de sistemas MES em linhas de fundição. Forte atuação em Lean Six Sigma, resolução de problemas de processo, otimização de layout e tomada de decisão orientada a dados utilizando Excel, Power BI e Python.",
+  "summary": "Engenheiro de Processos com experiência em ambiente fabril, atuando com análise de processo, CAPEX industrial, digitalização (MES) e indicadores operacionais. Forte atuação com Lean Six Sigma (Green Belt), PDCA, DMAIC e diagnósticos industriais aplicados no chão de fábrica (Gemba) para eliminar defeitos, reduzir retrabalho, otimizar fluxo e aumentar eficiência operacional. Perfil analítico com tomada de decisão orientada a dados e interface entre engenharia, produção, manutenção, qualidade e fornecedores. Inglês fluente e experiência em representação técnica internacional.",
 
   "experience": [
-
     {
-      "title": "Especialista em Engenharia Industrial",
+      "title": "Engenheiro de Processos",
       "company": "Yamaha Motor Componentes da Amazônia",
       "date": "Abr 2023 – Abr 2025",
       "tasks": [
-        "Liderou programa anual de renovação de moldes HPDC/LPDC com orçamento de R$ 8 milhões, definindo critérios técnicos, priorização de investimentos e interface com fornecedores.",
-        "Implementou monitoramento MES em máquinas de fundição, permitindo visibilidade em tempo real do processo e maior controle de defeitos.",
-        "Desenvolveu plano mestre semiautomatizado em Excel para gestão de moldes, aumentando previsibilidade e rastreabilidade técnica.",
-        "Apresentou internacionalmente em Taiwan o case de integração MES representando a Yamaha."
+        "Responsável funcional por programa de renovação de moldes com CAPEX anual de R$ 8 milhões, incluindo justificativa técnica, priorização, seleção de fornecedores e validação de engenharia.",
+        "Atuação direta no chão de fábrica para diagnóstico de defeitos, análise de causas e definição de ações corretivas visando estabilização de processo.",
+        "Implementação de sistema MES para monitoramento e rastreabilidade de parâmetros de processo.",
+        "Estruturação de indicadores operacionais e relatórios em Excel e Power BI para análise de performance e variabilidade.",
+        "Projeto de readequação de layout fabril melhorando fluxo produtivo e integração entre produção, engenharia e manutenção.",
+        "Apresentação internacional de case técnico sobre integração MES em conferência no exterior."
       ]
     },
-
     {
-      "title": "Analista de Engenharia – Ferramentaria & Estamparia",
+      "title": "Analista de Engenharia – Estamparia e Ferramentaria",
       "company": "Metalúrgica Sato da Amazônia",
       "date": "Mar 2023 – Abr 2023",
       "tasks": [
-        "Desenvolveu e revisou ferramentas de estamparia, reduzindo desperdício de material e custos de produção.",
-        "Criou procedimentos operacionais padronizados aumentando repetibilidade do processo.",
-        "Implementou sistema de controle de consumo químico via Excel."
+        "Desenvolvimento e revisão de ferramental para operações de estamparia reduzindo desperdícios de matéria-prima.",
+        "Criação de procedimentos operacionais padronizados para aumento de repetibilidade de processo.",
+        "Melhoria de controle de insumos químicos utilizando ferramentas Excel."
       ]
     },
-
     {
-      "title": "Analista Industrial – Soldagem & Estamparia",
+      "title": "Analista Industrial – Solda e Estamparia",
       "company": "Yamaha Motor da Amazônia",
       "date": "Jul 2021 – Nov 2021",
       "tasks": [
-        "Responsável por operações de soldagem e estamparia de suportes de balança traseira.",
-        "Liderou projetos de melhoria contínua via PDCA eliminando defeitos crônicos de processo.",
-        "Aprimorou documentação técnica e trabalho padronizado em conformidade com ISO 9001."
+        "Suporte técnico a operações de soldagem e estamparia com análise de defeitos e definição de ações corretivas.",
+        "Condução de projetos PDCA visando estabilidade de processo e redução de retrabalho.",
+        "Padronização de documentação técnica e controles de qualidade."
       ]
     },
-
     {
-      "title": "Estágio em Engenharia de Manutenção",
+      "title": "Estagiário de Engenharia – Manutenção",
       "company": "3M do Brasil",
       "date": "Jan 2020 – Jul 2021",
       "tasks": [
-        "Desenvolveu manuais de manutenção e checklists para equipamentos rotativos.",
-        "Criou dashboard Power BI integrando indicadores de manutenção (OEE, MTBF, MTTR).",
-        "Automatizou ferramentas de planejamento de equipe utilizando Excel."
+        "Desenvolvimento de manuais de manutenção e checklists de inspeção.",
+        "Criação de dashboard Power BI para indicadores de manutenção (OEE, MTBF, MTTR).",
+        "Automação de ferramentas Excel para planejamento operacional."
       ]
     }
+  ],
 
+  "core_competencies": [
+    "Processos Industriais",
+    "CAPEX Industrial",
+    "Digitalização Industrial (MES)",
+    "Lean Six Sigma (Green Belt)",
+    "PDCA / DMAIC",
+    "Análise de Causa Raiz (RCA)",
+    "Excel Avançado e Power BI",
+    "Indicadores Operacionais (KPIs)"
+  ],
+
+  "certifications": [
+    "Lean Six Sigma Green Belt — Escola DNC",
+    "IBM Data Science — Coursera",
+    "Scrum Master — PM Tech",
+    "MAGMASOFT Training — MAGMA"
+  ],
+
+  "languages": [
+    "Português: Nativo",
+    "Inglês: Fluente"
   ],
 
   "education": [
@@ -64,32 +84,9 @@
       "institution": "Universidade Federal do Amazonas (UFAM)",
       "date": "2015 – 2022",
       "comments": [
-        "Pesquisa em modelagem dinâmica e vibrações de engrenagens publicada em periódico Springer (Qualis A2)."
+        "Pesquisa em vibrações de engrenagens com publicação em periódico internacional Qualis A2."
       ]
     }
-  ],
-
-  "core_competencies": [
-    "Processos Industriais e Engenharia de Manufatura",
-    "Fundição de Alumínio HPDC/LPDC",
-    "Ferramentaria e Tryout de Moldes",
-    "Lean Six Sigma (Green Belt)",
-    "Análise de Causa Raiz e Troubleshooting",
-    "Implementação de Sistemas MES",
-    "Otimização de Layout Industrial",
-    "Análise de Dados (Excel, Power BI, Python)"
-  ],
-
-  "certifications": [
-    "Lean Six Sigma Green Belt — Escola DNC",
-    "IBM Data Science (Python, SQL) — Coursera",
-    "Scrum Master — PM Tech",
-    "Treinamento MAGMASOFT — MAGMA"
-  ],
-
-  "languages": [
-    "Português: Nativo",
-    "Inglês: Fluente"
   ],
 
   "publications": [
@@ -99,5 +96,7 @@
       "year": "2023",
       "link": "https://rdcu.be/ds3ID"
     }
-  ]
+  ],
+
+  "footer": "© 2026 - Flávio Dias"
 }
