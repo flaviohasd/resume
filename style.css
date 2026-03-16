@@ -278,6 +278,11 @@ footer {
   }
 }
 
+/* esconder seções vazias */
+section:empty {
+  display: none;
+}
+
 /* >>> ADIÇÃO — ESTILO DO SWITCH DE IDIOMA <<< */
 
 #lang-switch button {
