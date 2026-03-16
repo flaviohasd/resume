@@ -1,6 +1,6 @@
-// ===================================================================
-// Detecta a lingua selecionada e exibe o texto de página adequado
-// ===================================================================
+// ============================================================
+// i18n
+// ============================================================
 
 const i18n = {
   en: {
@@ -29,36 +29,22 @@ const i18n = {
   },
 };
 
-// ===================================================================
-// Detecta a versão do currículo e idioma pela URL
-// ===================================================================
+// ============================================================
+// URL params
+// ============================================================
 
 const params = new URLSearchParams(window.location.search);
 const cv = params.get("cv") || "industrial";
-const lang = params.get("lang") || "en";
+const lang = params.get("lang") || "pt";
 
-function getProfileFile() {
-  return `${cv}.${lang}.json`;
-}
+const PROFILE_FILE = `${cv}.${lang}.json?v=${Date.now()}`;
 
-const PROFILE_FILE = getProfileFile();
-
-// ===================================================================
+// ============================================================
 // Helpers
-// ===================================================================
+// ============================================================
 
-function safeText(v) {
+function safe(v) {
   return typeof v === "string" ? v : "";
-}
-
-function setTextById(id, text) {
-  const el = document.getElementById(id);
-  if (el) el.textContent = text || "";
-}
-
-function clearById(id) {
-  const el = document.getElementById(id);
-  if (el) el.innerHTML = "";
 }
 
 function hideSection(id) {
@@ -66,280 +52,291 @@ function hideSection(id) {
   if (el) el.style.display = "none";
 }
 
-// ===================================================================
-// Carrega JSON
-// ===================================================================
-
-function loadCV(file) {
-  const bust = Date.now();
-  const url = `${file}?v=${bust}`;
-
-  fetch(url, { cache: "no-store" })
-    .then((res) => res.json())
-    .then((data) => {
-      renderCV(data);
-      applyI18n(lang);
-    })
-    .catch((err) => console.error("Erro ao carregar JSON:", err));
+function setText(id, text) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text;
 }
 
-loadCV(PROFILE_FILE);
+// ============================================================
+// Load JSON
+// ============================================================
 
-// ===================================================================
-// Switch idioma
-// ===================================================================
+fetch(PROFILE_FILE)
+  .then((r) => r.json())
+  .then((data) => {
+    renderCV(data);
+    applyI18n(lang);
+  })
+  .catch((e) => console.error("Erro carregando JSON:", e));
+
+// ============================================================
+// Language switch
+// ============================================================
 
 function switchLang(newLang) {
   window.location.search = `?cv=${cv}&lang=${newLang}`;
 }
 
-// ===================================================================
-// Render CV
-// ===================================================================
+// ============================================================
+// Render
+// ============================================================
 
 function renderCV(data) {
 
-  document.title = `${safeText(data.name)} - Resume`;
+  document.title = `${safe(data.name)} - Resume`;
 
-  setTextById("name", data.name);
-  setTextById("title", data.title);
-  setTextById("subsummary", data.subsummary);
+  setText("name", data.name);
+  setText("title", data.title);
+  setText("subsummary", data.subsummary);
 
-  setTextById(
+  setText(
     "contact",
-    `${safeText(data.location)} | ✉️ ${safeText(data.email)} | 📱 ${safeText(data.phone)}`
+    `${safe(data.location)} | ✉ ${safe(data.email)} | 📱 ${safe(data.phone)}`
   );
 
-  const linksEl = document.getElementById("links");
-  if (linksEl) {
-    linksEl.innerHTML = `
-      🌐 <a href="${safeText(data.linkedin)}" target="_blank">LinkedIn</a> |
-      <a href="${safeText(data.github)}" target="_blank">GitHub</a>
+  const links = document.getElementById("links");
+  if (links) {
+    links.innerHTML = `
+      <a href="${safe(data.linkedin)}" target="_blank">LinkedIn</a> |
+      <a href="${safe(data.github)}" target="_blank">GitHub</a>
     `;
   }
 
-  setTextById("summary", data.summary);
+  setText("summary", data.summary);
 
-  [
-    "experience",
-    "core-competencies",
-    "education",
-    "publications",
-    "projects",
-    "certifications",
-    "skills",
-    "languages",
-    "volunteering",
-  ].forEach(clearById);
+  renderExperience(data);
+  renderCore(data);
+  renderEducation(data);
+  renderPublications(data);
+  renderCertifications(data);
+  renderSkills(data);
+  renderLanguages(data);
+  renderVolunteering(data);
 
-  // ---------------------------------------------------------------
-  // Experience
-  // ---------------------------------------------------------------
+  setText("footer", `© ${new Date().getFullYear()} - ${safe(data.name)}`);
+}
 
-  if (Array.isArray(data.experience) && data.experience.length) {
+// ============================================================
+// Experience
+// ============================================================
 
-    const div = document.getElementById("experience");
+function renderExperience(data) {
 
-    data.experience.forEach((job) => {
-
-      const item = document.createElement("div");
-
-      const tasks = Array.isArray(job.tasks) && job.tasks.length
-        ? `<ul>${job.tasks.map((t) => `<li>${t}</li>`).join("")}</ul>`
-        : "";
-
-      item.innerHTML = `
-        <h3>${safeText(job.title)} – ${safeText(job.company)}</h3>
-        <p class="date">${safeText(job.date)}</p>
-        ${tasks}
-      `;
-
-      div.appendChild(item);
-    });
-
-  } else {
+  if (!Array.isArray(data.experience) || !data.experience.length) {
     hideSection("experience-section");
+    return;
   }
 
-  // ---------------------------------------------------------------
-  // Core competencies
-  // ---------------------------------------------------------------
+  const div = document.getElementById("experience");
 
-  if (Array.isArray(data.core_competencies) && data.core_competencies.length) {
+  data.experience.forEach((job) => {
 
-    const div = document.getElementById("core-competencies");
+    const el = document.createElement("div");
 
-    data.core_competencies.forEach((c) => {
+    const tasks = Array.isArray(job.tasks)
+      ? `<ul>${job.tasks.map(t => `<li>${t}</li>`).join("")}</ul>`
+      : "";
 
-      const p = document.createElement("p");
+    el.innerHTML = `
+      <h3>${safe(job.title)} – ${safe(job.company)}</h3>
+      <p class="date">${safe(job.date)}</p>
+      ${tasks}
+    `;
 
-      if (typeof c === "string") {
-        p.textContent = c;
-      }
+    div.appendChild(el);
 
-      else if (c.category && Array.isArray(c.items)) {
-        p.innerHTML = `<strong>${c.category}:</strong> ${c.items.join(" · ")}`;
-      }
+  });
+}
 
-      div.appendChild(p);
-    });
+// ============================================================
+// Core competencies
+// ============================================================
 
-  } else {
+function renderCore(data) {
+
+  if (!Array.isArray(data.core_competencies) || !data.core_competencies.length) {
     hideSection("core-section");
+    return;
   }
 
-  // ---------------------------------------------------------------
-  // Education
-  // ---------------------------------------------------------------
+  const div = document.getElementById("core-competencies");
 
-  if (Array.isArray(data.education) && data.education.length) {
+  data.core_competencies.forEach((c) => {
 
-    const div = document.getElementById("education");
+    const p = document.createElement("p");
 
-    data.education.forEach((edu) => {
+    if (typeof c === "string") {
+      p.textContent = c;
+    }
+    else if (c.category && Array.isArray(c.items)) {
+      p.innerHTML = `<strong>${c.category}:</strong> ${c.items.join(" · ")}`;
+    }
 
-      const item = document.createElement("div");
+    div.appendChild(p);
 
-      const comments = Array.isArray(edu.comments) && edu.comments.length
-        ? `<ul>${edu.comments.map((c) => `<li>${c}</li>`).join("")}</ul>`
-        : "";
+  });
+}
 
-      item.innerHTML = `
-        <strong>${safeText(edu.degree)}</strong>
-        <p><em>${safeText(edu.institution)}</em></p>
-        <p class="date">${safeText(edu.date)}</p>
-        ${comments}
-      `;
+// ============================================================
+// Education
+// ============================================================
 
-      div.appendChild(item);
-    });
+function renderEducation(data) {
 
-  } else {
+  if (!Array.isArray(data.education) || !data.education.length) {
     hideSection("education-section");
+    return;
   }
 
-  // ---------------------------------------------------------------
-  // Publications
-  // ---------------------------------------------------------------
+  const div = document.getElementById("education");
 
-  if (Array.isArray(data.publications) && data.publications.length) {
+  data.education.forEach((edu) => {
 
-    const div = document.getElementById("publications");
+    const el = document.createElement("div");
 
-    data.publications.forEach((pub) => {
+    const comments = Array.isArray(edu.comments)
+      ? `<ul>${edu.comments.map(c => `<li>${c}</li>`).join("")}</ul>`
+      : "";
 
-      const item = document.createElement("div");
+    el.innerHTML = `
+      <strong>${safe(edu.degree)}</strong>
+      <p><em>${safe(edu.institution)}</em></p>
+      <p class="date">${safe(edu.date)}</p>
+      ${comments}
+    `;
 
-      item.innerHTML = `
-        <h3>${safeText(pub.title)}</h3>
-        <p><em>${safeText(pub.journal)}</em></p>
-        <p class="date">${safeText(pub.year)}</p>
-        ${
-          pub.link
-            ? `<p><a href="${pub.link}" target="_blank">Publication link</a></p>`
-            : ""
-        }
-      `;
+    div.appendChild(el);
 
-      div.appendChild(item);
-    });
+  });
+}
 
-  } else {
+// ============================================================
+// Publications
+// ============================================================
+
+function renderPublications(data) {
+
+  if (!Array.isArray(data.publications) || !data.publications.length) {
     hideSection("publications-section");
+    return;
   }
 
-  // ---------------------------------------------------------------
-  // Certifications
-  // ---------------------------------------------------------------
+  const div = document.getElementById("publications");
 
-  if (Array.isArray(data.certifications) && data.certifications.length) {
+  data.publications.forEach((pub) => {
 
-    const ul = document.getElementById("certifications");
+    const el = document.createElement("div");
 
-    data.certifications.forEach((cert) => {
+    el.innerHTML = `
+      <h3>${safe(pub.title)}</h3>
+      <p><em>${safe(pub.journal)}</em></p>
+      <p class="date">${safe(pub.year)}</p>
+      ${pub.link ? `<a href="${pub.link}" target="_blank">Publication link</a>` : ""}
+    `;
 
-      const li = document.createElement("li");
+    div.appendChild(el);
 
-      if (typeof cert === "string") {
-        li.textContent = cert;
-      }
+  });
+}
 
-      else {
-        li.textContent =
-          `${safeText(cert.name)} - ${safeText(cert.institution)} (${safeText(cert.date)})`;
-      }
+// ============================================================
+// Certifications
+// ============================================================
 
-      ul.appendChild(li);
-    });
+function renderCertifications(data) {
 
-  } else {
+  if (!Array.isArray(data.certifications) || !data.certifications.length) {
     hideSection("certifications-section");
+    return;
   }
 
-  // ---------------------------------------------------------------
-  // Skills
-  // ---------------------------------------------------------------
+  const ul = document.getElementById("certifications");
 
-  if (Array.isArray(data.skills) && data.skills.length) {
+  data.certifications.forEach((cert) => {
 
-    const ul = document.getElementById("skills");
+    const li = document.createElement("li");
 
-    data.skills.forEach((skill) => {
+    if (typeof cert === "string") {
+      li.textContent = cert;
+    }
+    else {
+      const inst = cert.institution ? ` - ${cert.institution}` : "";
+      const date = cert.date ? ` (${cert.date})` : "";
+      li.textContent = `${cert.name}${inst}${date}`;
+    }
 
-      const li = document.createElement("li");
-      li.textContent = skill;
-      ul.appendChild(li);
+    ul.appendChild(li);
 
-    });
+  });
+}
 
-  } else {
+// ============================================================
+// Skills
+// ============================================================
+
+function renderSkills(data) {
+
+  if (!Array.isArray(data.skills) || !data.skills.length) {
     hideSection("skills-section");
+    return;
   }
 
-  // ---------------------------------------------------------------
-  // Languages
-  // ---------------------------------------------------------------
+  const ul = document.getElementById("skills");
 
-  if (Array.isArray(data.languages) && data.languages.length) {
-
-    setTextById("languages", data.languages.join(" | "));
-
-  } else {
-    hideSection("languages-section");
-  }
-
-  // ---------------------------------------------------------------
-  // Volunteering
-  // ---------------------------------------------------------------
-
-  if (Array.isArray(data.volunteering) && data.volunteering.length) {
-
-    const div = document.getElementById("volunteering");
-
-    data.volunteering.forEach((v) => {
-
-      const item = document.createElement("div");
-
-      item.innerHTML = `
-        <h3>${safeText(v.role)} – ${safeText(v.organization)}</h3>
-        <p class="date">${safeText(v.date)}</p>
-        <p>${safeText(v.description)}</p>
-      `;
-
-      div.appendChild(item);
-    });
-
-  } else {
-    hideSection("volunteering-section");
-  }
-
-  setTextById("footer", `© ${new Date().getFullYear()} - ${safeText(data.name)}`);
+  data.skills.forEach((s) => {
+    const li = document.createElement("li");
+    li.textContent = s;
+    ul.appendChild(li);
+  });
 
 }
 
-// ===================================================================
-// Aplica tradução
-// ===================================================================
+// ============================================================
+// Languages
+// ============================================================
+
+function renderLanguages(data) {
+
+  if (!Array.isArray(data.languages) || !data.languages.length) {
+    hideSection("languages-section");
+    return;
+  }
+
+  setText("languages", data.languages.join(" | "));
+
+}
+
+// ============================================================
+// Volunteering
+// ============================================================
+
+function renderVolunteering(data) {
+
+  if (!Array.isArray(data.volunteering) || !data.volunteering.length) {
+    hideSection("volunteering-section");
+    return;
+  }
+
+  const div = document.getElementById("volunteering");
+
+  data.volunteering.forEach((v) => {
+
+    const el = document.createElement("div");
+
+    el.innerHTML = `
+      <h3>${safe(v.role)} – ${safe(v.organization)}</h3>
+      <p class="date">${safe(v.date)}</p>
+      <p>${safe(v.description)}</p>
+    `;
+
+    div.appendChild(el);
+
+  });
+}
+
+// ============================================================
+// Apply i18n
+// ============================================================
 
 function applyI18n(lang) {
 
