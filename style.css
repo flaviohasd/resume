@@ -147,16 +147,20 @@ section ul li {
    ============================================================ */
 
 #core-competencies ul {
-  column-count: 3;
-  column-gap: 28px;
-  padding-left: 12px;
-  list-style-position: inside;
+  list-style: none;
+  padding-left: 0;
 }
 
 #core-competencies li {
-  break-inside: avoid;
-  margin-bottom: 6px;
-  font-size: 13px;
+  display: inline;
+}
+
+#core-competencies li::after {
+  content: " • ";
+}
+
+#core-competencies li:last-child::after {
+  content: "";
 }
 
 /* ============================================================
