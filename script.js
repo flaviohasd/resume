@@ -140,10 +140,16 @@ function renderExperience(data) {
   });
 }
 
-// ---------------------------------------------------------------
+// ============================================================
 // Core competencies
-// ---------------------------------------------------------------
-if (Array.isArray(data.core_competencies) && data.core_competencies.length) {
+// ============================================================
+
+function renderCore(data) {
+
+  if (!Array.isArray(data.core_competencies) || !data.core_competencies.length) {
+    hideSection("core-section");
+    return;
+  }
 
   const container = document.getElementById("core-competencies");
 
@@ -155,14 +161,10 @@ if (Array.isArray(data.core_competencies) && data.core_competencies.length) {
 
     if (typeof c === "string") {
       li.textContent = c;
-    } 
-
-    else if (c && c.category && Array.isArray(c.items) && c.items.length) {
-      li.innerHTML = `<strong>${safeText(c.category)}:</strong> ${c.items.join(" · ")}`;
     }
 
-    else {
-      return;
+    else if (c && c.category && Array.isArray(c.items) && c.items.length) {
+      li.innerHTML = `<strong>${safe(c.category)}:</strong> ${c.items.join(" · ")}`;
     }
 
     ul.appendChild(li);
@@ -171,9 +173,6 @@ if (Array.isArray(data.core_competencies) && data.core_competencies.length) {
 
   container.appendChild(ul);
 
-} 
-else {
-  hideSection("core-section");
 }
 
 // ============================================================
