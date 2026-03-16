@@ -44,35 +44,39 @@ function getProfileFile() {
 const PROFILE_FILE = getProfileFile();
 
 // ===================================================================
-// Carrega e renderiza
+// Helpers
+// ===================================================================
+
+function safeText(v) {
+  return typeof v === "string" ? v : "";
+}
+
+function setTextById(id, text) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text || "";
+}
+
+function clearById(id) {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = "";
+}
+
+function hideSection(id) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = "none";
+}
+
+// ===================================================================
+// Carrega JSON
 // ===================================================================
 
 function loadCV(file) {
-  // Cache-bust para evitar CDN/Browser cache
   const bust = Date.now();
   const url = `${file}?v=${bust}`;
 
-  console.log("[CV] cv param:", cv);
-  console.log("[CV] lang param:", lang);
-  console.log("[CV] loading file:", file);
-  console.log("[CV] request url:", url);
-
   fetch(url, { cache: "no-store" })
-    .then((res) => {
-      if (!res.ok) throw new Error(`HTTP ${res.status} ao buscar ${file}`);
-      return res.text();
-    })
-    .then((text) => {
-      // Remove BOM e espaços
-      const cleaned = text.replace(/^\uFEFF/, "").trim();
-      let data;
-      try {
-        data = JSON.parse(cleaned);
-      } catch (e) {
-        console.error("[CV] JSON inválido. Início:", cleaned.slice(0, 300));
-        throw e;
-      }
-
+    .then((res) => res.json())
+    .then((data) => {
       renderCV(data);
       applyI18n(lang);
     })
@@ -82,7 +86,7 @@ function loadCV(file) {
 loadCV(PROFILE_FILE);
 
 // ===================================================================
-// Troca idioma via reload (bom para compartilhamento/ATS)
+// Switch idioma
 // ===================================================================
 
 function switchLang(newLang) {
@@ -90,38 +94,16 @@ function switchLang(newLang) {
 }
 
 // ===================================================================
-// Helpers
-// ===================================================================
-
-function safeText(v) {
-  return typeof v === "string" ? v : "";
-}
-
-function joinOrEmpty(arr, sep = " · ") {
-  const a = Array.isArray(arr) ? arr.filter(Boolean) : [];
-  return a.length ? a.join(sep) : "";
-}
-
-function setTextById(id, text) {
-  const el = document.getElementById(id);
-  if (el) el.textContent = text;
-}
-
-function clearById(id) {
-  const el = document.getElementById(id);
-  if (el) el.innerHTML = "";
-}
-
-// ===================================================================
-// Renderiza o currículo
+// Render CV
 // ===================================================================
 
 function renderCV(data) {
+
   document.title = `${safeText(data.name)} - Resume`;
 
-  setTextById("name", safeText(data.name));
-  setTextById("title", safeText(data.title));
-  setTextById("subsummary", safeText(data.subsummary));
+  setTextById("name", data.name);
+  setTextById("title", data.title);
+  setTextById("subsummary", data.subsummary);
 
   setTextById(
     "contact",
@@ -131,14 +113,13 @@ function renderCV(data) {
   const linksEl = document.getElementById("links");
   if (linksEl) {
     linksEl.innerHTML = `
-      🌐 <a href="${safeText(data.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-      <a href="${safeText(data.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      🌐 <a href="${safeText(data.linkedin)}" target="_blank">LinkedIn</a> |
+      <a href="${safeText(data.github)}" target="_blank">GitHub</a>
     `;
   }
 
-  setTextById("summary", safeText(data.summary));
+  setTextById("summary", data.summary);
 
-  // Limpa containers
   [
     "experience",
     "core-competencies",
@@ -154,189 +135,214 @@ function renderCV(data) {
   // ---------------------------------------------------------------
   // Experience
   // ---------------------------------------------------------------
-  if (Array.isArray(data.experience)) {
+
+  if (Array.isArray(data.experience) && data.experience.length) {
+
     const div = document.getElementById("experience");
-    if (div) {
-      data.experience.forEach((job) => {
-        const item = document.createElement("div");
 
-        const tasks = Array.isArray(job?.tasks) && job.tasks.length
-          ? `<ul>${job.tasks.map((t) => `<li>${t}</li>`).join("")}</ul>`
-          : "";
+    data.experience.forEach((job) => {
 
-        item.innerHTML = `
-          <h3>${safeText(job.title)} – ${safeText(job.company)}</h3>
-          <p class="date">${safeText(job.date)}</p>
-          ${tasks}
-        `;
-        div.appendChild(item);
-      });
-    }
+      const item = document.createElement("div");
+
+      const tasks = Array.isArray(job.tasks) && job.tasks.length
+        ? `<ul>${job.tasks.map((t) => `<li>${t}</li>`).join("")}</ul>`
+        : "";
+
+      item.innerHTML = `
+        <h3>${safeText(job.title)} – ${safeText(job.company)}</h3>
+        <p class="date">${safeText(job.date)}</p>
+        ${tasks}
+      `;
+
+      div.appendChild(item);
+    });
+
+  } else {
+    hideSection("experience-section");
   }
 
   // ---------------------------------------------------------------
   // Core competencies
   // ---------------------------------------------------------------
-  if (Array.isArray(data.core_competencies)) {
+
+  if (Array.isArray(data.core_competencies) && data.core_competencies.length) {
+
     const div = document.getElementById("core-competencies");
-    if (div) {
-      data.core_competencies.forEach((c) => {
-        const p = document.createElement("p");
-        p.innerHTML = `<strong>${safeText(c.category)}:</strong> ${joinOrEmpty(c.items)}`;
-        div.appendChild(p);
-      });
-    }
+
+    data.core_competencies.forEach((c) => {
+
+      const p = document.createElement("p");
+
+      if (typeof c === "string") {
+        p.textContent = c;
+      }
+
+      else if (c.category && Array.isArray(c.items)) {
+        p.innerHTML = `<strong>${c.category}:</strong> ${c.items.join(" · ")}`;
+      }
+
+      div.appendChild(p);
+    });
+
+  } else {
+    hideSection("core-section");
   }
 
   // ---------------------------------------------------------------
-  // Education (in/em conforme idioma)
+  // Education
   // ---------------------------------------------------------------
-  if (Array.isArray(data.education)) {
+
+  if (Array.isArray(data.education) && data.education.length) {
+
     const div = document.getElementById("education");
-    if (div) {
-      data.education.forEach((edu) => {
-        const item = document.createElement("div");
 
-        const comments = Array.isArray(edu?.comments) && edu.comments.length
-          ? `<ul>${edu.comments.map((c) => `<li>${c}</li>`).join("")}</ul>`
-          : "";
+    data.education.forEach((edu) => {
 
-        const connector = lang === "pt" ? "em" : "in";
-        const degreeLine = edu.field
-          ? `<strong>${safeText(edu.degree)} ${connector} ${safeText(edu.field)}</strong>`
-          : `<strong>${safeText(edu.degree)}</strong>`;
+      const item = document.createElement("div");
 
-        item.innerHTML = `
-          ${degreeLine}
-          <p><em>${safeText(edu.institution)}</em></p>
-          <p class="date">${safeText(edu.date)}</p>
-          ${comments}
-        `;
-        div.appendChild(item);
-      });
-    }
+      const comments = Array.isArray(edu.comments) && edu.comments.length
+        ? `<ul>${edu.comments.map((c) => `<li>${c}</li>`).join("")}</ul>`
+        : "";
+
+      item.innerHTML = `
+        <strong>${safeText(edu.degree)}</strong>
+        <p><em>${safeText(edu.institution)}</em></p>
+        <p class="date">${safeText(edu.date)}</p>
+        ${comments}
+      `;
+
+      div.appendChild(item);
+    });
+
+  } else {
+    hideSection("education-section");
   }
 
   // ---------------------------------------------------------------
   // Publications
   // ---------------------------------------------------------------
-  if (Array.isArray(data.publications)) {
+
+  if (Array.isArray(data.publications) && data.publications.length) {
+
     const div = document.getElementById("publications");
-    if (div) {
-      data.publications.forEach((pub) => {
-        const item = document.createElement("div");
 
-        const journal = pub.journal ? `<p><em>${safeText(pub.journal)}</em></p>` : "";
-        const year = pub.year ? `<p class="date">${safeText(pub.year)}</p>` : "";
-        const link = pub.link
-          ? `<p><a href="${pub.link}" target="_blank" rel="noopener noreferrer">Publication link</a></p>`
-          : "";
+    data.publications.forEach((pub) => {
 
-        item.innerHTML = `
-          <h3>${safeText(pub.title)}</h3>
-          ${journal}
-          ${year}
-          ${link}
-        `;
-        div.appendChild(item);
-      });
-    }
-  }
+      const item = document.createElement("div");
 
-  // ---------------------------------------------------------------
-  // Projects
-  // ---------------------------------------------------------------
-  if (Array.isArray(data.projects)) {
-    const div = document.getElementById("projects");
-    if (div) {
-      data.projects.forEach((proj) => {
-        const item = document.createElement("div");
+      item.innerHTML = `
+        <h3>${safeText(pub.title)}</h3>
+        <p><em>${safeText(pub.journal)}</em></p>
+        <p class="date">${safeText(pub.year)}</p>
+        ${
+          pub.link
+            ? `<p><a href="${pub.link}" target="_blank">Publication link</a></p>`
+            : ""
+        }
+      `;
 
-        const bullets = Array.isArray(proj?.bullets) && proj.bullets.length
-          ? `<ul>${proj.bullets.map((b) => `<li>${b}</li>`).join("")}</ul>`
-          : "";
+      div.appendChild(item);
+    });
 
-        const repoLink = proj.repository
-          ? `<p><a href="${proj.repository}" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>`
-          : "";
-
-        const link = proj.link
-          ? `<p><a href="${proj.link}" target="_blank" rel="noopener noreferrer">Link</a></p>`
-          : "";
-
-        item.innerHTML = `
-          <h3>${safeText(proj.title)}</h3>
-          ${proj.subtitle ? `<p class="project-subtitle">${safeText(proj.subtitle)}</p>` : ""}
-          ${bullets}
-          ${repoLink}
-          ${link}
-        `;
-        div.appendChild(item);
-      });
-    }
+  } else {
+    hideSection("publications-section");
   }
 
   // ---------------------------------------------------------------
   // Certifications
   // ---------------------------------------------------------------
-  if (Array.isArray(data.certifications)) {
+
+  if (Array.isArray(data.certifications) && data.certifications.length) {
+
     const ul = document.getElementById("certifications");
-    if (ul) {
-      data.certifications.forEach((cert) => {
-        const li = document.createElement("li");
-        li.textContent = `${safeText(cert.name)} - ${safeText(cert.institution)} (${safeText(cert.date)})`;
-        ul.appendChild(li);
-      });
-    }
+
+    data.certifications.forEach((cert) => {
+
+      const li = document.createElement("li");
+
+      if (typeof cert === "string") {
+        li.textContent = cert;
+      }
+
+      else {
+        li.textContent =
+          `${safeText(cert.name)} - ${safeText(cert.institution)} (${safeText(cert.date)})`;
+      }
+
+      ul.appendChild(li);
+    });
+
+  } else {
+    hideSection("certifications-section");
   }
 
   // ---------------------------------------------------------------
   // Skills
   // ---------------------------------------------------------------
-  if (Array.isArray(data.skills)) {
+
+  if (Array.isArray(data.skills) && data.skills.length) {
+
     const ul = document.getElementById("skills");
-    if (ul) {
-      data.skills.forEach((skill) => {
-        const li = document.createElement("li");
-        li.textContent = skill;
-        ul.appendChild(li);
-      });
-    }
+
+    data.skills.forEach((skill) => {
+
+      const li = document.createElement("li");
+      li.textContent = skill;
+      ul.appendChild(li);
+
+    });
+
+  } else {
+    hideSection("skills-section");
   }
 
   // ---------------------------------------------------------------
   // Languages
   // ---------------------------------------------------------------
-  if (Array.isArray(data.languages)) {
+
+  if (Array.isArray(data.languages) && data.languages.length) {
+
     setTextById("languages", data.languages.join(" | "));
+
+  } else {
+    hideSection("languages-section");
   }
 
   // ---------------------------------------------------------------
   // Volunteering
   // ---------------------------------------------------------------
-  if (Array.isArray(data.volunteering)) {
+
+  if (Array.isArray(data.volunteering) && data.volunteering.length) {
+
     const div = document.getElementById("volunteering");
-    if (div) {
-      data.volunteering.forEach((v) => {
-        const item = document.createElement("div");
-        item.innerHTML = `
-          <h3>${safeText(v.role)} – ${safeText(v.organization)}</h3>
-          <p class="date">${safeText(v.date)}</p>
-          <p>${safeText(v.description)}</p>
-        `;
-        div.appendChild(item);
-      });
-    }
+
+    data.volunteering.forEach((v) => {
+
+      const item = document.createElement("div");
+
+      item.innerHTML = `
+        <h3>${safeText(v.role)} – ${safeText(v.organization)}</h3>
+        <p class="date">${safeText(v.date)}</p>
+        <p>${safeText(v.description)}</p>
+      `;
+
+      div.appendChild(item);
+    });
+
+  } else {
+    hideSection("volunteering-section");
   }
 
   setTextById("footer", `© ${new Date().getFullYear()} - ${safeText(data.name)}`);
+
 }
 
 // ===================================================================
-// Aplica tradução dos títulos
+// Aplica tradução
 // ===================================================================
 
 function applyI18n(lang) {
+
   const set = (selector, text) => {
     const el = document.querySelector(selector);
     if (el) el.textContent = text;
@@ -352,4 +358,5 @@ function applyI18n(lang) {
   set("#skills-section h2", i18n[lang].skills);
   set("#languages-section h2", i18n[lang].languages);
   set("#volunteering-section h2", i18n[lang].volunteering);
+
 }
