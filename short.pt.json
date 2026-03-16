@@ -1,1 +1,103 @@
+{
+  "name": "Flávio Dias",
+  "title": "Engenheiro Mecânico / Processos Industriais",
+  "location": "Santarém, Pará, Brasil",
+  "email": "flaviohasd@hotmail.com",
+  "phone": "+55 92 984776604",
+  "linkedin": "https://www.linkedin.com/in/flaviohasd/",
+  "github": "https://github.com/flaviohasd",
 
+  "summary": "Engenheiro Mecânico com experiência em processos industriais, fundição de alumínio (HPDC/LPDC), desenvolvimento de ferramentais e engenharia de manufatura. Liderou iniciativas industriais de grande porte, incluindo programas de renovação de moldes com orçamento anual de R$ 8 milhões e implementação de sistemas MES em linhas de fundição. Forte atuação em Lean Six Sigma, resolução de problemas de processo, otimização de layout e tomada de decisão orientada a dados utilizando Excel, Power BI e Python.",
+
+  "experience": [
+
+    {
+      "title": "Especialista em Engenharia Industrial",
+      "company": "Yamaha Motor Componentes da Amazônia",
+      "date": "Abr 2023 – Abr 2025",
+      "tasks": [
+        "Liderou programa anual de renovação de moldes HPDC/LPDC com orçamento de R$ 8 milhões, definindo critérios técnicos, priorização de investimentos e interface com fornecedores.",
+        "Implementou monitoramento MES em máquinas de fundição, permitindo visibilidade em tempo real do processo e maior controle de defeitos.",
+        "Desenvolveu plano mestre semiautomatizado em Excel para gestão de moldes, aumentando previsibilidade e rastreabilidade técnica.",
+        "Apresentou internacionalmente em Taiwan o case de integração MES representando a Yamaha."
+      ]
+    },
+
+    {
+      "title": "Analista de Engenharia – Ferramentaria & Estamparia",
+      "company": "Metalúrgica Sato da Amazônia",
+      "date": "Mar 2023 – Abr 2023",
+      "tasks": [
+        "Desenvolveu e revisou ferramentas de estamparia, reduzindo desperdício de material e custos de produção.",
+        "Criou procedimentos operacionais padronizados aumentando repetibilidade do processo.",
+        "Implementou sistema de controle de consumo químico via Excel."
+      ]
+    },
+
+    {
+      "title": "Analista Industrial – Soldagem & Estamparia",
+      "company": "Yamaha Motor da Amazônia",
+      "date": "Jul 2021 – Nov 2021",
+      "tasks": [
+        "Responsável por operações de soldagem e estamparia de suportes de balança traseira.",
+        "Liderou projetos de melhoria contínua via PDCA eliminando defeitos crônicos de processo.",
+        "Aprimorou documentação técnica e trabalho padronizado em conformidade com ISO 9001."
+      ]
+    },
+
+    {
+      "title": "Estágio em Engenharia de Manutenção",
+      "company": "3M do Brasil",
+      "date": "Jan 2020 – Jul 2021",
+      "tasks": [
+        "Desenvolveu manuais de manutenção e checklists para equipamentos rotativos.",
+        "Criou dashboard Power BI integrando indicadores de manutenção (OEE, MTBF, MTTR).",
+        "Automatizou ferramentas de planejamento de equipe utilizando Excel."
+      ]
+    }
+
+  ],
+
+  "education": [
+    {
+      "degree": "Bacharel em Engenharia Mecânica",
+      "institution": "Universidade Federal do Amazonas (UFAM)",
+      "date": "2015 – 2022",
+      "comments": [
+        "Pesquisa em modelagem dinâmica e vibrações de engrenagens publicada em periódico Springer (Qualis A2)."
+      ]
+    }
+  ],
+
+  "core_competencies": [
+    "Processos Industriais e Engenharia de Manufatura",
+    "Fundição de Alumínio HPDC/LPDC",
+    "Ferramentaria e Tryout de Moldes",
+    "Lean Six Sigma (Green Belt)",
+    "Análise de Causa Raiz e Troubleshooting",
+    "Implementação de Sistemas MES",
+    "Otimização de Layout Industrial",
+    "Análise de Dados (Excel, Power BI, Python)"
+  ],
+
+  "certifications": [
+    "Lean Six Sigma Green Belt — Escola DNC",
+    "IBM Data Science (Python, SQL) — Coursera",
+    "Scrum Master — PM Tech",
+    "Treinamento MAGMASOFT — MAGMA"
+  ],
+
+  "languages": [
+    "Português: Nativo",
+    "Inglês: Fluente"
+  ],
+
+  "publications": [
+    {
+      "title": "Vibration attenuation on spur gears through optimal profile modification",
+      "journal": "Journal of the Brazilian Society of Mechanical Sciences and Engineering (Springer)",
+      "year": "2023",
+      "link": "https://rdcu.be/ds3ID"
+    }
+  ]
+}
