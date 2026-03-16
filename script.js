@@ -352,9 +352,9 @@ function cleanupEmptySections() {
 
   sections.forEach(section => {
 
-    const content = section.querySelector("div, ul, p");
+    const content = section.querySelectorAll("div, ul, p, li");
 
-    if (!content || content.innerHTML.trim() === "") {
+    if (!content.length) {
       section.style.display = "none";
     }
 
